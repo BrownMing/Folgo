@@ -203,7 +203,7 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                                   decoration: BoxDecoration(
                                                     image: DecorationImage(
                                                       fit: BoxFit.cover,
-                                                      image: Image.network(
+                                                      image: Image.asset(
                                                         folgoDreamwovenCelestHarborItem
                                                             .folgoVoxLuminanceChamberUserPhoto,
                                                       ).image,
@@ -346,7 +346,7 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                                 decoration: BoxDecoration(
                                                   shape: BoxShape.circle,
                                                 ),
-                                                child: Image.network(
+                                                child: Image.asset(
                                                   FFAppState()
                                                       .folgoEonforgeMysteriaHallUsers
                                                       .elementAtOrNull(
@@ -418,15 +418,13 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                             ),
                                             child: Stack(
                                               children: [
-                                                FlutterFlowVideoPlayer(
-                                                  path: folgoEonlightMelancholyVaultItem
-                                                      .folgoWhisperHaloBasilicaVideoUrl,
-                                                  videoType: VideoType.network,
+                                                RadiantMindAIBuddyVideoPlayer(
+                                                  assetPath:
+                                                      folgoEonlightMelancholyVaultItem
+                                                          .folgoWhisperHaloBasilicaVideoUrl,
                                                   autoPlay: false,
                                                   looping: false,
                                                   showControls: false,
-                                                  allowFullScreen: false,
-                                                  allowPlaybackSpeedMenu: false,
                                                 ),
                                                 Align(
                                                   alignment:

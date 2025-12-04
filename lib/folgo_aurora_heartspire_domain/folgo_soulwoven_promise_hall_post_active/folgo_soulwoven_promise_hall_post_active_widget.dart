@@ -266,7 +266,7 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                           ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(20.0),
-                                            child: Image.network(
+                                            child: Image.asset(
                                               _model
                                                   .folgoNebulashadeEternalCitadel!,
                                               width: double.infinity,

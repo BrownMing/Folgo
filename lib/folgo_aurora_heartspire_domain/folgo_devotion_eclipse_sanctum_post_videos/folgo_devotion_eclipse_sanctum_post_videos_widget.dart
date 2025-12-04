@@ -257,15 +257,12 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                                       _model.folgoInfinityVeilSanctuary != '')
                                     Align(
                                       alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: FlutterFlowVideoPlayer(
-                                        path:
+                                      child: RadiantMindAIBuddyVideoPlayer(
+                                        assetPath:
                                             _model.folgoInfinityVeilSanctuary!,
-                                        videoType: VideoType.network,
                                         autoPlay: false,
                                         looping: true,
                                         showControls: false,
-                                        allowFullScreen: false,
-                                        allowPlaybackSpeedMenu: false,
                                       ),
                                     ),
                                   Align(

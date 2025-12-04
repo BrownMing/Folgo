@@ -230,7 +230,7 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                                 decoration: BoxDecoration(
                                                   shape: BoxShape.circle,
                                                 ),
-                                                child: Image.network(
+                                                child: Image.asset(
                                                   FFAppState()
                                                       .folgoEonforgeMysteriaHallUsers
                                                       .elementAtOrNull(
@@ -431,7 +431,7 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                                 decoration: BoxDecoration(
                                                   shape: BoxShape.circle,
                                                 ),
-                                                child: Image.network(
+                                                child: Image.asset(
                                                   FFAppState()
                                                       .folgoEonforgeMysteriaHallUsers
                                                       .elementAtOrNull(

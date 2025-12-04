@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
+import '/backend/schema/structs/index.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'folgo_nimbus_continuum_start_model.dart';
@@ -110,12 +111,30 @@ class _FolgoNimbusContinuumStartWidgetState
                   Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                    child: InkWell(
-                      splashColor: Colors.transparent,
-                      focusColor: Colors.transparent,
-                      hoverColor: Colors.transparent,
-                      highlightColor: Colors.transparent,
+                    child: GestureDetector(
                       onTap: () async {
+                        // 检查是否已有缓存的用户，没有才创建新账户
+                        if (FFAppState().folgoStardreamHallowedAtriumID < 6) {
+                          final newUserId = FFAppState()
+                              .folgoEonforgeMysteriaHallUsers
+                              .length;
+                          final newUser = FolgoVoxLuminanceChamberUserStruct(
+                            folgoVoxLuminanceChamberUserId: newUserId,
+                            folgoVoxLuminanceChamberUserEmail: '',
+                            folgoVoxLuminanceChamberUserPassword: '',
+                            folgoVoxLuminanceChamberUserPhoto:
+                                'assets/images/dfghuhudhfogiu_dfyuighudfhgo.png',
+                            folgoVoxLuminanceChamberUserName: 'User$newUserId',
+                            folgoVoxLuminanceChamberUserDescribe: '',
+                            folgoVoxLuminanceChamberUserCoins: 0,
+                          );
+                          FFAppState()
+                              .addToFolgoEonforgeMysteriaHallUsers(newUser);
+                          FFAppState().folgoStardreamHallowedAtriumID =
+                              newUserId;
+                          FFAppState().update(() {});
+                        }
+                        // 跳转至首页
                         context.pushNamed(
                           FolgoLuminaraSerenityHallHomeWidget.routeName,
                           extra: <String, dynamic>{
@@ -168,6 +187,7 @@ class _FolgoNimbusContinuumStartWidgetState
                                 safeSetState(
                                     () => _model.checkboxValue = newValue!);
                               },
+                              // ignore: unnecessary_null_comparison
                               side: (Color(0x7FFFFFFF) != null)
                                   ? BorderSide(
                                       width: 2,

@@ -54,7 +54,7 @@ class _FolgoTenderDreamriseTempleChatVideoWidgetState
         key: scaffoldKey,
         body: Stack(
           children: [
-            Image.network(
+            Image.asset(
               FFAppState()
                   .folgoEonforgeMysteriaHallUsers
                   .elementAtOrNull(widget.folgoCosmicSeraphshadeCourt!)!
@@ -86,7 +86,7 @@ class _FolgoTenderDreamriseTempleChatVideoWidgetState
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                         ),
-                        child: Image.network(
+                        child: Image.asset(
                           FFAppState()
                               .folgoEonforgeMysteriaHallUsers
                               .elementAtOrNull(

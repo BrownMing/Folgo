@@ -111,7 +111,7 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
-                              child: Image.network(
+                              child: Image.asset(
                                 FFAppState()
                                     .folgoEonforgeMysteriaHallUsers
                                     .elementAtOrNull(widget
@@ -262,8 +262,8 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       if (folgoPassionborneSeraphChapelItem
-                                                  .folgoCelestiumNovaMessageContent !=
-                                              '')
+                                              .folgoCelestiumNovaMessageContent !=
+                                          '')
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -274,7 +274,7 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                               decoration: BoxDecoration(
                                                 shape: BoxShape.circle,
                                               ),
-                                              child: Image.network(
+                                              child: Image.asset(
                                                 FFAppState()
                                                     .folgoEonforgeMysteriaHallUsers
                                                     .elementAtOrNull(widget
@@ -338,8 +338,8 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         if (folgoPassionborneSeraphChapelItem
-                                                    .folgoCelestiumNovaMessageContent !=
-                                                '')
+                                                .folgoCelestiumNovaMessageContent !=
+                                            '')
                                           Row(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
@@ -387,7 +387,7 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                                   decoration: BoxDecoration(
                                                     shape: BoxShape.circle,
                                                   ),
-                                                  child: Image.network(
+                                                  child: Image.asset(
                                                     FFAppState()
                                                         .folgoEonforgeMysteriaHallUsers
                                                         .elementAtOrNull(
@@ -527,8 +527,8 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                       folgoCelestiumNovaMessageCreateId:
                                           FFAppState()
                                               .folgoStardreamHallowedAtriumID,
-                                      folgoCelestiumNovaMessageChatRef: widget
-                                          .folgoLoveraEonreachSanctumChat,
+                                      folgoCelestiumNovaMessageChatRef:
+                                          widget.folgoLoveraEonreachSanctumChat,
                                     ));
                                     FFAppState()
                                         .updateFolgoNebulaEonspireDomeChatsAtIndex(

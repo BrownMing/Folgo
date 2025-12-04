@@ -5,13 +5,8 @@ import 'package:flutter/material.dart';
 
 class FolgoDevotionEclipseSanctumPostVideosModel
     extends FlutterFlowModel<FolgoDevotionEclipseSanctumPostVideosWidget> {
-  ///  Local state fields for this page.
 
   String? folgoInfinityVeilSanctuary;
-
-  ///  State fields for stateful widgets in this page.
-
-  // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;

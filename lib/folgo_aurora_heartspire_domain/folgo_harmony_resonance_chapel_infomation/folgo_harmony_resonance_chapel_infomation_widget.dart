@@ -52,7 +52,7 @@ class _FolgoHarmonyResonanceChapelInfomationWidgetState
         backgroundColor: Color(0xFF171717),
         body: Stack(
           children: [
-            Image.network(
+            Image.asset(
               FFAppState()
                   .folgoEonforgeMysteriaHallUsers
                   .elementAtOrNull(FFAppState().folgoStardreamHallowedAtriumID)!
@@ -337,17 +337,13 @@ class _FolgoHarmonyResonanceChapelInfomationWidgetState
                                               ),
                                               child: Stack(
                                                 children: [
-                                                  FlutterFlowVideoPlayer(
-                                                    path: folgoWhisperglowReverenceManorItem
-                                                        .folgoWhisperHaloBasilicaVideoUrl,
-                                                    videoType:
-                                                        VideoType.network,
+                                                  RadiantMindAIBuddyVideoPlayer(
+                                                    assetPath:
+                                                        folgoWhisperglowReverenceManorItem
+                                                            .folgoWhisperHaloBasilicaVideoUrl,
                                                     autoPlay: false,
                                                     looping: true,
                                                     showControls: false,
-                                                    allowFullScreen: false,
-                                                    allowPlaybackSpeedMenu:
-                                                        false,
                                                   ),
                                                 ],
                                               ),

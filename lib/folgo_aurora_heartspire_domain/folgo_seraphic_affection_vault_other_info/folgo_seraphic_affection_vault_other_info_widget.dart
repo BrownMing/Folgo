@@ -58,7 +58,7 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
         backgroundColor: Color(0xFF171717),
         body: Stack(
           children: [
-            Image.network(
+            Image.asset(
               FFAppState()
                   .folgoEonforgeMysteriaHallUsers
                   .elementAtOrNull(widget.folgoCelestforgeDreamholdBasilica!)!
@@ -298,17 +298,13 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
                                               ),
                                               child: Stack(
                                                 children: [
-                                                  FlutterFlowVideoPlayer(
-                                                    path: folgoMythbornEclipticaSpireItem
-                                                        .folgoWhisperHaloBasilicaVideoUrl,
-                                                    videoType:
-                                                        VideoType.network,
+                                                  RadiantMindAIBuddyVideoPlayer(
+                                                    assetPath:
+                                                        folgoMythbornEclipticaSpireItem
+                                                            .folgoWhisperHaloBasilicaVideoUrl,
                                                     autoPlay: false,
                                                     looping: true,
                                                     showControls: false,
-                                                    allowFullScreen: false,
-                                                    allowPlaybackSpeedMenu:
-                                                        false,
                                                   ),
                                                   Align(
                                                     alignment:
@@ -360,9 +356,8 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
                                                                   child:
                                                                       FolgoPassionWhisperPalaceReportBlockWidget(
                                                                     folgoEonwyrmStarluminHarborUser:
-                                                                        0,
-                                                                    folgoCosmoriaVeilboundTemplePost:
-                                                                        0,
+                                                                        widget
+                                                                            .folgoCelestforgeDreamholdBasilica,
                                                                   ),
                                                                 ),
                                                               );

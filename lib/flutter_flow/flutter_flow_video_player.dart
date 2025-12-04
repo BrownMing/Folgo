@@ -1,64 +1,49 @@
-import 'package:chewie/chewie.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
+import 'package:folgo/flutter_flow/flutter_flow_util.dart';
 import 'package:video_player/video_player.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart' show routeObserver;
-
-const kDefaultAspectRatio = 16 / 9;
-
-enum VideoType {
-  asset,
-  network,
-}
-
-Set<VideoPlayerController> _videoPlayers = Set();
-
-class FlutterFlowVideoPlayer extends StatefulWidget {
-  const FlutterFlowVideoPlayer({
+/// 专门用于播放本地 asset 视频，等比例缩放填满父容器，支持圆角
+class RadiantMindAIBuddyVideoPlayer extends StatefulWidget {
+  const RadiantMindAIBuddyVideoPlayer({
     super.key,
-    required this.path,
-    this.videoType = VideoType.network,
-    this.width,
-    this.height,
-    this.aspectRatio,
+    required this.assetPath,
     this.autoPlay = false,
     this.looping = false,
     this.showControls = true,
-    this.allowFullScreen = true,
-    this.allowPlaybackSpeedMenu = false,
-    this.lazyLoad = false,
     this.pauseOnNavigate = true,
+    this.borderRadius = 0.0,
+    this.fit = BoxFit.cover,
   });
 
-  final String path;
-  final VideoType videoType;
-  final double? width;
-  final double? height;
-  final double? aspectRatio;
-  final bool autoPlay;
-  final bool looping;
-  final bool showControls;
-  final bool allowFullScreen;
-  final bool allowPlaybackSpeedMenu;
-  final bool lazyLoad;
-  final bool pauseOnNavigate;
+  /// 本地资源路径，例如 'assets/videos/demo.mp4'
+  final String assetPath;
 
+  /// 是否自动播放
+  final bool autoPlay;
+
+  /// 是否循环播放
+  final bool looping;
+
+  /// 是否显示控制按钮
+  final bool showControls;
+
+  /// 圆角半径
+  final double borderRadius;
+
+  /// 视频填充方式，默认 BoxFit.cover 等比例缩放填满
+  final BoxFit fit;
+  final bool pauseOnNavigate;
   @override
-  State<StatefulWidget> createState() => _FlutterFlowVideoPlayerState();
+  State<RadiantMindAIBuddyVideoPlayer> createState() =>
+      _RadiantMindAIBuddyVideoPlayerState();
 }
 
-class _FlutterFlowVideoPlayerState extends State<FlutterFlowVideoPlayer>
-    with RouteAware {
-  VideoPlayerController? _videoPlayerController;
-  ChewieController? _chewieController;
-  bool _loggedError = false;
-  bool _subscribedRoute = false;
-  bool _isFullScreen = false;
-
+class _RadiantMindAIBuddyVideoPlayerState
+    extends State<RadiantMindAIBuddyVideoPlayer> with RouteAware {
+  VideoPlayerController? _controller;
+  bool _isInitialized = false;
+  bool _hasError = false;
+  bool _trueBondEmergingConversation = false;
   @override
   void initState() {
     super.initState();
@@ -67,19 +52,24 @@ class _FlutterFlowVideoPlayerState extends State<FlutterFlowVideoPlayer>
 
   @override
   void dispose() {
-    if (_subscribedRoute) {
+    _controller?.dispose();
+    if (_trueBondEmergingConversation) {
       routeObserver.unsubscribe(this);
     }
-    _disposeCurrentPlayer();
     super.dispose();
   }
 
   @override
-  void didUpdateWidget(FlutterFlowVideoPlayer oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    if (oldWidget.path != widget.path) {
-      _disposeCurrentPlayer();
-      _initializePlayer();
+  void didPushNext() {
+    if (widget.pauseOnNavigate) {
+      _controller?.pause();
+    }
+  }
+
+  @override
+  void didPopNext() {
+    if (widget.pauseOnNavigate && widget.autoPlay) {
+      _controller?.play();
     }
   }
 
@@ -87,136 +77,169 @@ class _FlutterFlowVideoPlayerState extends State<FlutterFlowVideoPlayer>
   void didChangeDependencies() {
     super.didChangeDependencies();
     if (widget.pauseOnNavigate && ModalRoute.of(context) is PageRoute) {
-      _subscribedRoute = true;
+      _trueBondEmergingConversation = true;
       routeObserver.subscribe(this, ModalRoute.of(context)!);
     }
   }
 
   @override
-  void didPushNext() {
-    if (widget.pauseOnNavigate) {
-      _videoPlayerController?.pause();
+  void didUpdateWidget(RadiantMindAIBuddyVideoPlayer oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.assetPath != widget.assetPath) {
+      _controller?.dispose();
+      _initializePlayer();
     }
   }
 
-  double get width => widget.width == null || widget.width! >= double.infinity
-      ? MediaQuery.sizeOf(context).width
-      : widget.width!;
+  Future<void> _initializePlayer() async {
+    setState(() {
+      _isInitialized = false;
+      _hasError = false;
+    });
 
-  double get height =>
-      widget.height == null || widget.height! >= double.infinity
-          ? width / aspectRatio
-          : widget.height!;
+    _controller = VideoPlayerController.asset(widget.assetPath);
 
-  double get aspectRatio =>
-      _chewieController?.videoPlayerController.value.aspectRatio ??
-      kDefaultAspectRatio;
+    try {
+      await _controller!.initialize();
+      _controller!.setLooping(widget.looping);
 
-  void _disposeCurrentPlayer() {
-    _videoPlayers.remove(_videoPlayerController);
-    _videoPlayerController?.dispose();
-    _chewieController?.dispose();
+      if (widget.autoPlay) {
+        _controller!.play();
+      }
+
+      if (mounted) {
+        setState(() {
+          _isInitialized = true;
+        });
+      }
+    } catch (e) {
+      debugPrint('Error initializing video: $e');
+      if (mounted) {
+        setState(() {
+          _hasError = true;
+        });
+      }
+    }
   }
 
-  Future _initializePlayer() async {
-    _videoPlayerController = widget.videoType == VideoType.network
-        ? VideoPlayerController.networkUrl(Uri.parse(widget.path))
-        : VideoPlayerController.asset(widget.path);
-    if (kIsWeb && widget.autoPlay) {
-      // Browsers generally don't allow autoplay unless it's muted.
-      // Ideally this should be configurable, but for now we just automatically
-      // mute on web.
-      // See https://pub.dev/packages/video_player_web#autoplay
-      _videoPlayerController!.setVolume(0);
-    }
-    if (!widget.lazyLoad) {
-      await _videoPlayerController?.initialize();
-    }
-    _chewieController = ChewieController(
-      videoPlayerController: _videoPlayerController!,
-      deviceOrientationsOnEnterFullScreen: [
-        DeviceOrientation.landscapeLeft,
-        DeviceOrientation.landscapeRight,
-      ],
-      deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp],
-      aspectRatio: widget.aspectRatio,
-      autoPlay: widget.autoPlay,
-      looping: widget.looping,
-      showControls: widget.showControls,
-      allowFullScreen: widget.allowFullScreen,
-      allowPlaybackSpeedChanging: widget.allowPlaybackSpeedMenu,
-    );
+  void _togglePlayPause() {
+    if (_controller == null || !_isInitialized) return;
 
-    _videoPlayers.add(_videoPlayerController!);
-    _videoPlayerController!.addListener(() {
-      if (_videoPlayerController!.value.hasError && !_loggedError) {
-        print(
-            'Error playing video: ${_videoPlayerController!.value.errorDescription}');
-        _loggedError = true;
-      }
-      // Stop all other players when one video is playing.
-      if (_videoPlayerController!.value.isPlaying) {
-        _videoPlayers.forEach((otherPlayer) {
-          if (otherPlayer != _videoPlayerController &&
-              otherPlayer.value.isPlaying &&
-              mounted) {
-            setState(() {
-              otherPlayer.pause();
-            });
-          }
-        });
+    setState(() {
+      if (_controller!.value.isPlaying) {
+        _controller!.pause();
+      } else {
+        _controller!.play();
       }
     });
-
-    _chewieController!.addListener(() {
-      // On web, Chewie has issues when exiting fullscreen. As a workaround,
-      // reset the video player when exiting fullscreen, as suggested here:
-      // https://github.com/fluttercommunity/chewie/issues/688#issuecomment-1790033300.
-      if (kIsWeb && !_chewieController!.isFullScreen && _isFullScreen) {
-        SchedulerBinding.instance.addPostFrameCallback((_) async {
-          final position = _videoPlayerController!.value.position;
-          _disposeCurrentPlayer();
-          await _initializePlayer();
-          _videoPlayerController!.seekTo(position);
-        });
-      }
-      _isFullScreen = _chewieController!.isFullScreen;
-    });
-    if (mounted) {
-      setState(() {});
-    }
   }
 
   @override
-  Widget build(BuildContext context) => FittedBox(
-        fit: BoxFit.cover,
-        child: Container(
-          height: height,
-          width: width,
-          child: _chewieController != null &&
-                  (widget.lazyLoad ||
-                      _chewieController!
-                          .videoPlayerController.value.isInitialized)
-              ? Chewie(controller: _chewieController!)
-              : (_chewieController != null &&
-                      _chewieController!.videoPlayerController.value.hasError)
-                  ? Text('Error playing video')
-                  : Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          width: 50.0,
-                          height: 50.0,
-                          child: CircularProgressIndicator(
-                            valueColor: AlwaysStoppedAnimation<Color>(
-                              FlutterFlowTheme.of(context).primary,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        const Text('Loading'),
-                      ],
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(widget.borderRadius),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          // 使用父容器的约束尺寸
+          final parentWidth = constraints.maxWidth;
+          final parentHeight = constraints.maxHeight;
+
+          if (_hasError) {
+            return Container(
+              width: parentWidth,
+              height: parentHeight,
+              color: Colors.black,
+              child: const Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.error_outline, color: Colors.white, size: 48),
+                    SizedBox(height: 8),
+                    Text(
+                      'Video loading failed',
+                      style: TextStyle(color: Colors.white),
                     ),
-        ),
-      );
+                  ],
+                ),
+              ),
+            );
+          }
+
+          if (!_isInitialized || _controller == null) {
+            return Container(
+              width: parentWidth,
+              height: parentHeight,
+              color: Colors.black,
+              child: Center(
+                child: CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(
+                    Colors.white,
+                  ),
+                ),
+              ),
+            );
+          }
+
+          return Container(
+            width: parentWidth,
+            height: parentHeight,
+            color: Colors.black,
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                // 视频播放器，等比例缩放填满父容器
+                FittedBox(
+                  fit: widget.fit,
+                  child: SizedBox(
+                    width: _controller!.value.size.width,
+                    height: _controller!.value.size.height,
+                    child: VideoPlayer(_controller!),
+                  ),
+                ),
+                // 控制层
+                if (widget.showControls) _buildControls(),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+
+  Widget _buildControls() {
+    return ValueListenableBuilder<VideoPlayerValue>(
+      valueListenable: _controller!,
+      builder: (context, value, child) {
+        return GestureDetector(
+          onTap: _togglePlayPause,
+          child: Container(
+            color: Colors.transparent,
+            child: Stack(
+              children: [
+                // 播放/暂停按钮
+                Center(
+                  child: AnimatedOpacity(
+                    opacity: value.isPlaying ? 0.0 : 1.0,
+                    duration: const Duration(milliseconds: 200),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.black54,
+                        shape: BoxShape.circle,
+                      ),
+                      padding: const EdgeInsets.all(12),
+                      child: Icon(
+                        value.isPlaying ? Icons.pause : Icons.play_arrow,
+                        color: Colors.white,
+                        size: 26,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
 }

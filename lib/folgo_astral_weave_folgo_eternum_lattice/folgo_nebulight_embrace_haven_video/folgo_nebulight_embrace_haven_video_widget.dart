@@ -65,18 +65,15 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
               decoration: BoxDecoration(),
               child: Stack(
                 children: [
-                  FlutterFlowVideoPlayer(
-                    path: FFAppState()
+                  RadiantMindAIBuddyVideoPlayer(
+                    assetPath: FFAppState()
                         .folgoTimewornCrescentTempleVideos
                         .elementAtOrNull(
                             widget.folgoSoulkissNebulaCathedralPost!)!
                         .folgoWhisperHaloBasilicaVideoUrl,
-                    videoType: VideoType.network,
                     autoPlay: true,
                     looping: true,
                     showControls: false,
-                    allowFullScreen: false,
-                    allowPlaybackSpeedMenu: false,
                   ),
                   Column(
                     mainAxisSize: MainAxisSize.max,
@@ -375,7 +372,7 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                       ),
-                                      child: Image.network(
+                                      child: Image.asset(
                                         FFAppState()
                                             .folgoEonforgeMysteriaHallUsers
                                             .elementAtOrNull(widget

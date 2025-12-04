@@ -91,7 +91,7 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                           ),
-                          child: Image.network(
+                          child: Image.asset(
                             FFAppState()
                                 .folgoEonforgeMysteriaHallUsers
                                 .elementAtOrNull(FFAppState()
@@ -440,8 +440,7 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                                 BorderRadius
                                                                     .circular(
                                                                         10.0),
-                                                            child:
-                                                                Image.network(
+                                                            child: Image.asset(
                                                               folgoHeartweaveEclipseTempleItem
                                                                   .folgoChronoLatticeSanctuaryActivePhoto,
                                                               width: 60.0,
@@ -786,7 +785,7 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                               decoration: BoxDecoration(
                                                 image: DecorationImage(
                                                   fit: BoxFit.cover,
-                                                  image: Image.network(
+                                                  image: Image.asset(
                                                     folgoEmberloveAstraSanctuaryItem
                                                         .folgoToneweaveEmotionCoveVenuesShow
                                                         .firstOrNull!,

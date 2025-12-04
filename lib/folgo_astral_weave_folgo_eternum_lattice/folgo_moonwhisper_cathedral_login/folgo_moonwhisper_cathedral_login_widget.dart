@@ -1,3 +1,6 @@
+import 'package:folgo/backend/schema/structs/folgo_vox_luminance_chamber_user_struct.dart';
+import 'package:folgo/flutter_flow/golf_loading.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
@@ -454,29 +457,95 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
               alignment: AlignmentDirectional(0.0, 1.0),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 34.0),
-                child: Container(
-                  width: double.infinity,
-                  height: 52.0,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [Color(0xFF2AD2BE), Color(0xFFB6E63E)],
-                      stops: [0.0, 1.0],
-                      begin: AlignmentDirectional(1.0, 0.0),
-                      end: AlignmentDirectional(-1.0, 0),
+                child: GestureDetector(
+                  onTap: () async {
+                    // 获取输入的邮箱和密码
+                    final email = _model.textController1.text.trim();
+                    final password = _model.textController2.text.trim();
+
+                    // 验证邮箱和密码不能为空
+                    if (email.isEmpty || password.isEmpty) {
+                      GolfLoading.showError(
+                        context,
+                        message: 'Please enter email and password',
+                      );
+                      return;
+                    }
+
+                    // 显示加载动画
+                    GolfLoading.show(context, message: 'Logging in...');
+
+                    // 模拟网络延迟
+                    await Future.delayed(const Duration(milliseconds: 2000));
+
+                    // 在用户列表中查找匹配的用户
+                    final users = FFAppState().folgoEonforgeMysteriaHallUsers;
+                    FolgoVoxLuminanceChamberUserStruct? matchedUser;
+
+                    for (var user in users) {
+                      if (user.folgoVoxLuminanceChamberUserEmail == email &&
+                          user.folgoVoxLuminanceChamberUserPassword ==
+                              password) {
+                        matchedUser = user;
+                        break;
+                      }
+                    }
+
+                    // 关闭加载动画
+                    GolfLoading.dismiss();
+
+                    // 如果找到匹配的用户
+                    if (matchedUser != null) {
+                      // 保存用户ID到appstate
+                      FFAppState().folgoStardreamHallowedAtriumID =
+                          matchedUser.folgoVoxLuminanceChamberUserId;
+
+                      // 显示成功提示
+                      GolfLoading.showSuccess(
+                        context,
+                        message: 'Login successful!',
+                        duration: const Duration(milliseconds: 1500),
+                      );
+
+                      // 延迟跳转以显示成功动画
+                      await Future.delayed(const Duration(milliseconds: 1600));
+
+                      // 跳转到主页
+                      if (context.mounted) {
+                        context.goNamed('FolgoLuminaraSerenityHall_home');
+                      }
+                    } else {
+                      // 登录失败提示
+                      GolfLoading.showError(
+                        context,
+                        message: 'Invalid email or password',
+                      );
+                    }
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 52.0,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [Color(0xFF2AD2BE), Color(0xFFB6E63E)],
+                        stops: [0.0, 1.0],
+                        begin: AlignmentDirectional(1.0, 0.0),
+                        end: AlignmentDirectional(-1.0, 0),
+                      ),
+                      borderRadius: BorderRadius.circular(20.0),
                     ),
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
-                    child: Text(
-                      'Login',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'siyuanheiti',
-                            color: Color(0xFF171717),
-                            fontSize: 16.0,
-                            letterSpacing: 0.0,
-                            fontWeight: FontWeight.bold,
-                          ),
+                    child: Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: Text(
+                        'Login',
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'siyuanheiti',
+                              color: Color(0xFF171717),
+                              fontSize: 16.0,
+                              letterSpacing: 0.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
                     ),
                   ),
                 ),

@@ -133,7 +133,7 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       fit: BoxFit.cover,
-                                      image: Image.network(
+                                      image: Image.asset(
                                         FFAppState()
                                             .folgoEonforgeMysteriaHallUsers
                                             .elementAtOrNull(FFAppState()

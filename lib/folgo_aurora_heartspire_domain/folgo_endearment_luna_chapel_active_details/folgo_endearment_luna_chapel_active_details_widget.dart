@@ -154,7 +154,7 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(20.0),
-                            child: Image.network(
+                            child: Image.asset(
                               FFAppState()
                                   .folgoVastrealmEclipseHavenActives
                                   .elementAtOrNull(
@@ -374,8 +374,7 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                                                           image:
                                                               DecorationImage(
                                                             fit: BoxFit.cover,
-                                                            image:
-                                                                Image.network(
+                                                            image: Image.asset(
                                                               FFAppState()
                                                                   .folgoEonforgeMysteriaHallUsers
                                                                   .elementAtOrNull(

@@ -186,7 +186,7 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                                             folgoStarboundSolitudeHavenIndex];
                                     return ClipRRect(
                                       borderRadius: BorderRadius.circular(20.0),
-                                      child: Image.network(
+                                      child: Image.asset(
                                         folgoStarboundSolitudeHavenItem,
                                         width: 300.0,
                                         height: 300.0,
