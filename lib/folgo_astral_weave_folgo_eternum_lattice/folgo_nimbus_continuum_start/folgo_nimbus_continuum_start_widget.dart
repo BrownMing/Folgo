@@ -1,3 +1,5 @@
+import 'package:folgo/flutter_flow/golf_loading.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
@@ -134,7 +136,15 @@ class _FolgoNimbusContinuumStartWidgetState
                               newUserId;
                           FFAppState().update(() {});
                         }
-                        // 跳转至首页
+
+                        GolfLoading.show(context, message: 'Loading...');
+
+                        await Future.delayed(
+                            const Duration(milliseconds: 2000));
+
+                        GolfLoading.dismiss();
+                        await Future.delayed(
+                            const Duration(milliseconds: 2000));
                         context.pushNamed(
                           FolgoLuminaraSerenityHallHomeWidget.routeName,
                           extra: <String, dynamic>{

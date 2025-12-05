@@ -1,3 +1,5 @@
+import 'package:folgo/flutter_flow/empty_state.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
@@ -269,7 +271,14 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
                                                     .folgoCelestforgeDreamholdBasilica ==
                                                 e.folgoWhisperHaloBasilicaVideoCreateId)
                                             .toList();
-
+                                        if (folgoMythbornEclipticaSpire
+                                            .isEmpty) {
+                                          return GolfEmptyState(
+                                            title: 'No Posts Yet',
+                                            subtitle:
+                                                'Be the first to share something!',
+                                          );
+                                        }
                                         return GridView.builder(
                                           padding: EdgeInsets.zero,
                                           gridDelegate:
@@ -305,6 +314,7 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
                                                     autoPlay: false,
                                                     looping: true,
                                                     showControls: false,
+                                                    borderRadius: 20.0,
                                                   ),
                                                   Align(
                                                     alignment:

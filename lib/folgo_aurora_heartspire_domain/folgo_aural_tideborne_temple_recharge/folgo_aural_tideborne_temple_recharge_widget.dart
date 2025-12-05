@@ -1,3 +1,5 @@
+import 'package:folgo/flutter_flow/iap_service.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -22,11 +24,17 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
+  // 选中的商品索引
+  int? _selectedIndex;
+
   @override
   void initState() {
     super.initState();
     _model =
         createModel(context, () => FolgoAuralTideborneTempleRechargeModel());
+
+    // 初始化 IAP 服务
+    IAPManager.initialize();
   }
 
   @override
@@ -34,6 +42,29 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
     _model.dispose();
 
     super.dispose();
+  }
+
+  // 购买商品
+  Future<void> _purchaseProduct(RechargeProduct product) async {
+    await IAPManager.purchase(
+      context,
+      product,
+      onSuccess: (diamonds) {
+        // 更新用户钻石数量
+        final currentCoins = FFAppState()
+                .folgoEonforgeMysteriaHallUsers
+                .elementAtOrNull(FFAppState().folgoStardreamHallowedAtriumID)
+                ?.folgoVoxLuminanceChamberUserCoins ??
+            0;
+
+        FFAppState().updateFolgoEonforgeMysteriaHallUsersAtIndex(
+          FFAppState().folgoStardreamHallowedAtriumID,
+          (user) =>
+              user..folgoVoxLuminanceChamberUserCoins = currentCoins + diamonds,
+        );
+        FFAppState().update(() {});
+      },
+    );
   }
 
   @override
@@ -142,114 +173,122 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 24.0, 0.0, 0.0),
-                            child: Builder(
-                              builder: (context) {
-                                final folgoNebulaEonspireDome = FFAppState()
-                                    .folgoEonforgeMysteriaHallUsers
-                                    .toList();
+                            child: GridView.builder(
+                              padding: EdgeInsets.zero,
+                              gridDelegate:
+                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 3,
+                                crossAxisSpacing: 14.0,
+                                mainAxisSpacing: 14.0,
+                                childAspectRatio: 0.7,
+                              ),
+                              scrollDirection: Axis.vertical,
+                              itemCount: RechargeProducts.products.length,
+                              itemBuilder: (context, index) {
+                                final product =
+                                    RechargeProducts.products[index];
+                                final isSelected = _selectedIndex == index;
 
-                                return GridView.builder(
-                                  padding: EdgeInsets.zero,
-                                  gridDelegate:
-                                      SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 3,
-                                    crossAxisSpacing: 14.0,
-                                    mainAxisSpacing: 14.0,
-                                    childAspectRatio: 0.7,
-                                  ),
-                                  scrollDirection: Axis.vertical,
-                                  itemCount: folgoNebulaEonspireDome.length,
-                                  itemBuilder:
-                                      (context, folgoNebulaEonspireDomeIndex) {
-                                    final folgoNebulaEonspireDomeItem =
-                                        folgoNebulaEonspireDome[
-                                            folgoNebulaEonspireDomeIndex];
-                                    return Container(
-                                      width: 100.0,
-                                      height: 100.0,
-                                      decoration: BoxDecoration(
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
-                                        borderRadius:
-                                            BorderRadius.circular(20.0),
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 11.0),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 30.0, 0.0, 0.0),
-                                              child: Image.asset(
-                                                'assets/images/yugdiyfugdfiuygd_gitsugydoyfsidyus.png',
-                                                width: 45.0,
-                                                height: 45.0,
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0.0, 2.0, 0.0, 0.0),
-                                              child: Text(
-                                                '${folgoNebulaEonspireDomeItem.folgoVoxLuminanceChamberUserId.toString()}',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'siyuanheiti',
-                                                          color: Colors.black,
-                                                          fontSize: 16.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
-                                              ),
-                                            ),
-                                            Container(
-                                              width: 75.0,
-                                              height: 24.0,
-                                              decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                  fit: BoxFit.cover,
-                                                  image: Image.asset(
-                                                    'assets/images/iuhoudfgyusidf_ydigyfgsyudifgsd.png',
-                                                  ).image,
-                                                ),
-                                              ),
-                                              child: Align(
-                                                alignment: AlignmentDirectional(
-                                                    0.0, 0.0),
-                                                child: Text(
-                                                  '\$${folgoNebulaEonspireDomeItem.folgoVoxLuminanceChamberUserId.toString()}',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'siyuanheiti',
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .info,
-                                                        fontSize: 11.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    );
+                                return GestureDetector(
+                                  onTap: () async {
+                                    // 先发起购买，再更新选中状态（避免 setState 导致闪烁）
+                                    await _purchaseProduct(product);
+                                    if (mounted) {
+                                      setState(() {
+                                        _selectedIndex = index;
+                                      });
+                                    }
                                   },
+                                  child: AnimatedContainer(
+                                    duration: Duration(milliseconds: 200),
+                                    width: 100.0,
+                                    height: 100.0,
+                                    decoration: BoxDecoration(
+                                      color: isSelected
+                                          ? Color(0xFF78F57D)
+                                          : FlutterFlowTheme.of(context).info,
+                                      borderRadius: BorderRadius.circular(20.0),
+                                      border: isSelected
+                                          ? Border.all(
+                                              color: Color(0xFF2AD2BE),
+                                              width: 3.0,
+                                            )
+                                          : null,
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 0.0, 11.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 30.0, 0.0, 0.0),
+                                            child: Image.asset(
+                                              'assets/images/yugdiyfugdfiuygd_gitsugydoyfsidyus.png',
+                                              width: 45.0,
+                                              height: 45.0,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 2.0, 0.0, 0.0),
+                                            child: Text(
+                                              '${product.diamonds}',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily: 'siyuanheiti',
+                                                    color: Colors.black,
+                                                    fontSize: 16.0,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                            ),
+                                          ),
+                                          Container(
+                                            width: 75.0,
+                                            height: 24.0,
+                                            decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                fit: BoxFit.cover,
+                                                image: Image.asset(
+                                                  'assets/images/iuhoudfgyusidf_ydigyfgsyudifgsd.png',
+                                                ).image,
+                                              ),
+                                            ),
+                                            child: Align(
+                                              alignment: AlignmentDirectional(
+                                                  0.0, 0.0),
+                                              child: Text(
+                                                '\$${product.price.toStringAsFixed(2)}',
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'siyuanheiti',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .info,
+                                                      fontSize: 11.0,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
                                 );
                               },
                             ),

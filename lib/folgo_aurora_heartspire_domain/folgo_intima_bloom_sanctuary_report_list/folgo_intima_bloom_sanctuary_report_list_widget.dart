@@ -1,3 +1,5 @@
+import 'package:folgo/flutter_flow/golf_loading.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +22,7 @@ class _FolgoIntimaBloomSanctuaryReportListWidgetState
   late FolgoIntimaBloomSanctuaryReportListModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
+  int? folgoSpiritflareCloudarcanum;
   @override
   void initState() {
     super.initState();
@@ -147,26 +149,40 @@ class _FolgoIntimaBloomSanctuaryReportListWidgetState
                                   final folgoNightsylphArcanumHallItem =
                                       folgoNightsylphArcanumHall[
                                           folgoNightsylphArcanumHallIndex];
-                                  return Container(
-                                    width: double.infinity,
-                                    height: 46.0,
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context).info,
-                                      borderRadius: BorderRadius.circular(20.0),
-                                    ),
-                                    child: Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: Text(
-                                        '${folgoNightsylphArcanumHallItem}',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'siyuanheiti',
-                                              color: Color(0xFF171717),
-                                              fontSize: 15.0,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.w600,
-                                            ),
+                                  return GestureDetector(
+                                    onTap: () {
+                                      folgoSpiritflareCloudarcanum =
+                                          folgoNightsylphArcanumHallIndex;
+                                      setState(() {});
+                                    },
+                                    child: AnimatedContainer(
+                                      duration: Duration(milliseconds: 300),
+                                      curve: Curves.easeInOut,
+                                      width: double.infinity,
+                                      height: 46.0,
+                                      decoration: BoxDecoration(
+                                        color: folgoSpiritflareCloudarcanum ==
+                                                folgoNightsylphArcanumHallIndex
+                                            ? Color(0xFF78F57D)
+                                            : FlutterFlowTheme.of(context).info,
+                                        borderRadius:
+                                            BorderRadius.circular(20.0),
+                                      ),
+                                      child: Align(
+                                        alignment:
+                                            AlignmentDirectional(0.0, 0.0),
+                                        child: Text(
+                                          '${folgoNightsylphArcanumHallItem}',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'siyuanheiti',
+                                                color: Color(0xFF171717),
+                                                fontSize: 15.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                        ),
                                       ),
                                     ),
                                   );
@@ -277,6 +293,11 @@ class _FolgoIntimaBloomSanctuaryReportListWidgetState
                               onTap: () async {
                                 if (_model.textController.text != '') {
                                   context.safePop();
+                                  GolfLoading.showSuccess(context,
+                                      message: 'Submit successfully!');
+                                } else {
+                                  GolfLoading.showError(context,
+                                      message: 'Please enter a description!');
                                 }
                               },
                               child: Container(

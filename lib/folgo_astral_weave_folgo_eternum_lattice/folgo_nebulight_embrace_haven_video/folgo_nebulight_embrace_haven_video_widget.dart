@@ -1,3 +1,5 @@
+import 'package:folgo/folgo_aurora_heartspire_domain/folgo_seraphic_affection_vault_other_info/folgo_seraphic_affection_vault_other_info_widget.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
@@ -133,12 +135,18 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                             FolgoPassionWhisperPalaceReportBlockWidget(
                                           folgoEonwyrmStarluminHarborUser: widget
                                               .folgoTenderflareEternityVaultUserid!,
-                                          folgoCosmoriaVeilboundTemplePost: 0,
                                         ),
                                       ),
                                     );
                                   },
-                                ).then((value) => safeSetState(() {}));
+                                ).then((value) => safeSetState(() {
+                                      if (value == true) {
+                                        Future.delayed(
+                                            Duration(milliseconds: 1800), () {
+                                          Navigator.pop(context);
+                                        });
+                                      }
+                                    }));
                               },
                               child: Container(
                                 width: 44.0,
@@ -189,12 +197,7 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                                     .contains(FFAppState()
                                                         .folgoStardreamHallowedAtriumID) ??
                                                 false) {
-                                              return InkWell(
-                                                splashColor: Colors.transparent,
-                                                focusColor: Colors.transparent,
-                                                hoverColor: Colors.transparent,
-                                                highlightColor:
-                                                    Colors.transparent,
+                                              return GestureDetector(
                                                 onTap: () async {
                                                   HapticFeedback.heavyImpact();
                                                   FFAppState()
@@ -209,7 +212,10 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                                   );
                                                   FFAppState().update(() {});
                                                 },
-                                                child: Container(
+                                                child: AnimatedContainer(
+                                                  duration: Duration(
+                                                      milliseconds: 300),
+                                                  curve: Curves.easeInOut,
                                                   width: 30.0,
                                                   height: 30.0,
                                                   decoration: BoxDecoration(
@@ -223,12 +229,7 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                                 ),
                                               );
                                             } else {
-                                              return InkWell(
-                                                splashColor: Colors.transparent,
-                                                focusColor: Colors.transparent,
-                                                hoverColor: Colors.transparent,
-                                                highlightColor:
-                                                    Colors.transparent,
+                                              return GestureDetector(
                                                 onTap: () async {
                                                   HapticFeedback.heavyImpact();
                                                   FFAppState()
@@ -243,7 +244,10 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                                   );
                                                   FFAppState().update(() {});
                                                 },
-                                                child: Container(
+                                                child: AnimatedContainer(
+                                                  duration: Duration(
+                                                      milliseconds: 300),
+                                                  curve: Curves.easeInOut,
                                                   width: 30.0,
                                                   height: 30.0,
                                                   decoration: BoxDecoration(
@@ -269,7 +273,15 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'siyuanheiti',
-                                                  color: Color(0xFF171717),
+                                                  color: FFAppState()
+                                                          .folgoTimewornCrescentTempleVideos
+                                                          .elementAtOrNull(widget
+                                                              .folgoSoulkissNebulaCathedralPost!)!
+                                                          .folgoWhisperHaloBasilicaVideoLikeUsers
+                                                          .contains(FFAppState()
+                                                              .folgoStardreamHallowedAtriumID)
+                                                      ? Color(0xFFFD37AF)
+                                                      : Color(0xFF171717),
                                                   fontSize: 13.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
@@ -365,20 +377,56 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
-                                    Container(
-                                      width: 34.0,
-                                      height: 34.0,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                      ),
-                                      child: Image.asset(
-                                        FFAppState()
-                                            .folgoEonforgeMysteriaHallUsers
-                                            .elementAtOrNull(widget
-                                                .folgoTenderflareEternityVaultUserid!)!
-                                            .folgoVoxLuminanceChamberUserPhoto,
-                                        fit: BoxFit.cover,
+                                    GestureDetector(
+                                      onTap: () async {
+                                        if (FFAppState()
+                                                .folgoEonforgeMysteriaHallUsers
+                                                .elementAtOrNull(widget
+                                                    .folgoTenderflareEternityVaultUserid!)!
+                                                .folgoVoxLuminanceChamberUserId !=
+                                            FFAppState()
+                                                .folgoStardreamHallowedAtriumID) {
+                                          context.pushNamed(
+                                            FolgoSeraphicAffectionVaultOtherInfoWidget
+                                                .routeName,
+                                            queryParameters: {
+                                              'folgoCelestforgeDreamholdBasilica':
+                                                  serializeParam(
+                                                FFAppState()
+                                                    .folgoEonforgeMysteriaHallUsers
+                                                    .elementAtOrNull(widget
+                                                        .folgoTenderflareEternityVaultUserid!)!
+                                                    .folgoVoxLuminanceChamberUserId,
+                                                ParamType.int,
+                                              ),
+                                            }.withoutNulls,
+                                            extra: <String, dynamic>{
+                                              kTransitionInfoKey:
+                                                  TransitionInfo(
+                                                hasTransition: true,
+                                                transitionType:
+                                                    PageTransitionType
+                                                        .rightToLeft,
+                                              ),
+                                            },
+                                          );
+                                        }
+                                      },
+                                      child: Container(
+                                        width: 34.0,
+                                        height: 34.0,
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: Image.asset(
+                                          FFAppState()
+                                              .folgoEonforgeMysteriaHallUsers
+                                              .elementAtOrNull(widget
+                                                  .folgoTenderflareEternityVaultUserid!)!
+                                              .folgoVoxLuminanceChamberUserPhoto,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                     ),
                                     Padding(

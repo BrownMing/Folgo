@@ -1,3 +1,5 @@
+import 'package:folgo/flutter_flow/empty_state.dart';
+
 import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -176,7 +178,14 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                             FFAppState()
                                                 .folgoStardreamHallowedAtriumID)
                                         .toList();
-
+                                    if (folgoTimefrostEverveilSanctuary
+                                        .isEmpty) {
+                                      return GolfEmptyState(
+                                        title: 'No Posts Yet',
+                                        subtitle:
+                                            'Be the first to share something!',
+                                      );
+                                    }
                                     return Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: List.generate(
@@ -378,7 +387,14 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                             FFAppState()
                                                 .folgoStardreamHallowedAtriumID)
                                         .toList();
-
+                                    if (folgoAstraldriftCathexisChapel
+                                        .isEmpty) {
+                                      return GolfEmptyState(
+                                        title: 'No Posts Yet',
+                                        subtitle:
+                                            'Be the first to share something!',
+                                      );
+                                    }
                                     return Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: List.generate(

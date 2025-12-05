@@ -1,5 +1,8 @@
+import 'package:folgo/flutter_flow/golf_loading.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'folgo_echoheart_celeste_atrium_delete_acount_model.dart';
 export 'folgo_echoheart_celeste_atrium_delete_acount_model.dart';
@@ -40,12 +43,12 @@ class _FolgoEchoheartCelesteAtriumDeleteAcountWidgetState
   Widget build(BuildContext context) {
     return Container(
       width: 343.0,
-      height: 188.0,
+      height: 180.0,
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
           image: Image.asset(
-            'assets/images/ruyidfhgydfigadf_ycuihsudyfgasyiudgfsd.png',
+            'assets/images/dfyghdhfug_fdughudoifhgoiu.png',
           ).image,
         ),
       ),
@@ -54,7 +57,7 @@ class _FolgoEchoheartCelesteAtriumDeleteAcountWidgetState
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(113.0, 42.0, 20.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(113.0, 32.0, 20.0, 0.0),
             child: Text(
               'Deleting the account will clear the account data. Are you sure to delete?',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -90,11 +93,54 @@ class _FolgoEchoheartCelesteAtriumDeleteAcountWidgetState
                   ),
                 ),
                 Expanded(
-                  child: Image.asset(
-                    'assets/images/gyugsuysdyfigu_ygdyfugsydufigsyudf.png',
-                    width: 140.0,
-                    height: 52.0,
-                    fit: BoxFit.fill,
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      // 关闭弹窗
+                      Navigator.pop(context);
+
+                      // 显示加载
+                      GolfLoading.show(context, message: 'Deleting account...');
+                      await Future.delayed(const Duration(milliseconds: 1000));
+
+                      // 重置用户ID为默认值
+                      FFAppState().folgoStardreamHallowedAtriumID = 0;
+
+                      // 清除用户相关数据
+                      FFAppState().update(() {});
+
+                      GolfLoading.dismiss();
+                      GolfLoading.showSuccess(
+                        context,
+                        message: 'Account deleted successfully!',
+                        duration: const Duration(milliseconds: 1500),
+                      );
+
+                      await Future.delayed(const Duration(milliseconds: 1600));
+
+                      // 跳转到启动页
+                      if (context.mounted) {
+                        context.goNamed(
+                          FolgoNimbusContinuumStartWidget.routeName,
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.fade,
+                              duration: Duration(milliseconds: 300),
+                            ),
+                          },
+                        );
+                      }
+                    },
+                    child: Image.asset(
+                      'assets/images/gyugsuysdyfigu_ygdyfugsydufigsyudf.png',
+                      width: 140.0,
+                      height: 52.0,
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
               ].divide(SizedBox(width: 14.0)),

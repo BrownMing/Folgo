@@ -603,7 +603,7 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                                   fit: BoxFit
                                                                       .cover,
                                                                   image: Image
-                                                                      .network(
+                                                                      .asset(
                                                                     FFAppState()
                                                                         .folgoEonforgeMysteriaHallUsers
                                                                         .elementAtOrNull(

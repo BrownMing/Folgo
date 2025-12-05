@@ -1,3 +1,5 @@
+import 'package:folgo/flutter_flow/empty_state.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
@@ -136,12 +138,17 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                           builder: (context) {
                             final folgoDreamwovenCelestHarbor = FFAppState()
                                 .folgoEonforgeMysteriaHallUsers
-                                .where((e) => !FFAppState()
-                                    .folgoEonforgeMysteriaHallUsers
-                                    .elementAtOrNull(FFAppState()
-                                        .folgoStardreamHallowedAtriumID)!
-                                    .folgoVoxLuminanceChamberUserBlacklist
-                                    .contains(e.folgoVoxLuminanceChamberUserId))
+                                .where((e) =>
+                                    !FFAppState()
+                                        .folgoEonforgeMysteriaHallUsers
+                                        .elementAtOrNull(FFAppState()
+                                            .folgoStardreamHallowedAtriumID)!
+                                        .folgoVoxLuminanceChamberUserBlacklist
+                                        .contains(
+                                            e.folgoVoxLuminanceChamberUserId) &&
+                                    e.folgoVoxLuminanceChamberUserId !=
+                                        FFAppState()
+                                            .folgoStardreamHallowedAtriumID)
                                 .toList();
 
                             return SingleChildScrollView(
@@ -160,25 +167,30 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed(
-                                        FolgoSeraphicAffectionVaultOtherInfoWidget
-                                            .routeName,
-                                        queryParameters: {
-                                          'folgoCelestforgeDreamholdBasilica':
-                                              serializeParam(
-                                            folgoDreamwovenCelestHarborItem
-                                                .folgoVoxLuminanceChamberUserId,
-                                            ParamType.int,
-                                          ),
-                                        }.withoutNulls,
-                                        extra: <String, dynamic>{
-                                          kTransitionInfoKey: TransitionInfo(
-                                            hasTransition: true,
-                                            transitionType:
-                                                PageTransitionType.rightToLeft,
-                                          ),
-                                        },
-                                      );
+                                      if (folgoDreamwovenCelestHarborItem
+                                              .folgoVoxLuminanceChamberUserId !=
+                                          FFAppState()
+                                              .folgoStardreamHallowedAtriumID) {
+                                        context.pushNamed(
+                                          FolgoSeraphicAffectionVaultOtherInfoWidget
+                                              .routeName,
+                                          queryParameters: {
+                                            'folgoCelestforgeDreamholdBasilica':
+                                                serializeParam(
+                                              folgoDreamwovenCelestHarborItem
+                                                  .folgoVoxLuminanceChamberUserId,
+                                              ParamType.int,
+                                            ),
+                                          }.withoutNulls,
+                                          extra: <String, dynamic>{
+                                            kTransitionInfoKey: TransitionInfo(
+                                              hasTransition: true,
+                                              transitionType: PageTransitionType
+                                                  .rightToLeft,
+                                            ),
+                                          },
+                                        );
+                                      }
                                     },
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -254,7 +266,12 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                       .contains(e
                                           .folgoWhisperHaloBasilicaVideoCreateId))
                                   .toList();
-
+                              if (folgoEonlightMelancholyVault.isEmpty) {
+                                return GolfEmptyState(
+                                  title: 'No Posts Yet',
+                                  subtitle: 'Be the first to share something!',
+                                );
+                              }
                               return ListView.separated(
                                 padding: EdgeInsets.fromLTRB(
                                   0,
@@ -272,6 +289,11 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                   final folgoEonlightMelancholyVaultItem =
                                       folgoEonlightMelancholyVault[
                                           folgoEonlightMelancholyVaultIndex];
+                                  final folgoDreamsunderMythhaven =
+                                      folgoEonlightMelancholyVaultItem
+                                          .folgoWhisperHaloBasilicaVideoLikeUsers
+                                          .contains(FFAppState()
+                                              .folgoStardreamHallowedAtriumID);
                                   return InkWell(
                                     splashColor: Colors.transparent,
                                     focusColor: Colors.transparent,
@@ -317,27 +339,32 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                               highlightColor:
                                                   Colors.transparent,
                                               onTap: () async {
-                                                context.pushNamed(
-                                                  FolgoSeraphicAffectionVaultOtherInfoWidget
-                                                      .routeName,
-                                                  queryParameters: {
-                                                    'folgoCelestforgeDreamholdBasilica':
-                                                        serializeParam(
-                                                      folgoEonlightMelancholyVaultItem
-                                                          .folgoWhisperHaloBasilicaVideoCreateId,
-                                                      ParamType.int,
-                                                    ),
-                                                  }.withoutNulls,
-                                                  extra: <String, dynamic>{
-                                                    kTransitionInfoKey:
-                                                        TransitionInfo(
-                                                      hasTransition: true,
-                                                      transitionType:
-                                                          PageTransitionType
-                                                              .rightToLeft,
-                                                    ),
-                                                  },
-                                                );
+                                                if (folgoEonlightMelancholyVaultItem
+                                                        .folgoWhisperHaloBasilicaVideoCreateId !=
+                                                    FFAppState()
+                                                        .folgoStardreamHallowedAtriumID) {
+                                                  context.pushNamed(
+                                                    FolgoSeraphicAffectionVaultOtherInfoWidget
+                                                        .routeName,
+                                                    queryParameters: {
+                                                      'folgoCelestforgeDreamholdBasilica':
+                                                          serializeParam(
+                                                        folgoEonlightMelancholyVaultItem
+                                                            .folgoWhisperHaloBasilicaVideoCreateId,
+                                                        ParamType.int,
+                                                      ),
+                                                    }.withoutNulls,
+                                                    extra: <String, dynamic>{
+                                                      kTransitionInfoKey:
+                                                          TransitionInfo(
+                                                        hasTransition: true,
+                                                        transitionType:
+                                                            PageTransitionType
+                                                                .rightToLeft,
+                                                      ),
+                                                    },
+                                                  );
+                                                }
                                               },
                                               child: Container(
                                                 width: 34.0,
@@ -425,6 +452,7 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                                   autoPlay: false,
                                                   looping: false,
                                                   showControls: false,
+                                                  borderRadius: 20.0,
                                                 ),
                                                 Align(
                                                   alignment:
@@ -636,8 +664,9 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                                                       .override(
                                                                         fontFamily:
                                                                             'siyuanheiti',
-                                                                        color: Color(
-                                                                            0xFFFD37AF),
+                                                                        color: folgoDreamsunderMythhaven
+                                                                            ? Color(0xFFFD37AF)
+                                                                            : Color(0xFF171717),
                                                                         fontSize:
                                                                             13.0,
                                                                         letterSpacing:
@@ -758,9 +787,7 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                                                         child:
                                                                             FolgoPassionWhisperPalaceReportBlockWidget(
                                                                           folgoEonwyrmStarluminHarborUser:
-                                                                              folgoEonlightMelancholyVaultItem.folgoWhisperHaloBasilicaVideoId,
-                                                                          folgoCosmoriaVeilboundTemplePost:
-                                                                              0,
+                                                                              folgoEonlightMelancholyVaultItem.folgoWhisperHaloBasilicaVideoCreateId,
                                                                         ),
                                                                       ),
                                                                     );

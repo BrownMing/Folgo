@@ -1,3 +1,5 @@
+import 'package:folgo/flutter_flow/empty_state.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
@@ -307,7 +309,14 @@ class _FolgoHarmonyResonanceChapelInfomationWidgetState
                                                     FFAppState()
                                                         .folgoStardreamHallowedAtriumID)
                                                 .toList();
-
+                                        if (folgoWhisperglowReverenceManor
+                                            .isEmpty) {
+                                          return GolfEmptyState(
+                                            title: 'No Posts Yet',
+                                            subtitle:
+                                                'Be the first to share something!',
+                                          );
+                                        }
                                         return GridView.builder(
                                           padding: EdgeInsets.zero,
                                           gridDelegate:

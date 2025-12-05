@@ -6,9 +6,6 @@ import 'package:flutter/material.dart';
 
 class FolgoEvernightHarmonyVaultDetailsModel
     extends FlutterFlowModel<FolgoEvernightHarmonyVaultDetailsWidget> {
-  ///  State fields for stateful widgets in this page.
-
-  // State field(s) for Carousel widget.
   CarouselSliderController? carouselController;
   int carouselCurrentIndex = 0;
 

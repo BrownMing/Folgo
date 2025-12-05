@@ -883,8 +883,6 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                   folgoChronoLatticeSanctuaryActiveLocation:
                                       _model.textController5.text,
                                   folgoChronoLatticeSanctuaryActiveJoinUsers: [
-                                    0,
-                                    0
                                   ],
                                   folgoChronoLatticeSanctuaryActiveCreateId:
                                       FFAppState()

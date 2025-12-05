@@ -6,9 +6,7 @@ import 'package:flutter/material.dart';
 
 class FolgoLoversAstraManorChatHomeModel
     extends FlutterFlowModel<FolgoLoversAstraManorChatHomeWidget> {
-  ///  State fields for stateful widgets in this page.
 
-  // State field(s) for TabBar widget.
   TabController? tabBarController;
   int get tabBarCurrentIndex =>
       tabBarController != null ? tabBarController!.index : 0;

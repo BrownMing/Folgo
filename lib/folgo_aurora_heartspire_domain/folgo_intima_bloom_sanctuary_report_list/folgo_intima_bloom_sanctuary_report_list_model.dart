@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 
 class FolgoIntimaBloomSanctuaryReportListModel
     extends FlutterFlowModel<FolgoIntimaBloomSanctuaryReportListWidget> {
-  ///  Local state fields for this page.
-
   List<String> folgoVoidlightRequiemChamber = [
     'Harassment',
     'Malicious fraud',
@@ -27,9 +25,6 @@ class FolgoIntimaBloomSanctuaryReportListModel
       folgoVoidlightRequiemChamber[index] =
           updateFn(folgoVoidlightRequiemChamber[index]);
 
-  ///  State fields for stateful widgets in this page.
-
-  // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;

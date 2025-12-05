@@ -1,3 +1,5 @@
+import 'package:folgo/flutter_flow/golf_loading.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -496,29 +498,122 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
               alignment: AlignmentDirectional(0.0, 1.0),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 34.0),
-                child: Container(
-                  width: double.infinity,
-                  height: 52.0,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [Color(0xFF2AD2BE), Color(0xFFB6E63E)],
-                      stops: [0.0, 1.0],
-                      begin: AlignmentDirectional(1.0, 0.0),
-                      end: AlignmentDirectional(-1.0, 0),
+                child: GestureDetector(
+                  onTap: () async {
+                    // 获取输入内容
+                    final email = _model.textController1.text.trim();
+                    final password = _model.textController2.text.trim();
+                    final confirmPassword = _model.textController3.text.trim();
+
+                    // 验证邮箱是否输入
+                    if (email.isEmpty) {
+                      GolfLoading.showError(
+                        context,
+                        message: 'Please enter your email address',
+                      );
+                      return;
+                    }
+
+                    // 验证新密码是否输入
+                    if (password.isEmpty) {
+                      GolfLoading.showError(
+                        context,
+                        message: 'Please enter your new password',
+                      );
+                      return;
+                    }
+
+                    // 验证确认密码是否输入
+                    if (confirmPassword.isEmpty) {
+                      GolfLoading.showError(
+                        context,
+                        message: 'Please confirm your new password',
+                      );
+                      return;
+                    }
+
+                    // 验证两次密码是否一致
+                    if (password != confirmPassword) {
+                      GolfLoading.showError(
+                        context,
+                        message: 'Passwords do not match',
+                      );
+                      return;
+                    }
+
+                    // 显示加载动画
+                    GolfLoading.show(context, message: 'Updating password...');
+
+                    // 模拟网络延迟
+                    await Future.delayed(const Duration(milliseconds: 800));
+
+                    // 在用户列表中查找匹配的邮箱
+                    final users = FFAppState().folgoEonforgeMysteriaHallUsers;
+                    int? matchedUserIndex;
+
+                    for (int i = 0; i < users.length; i++) {
+                      if (users[i].folgoVoxLuminanceChamberUserEmail == email) {
+                        matchedUserIndex = i;
+                        break;
+                      }
+                    }
+
+                    // 关闭加载动画
+                    GolfLoading.dismiss();
+
+                    // 如果找到匹配的用户
+                    if (matchedUserIndex != null) {
+                      // 更新用户密码
+                      FFAppState().updateFolgoEonforgeMysteriaHallUsersAtIndex(
+                        matchedUserIndex,
+                        (user) => user
+                          ..folgoVoxLuminanceChamberUserPassword = password,
+                      );
+                      FFAppState().update(() {});
+
+                      // 显示成功提示
+                      GolfLoading.showSuccess(
+                        context,
+                        message: 'Password updated successfully!',
+                        duration: const Duration(milliseconds: 1500),
+                      );
+
+                      await Future.delayed(const Duration(milliseconds: 1600));
+
+                      if (context.mounted) {
+                        context.safePop();
+                      }
+                    } else {
+                      GolfLoading.showError(
+                        context,
+                        message: 'Email address not found',
+                      );
+                    }
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 52.0,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [Color(0xFF2AD2BE), Color(0xFFB6E63E)],
+                        stops: [0.0, 1.0],
+                        begin: AlignmentDirectional(1.0, 0.0),
+                        end: AlignmentDirectional(-1.0, 0),
+                      ),
+                      borderRadius: BorderRadius.circular(20.0),
                     ),
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
-                    child: Text(
-                      'Save',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'siyuanheiti',
-                            color: Color(0xFF171717),
-                            fontSize: 16.0,
-                            letterSpacing: 0.0,
-                            fontWeight: FontWeight.bold,
-                          ),
+                    child: Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: Text(
+                        'Save',
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'siyuanheiti',
+                              color: Color(0xFF171717),
+                              fontSize: 16.0,
+                              letterSpacing: 0.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
                     ),
                   ),
                 ),

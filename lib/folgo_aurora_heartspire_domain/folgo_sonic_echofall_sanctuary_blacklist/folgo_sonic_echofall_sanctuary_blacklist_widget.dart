@@ -1,3 +1,5 @@
+import 'package:folgo/flutter_flow/empty_state.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -117,7 +119,12 @@ class _FolgoSonicEchofallSanctuaryBlacklistWidgetState
                                 ?.folgoVoxLuminanceChamberUserBlacklist
                                 .toList() ??
                             [];
-
+                        if (folgoChronoglintAstrisSanctum.isEmpty) {
+                          return GolfEmptyState(
+                            title: 'No Posts Yet',
+                            subtitle: 'Be the first to share something!',
+                          );
+                        }
                         return ListView.separated(
                           padding: EdgeInsets.zero,
                           shrinkWrap: true,

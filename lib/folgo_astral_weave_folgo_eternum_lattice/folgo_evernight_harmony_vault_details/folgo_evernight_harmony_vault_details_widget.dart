@@ -128,14 +128,21 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                                   padding: MediaQuery.viewInsetsOf(context),
                                   child:
                                       FolgoPassionWhisperPalaceReportBlockWidget(
-                                    folgoEonwyrmStarluminHarborUser: 0,
+                                    folgoEonwyrmStarluminHarborUser: null,
                                     folgoCosmoriaVeilboundTemplePost:
                                         widget.folgoLunarwhisperHorizonKeep,
                                   ),
                                 ),
                               );
                             },
-                          ).then((value) => safeSetState(() {}));
+                          ).then((value) => safeSetState(() {
+                                if (value == true) {
+                                  Future.delayed(Duration(milliseconds: 1800),
+                                      () {
+                                    Navigator.pop(context);
+                                  });
+                                }
+                              }));
                         },
                         child: Container(
                           width: 44.0,
@@ -211,8 +218,11 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                                     enableInfiniteScroll: true,
                                     scrollDirection: Axis.horizontal,
                                     autoPlay: false,
-                                    onPageChanged: (index, _) =>
-                                        _model.carouselCurrentIndex = index,
+                                    onPageChanged: (index, _) {
+                                      setState(() {
+                                        _model.carouselCurrentIndex = index;
+                                      });
+                                    },
                                   ),
                                 ),
                               );
@@ -221,21 +231,40 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                         ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 8.0, 0.0, 0.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 10.0,
-                                height: 10.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  shape: BoxShape.circle,
-                                ),
-                              ),
-                            ],
+                              0.0, 16.0, 0.0, 0.0),
+                          child: Builder(
+                            builder: (context) {
+                              final imageCount = FFAppState()
+                                      .folgoInfinityVeilSanctuaryVenues
+                                      .elementAtOrNull(
+                                          widget.folgoLunarwhisperHorizonKeep!)
+                                      ?.folgoToneweaveEmotionCoveVenuesShow
+                                      .length ??
+                                  0;
+                              return Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: List.generate(imageCount, (index) {
+                                  final isActive =
+                                      index == _model.carouselCurrentIndex;
+                                  return AnimatedContainer(
+                                    duration: Duration(milliseconds: 300),
+                                    curve: Curves.easeInOut,
+                                    width: isActive ? 30.0 : 10.0,
+                                    height: 10.0,
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 4.0),
+                                    decoration: BoxDecoration(
+                                      color: isActive
+                                          ? Color(0xFF78F57D)
+                                          : Colors.white.withOpacity(0.2),
+                                      borderRadius:
+                                          BorderRadius.circular(100.0),
+                                    ),
+                                  );
+                                }),
+                              );
+                            },
                           ),
                         ),
                         Padding(
