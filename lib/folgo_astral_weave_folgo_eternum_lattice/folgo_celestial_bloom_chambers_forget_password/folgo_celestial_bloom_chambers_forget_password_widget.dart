@@ -1,7 +1,7 @@
-import 'package:folgo/flutter_flow/golf_loading.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_loading.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import 'package:flutter/material.dart';
 import 'folgo_celestial_bloom_chambers_forget_password_model.dart';
 export 'folgo_celestial_bloom_chambers_forget_password_model.dart';
@@ -29,14 +29,14 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
     _model = createModel(
         context, () => FolgoCelestialBloomChambersForgetPasswordModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.folgoEclipsereignAstralhollowGate ??= TextEditingController();
+    _model.folgoStarveilEchochasm ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.folgoSpiritfrostEonwharf ??= TextEditingController();
+    _model.folgoFatebloomDreamshard ??= FocusNode();
 
-    _model.textController3 ??= TextEditingController();
-    _model.textFieldFocusNode3 ??= FocusNode();
+    _model.folgoVoyageruneMythbound ??= TextEditingController();
+    _model.folgoWindrelicEchowake ??= FocusNode();
   }
 
   @override
@@ -96,9 +96,12 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                       ),
                       Text(
                         'Forgot password',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
-                              color: FlutterFlowTheme.of(context).info,
+                              color:
+                                  FolgoMythriseCelestialTheme.of(context).info,
                               fontSize: 18.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -132,16 +135,18 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                                       0.0, 0.0, 0.0, 13.0),
                                   child: Text(
                                     'Email',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'siyuanheiti',
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
-                                          fontSize: 20.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                    style:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'siyuanheiti',
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
+                                              fontSize: 20.0,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                   ),
                                 ),
                                 Container(
@@ -156,8 +161,10 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController1,
-                                        focusNode: _model.textFieldFocusNode1,
+                                        controller: _model
+                                            .folgoEclipsereignAstralhollowGate,
+                                        focusNode:
+                                            _model.folgoStarveilEchochasm,
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
@@ -165,7 +172,8 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                                         decoration: InputDecoration(
                                           isDense: true,
                                           labelStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FolgoMythriseCelestialTheme.of(
+                                                      context)
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -173,7 +181,8 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                                                   ),
                                           hintText: 'Enter email address',
                                           hintStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FolgoMythriseCelestialTheme.of(
+                                                      context)
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -215,20 +224,23 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                                                 BorderRadius.circular(8.0),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FolgoMythriseCelestialTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'siyuanheiti',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .info,
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
                                               letterSpacing: 0.0,
                                             ),
                                         cursorColor:
-                                            FlutterFlowTheme.of(context).info,
+                                            FolgoMythriseCelestialTheme.of(
+                                                    context)
+                                                .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textController1Validator
+                                            .folgoMoonshatterCelestflowCitadel
                                             .asValidator(context),
                                       ),
                                     ),
@@ -254,13 +266,14 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                                     children: [
                                       Text(
                                         'Password',
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FolgoMythriseCelestialTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'siyuanheiti',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .info,
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
@@ -281,16 +294,19 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController2,
-                                        focusNode: _model.textFieldFocusNode2,
+                                        controller:
+                                            _model.folgoSpiritfrostEonwharf,
+                                        focusNode:
+                                            _model.folgoFatebloomDreamshard,
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
-                                        obscureText: false,
+                                        obscureText: true,
                                         decoration: InputDecoration(
                                           isDense: true,
                                           labelStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FolgoMythriseCelestialTheme.of(
+                                                      context)
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -298,7 +314,8 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                                                   ),
                                           hintText: 'Enter password',
                                           hintStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FolgoMythriseCelestialTheme.of(
+                                                      context)
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -340,20 +357,23 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                                                 BorderRadius.circular(8.0),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FolgoMythriseCelestialTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'siyuanheiti',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .info,
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
                                               letterSpacing: 0.0,
                                             ),
                                         cursorColor:
-                                            FlutterFlowTheme.of(context).info,
+                                            FolgoMythriseCelestialTheme.of(
+                                                    context)
+                                                .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textController2Validator
+                                            .folgoLumincrestAetherforge
                                             .asValidator(context),
                                       ),
                                     ),
@@ -379,13 +399,14 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                                     children: [
                                       Text(
                                         'Password',
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FolgoMythriseCelestialTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'siyuanheiti',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .info,
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
@@ -406,16 +427,19 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController3,
-                                        focusNode: _model.textFieldFocusNode3,
+                                        controller:
+                                            _model.folgoVoyageruneMythbound,
+                                        focusNode:
+                                            _model.folgoWindrelicEchowake,
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
-                                        obscureText: false,
+                                        obscureText: true,
                                         decoration: InputDecoration(
                                           isDense: true,
                                           labelStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FolgoMythriseCelestialTheme.of(
+                                                      context)
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -423,7 +447,8 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                                                   ),
                                           hintText: 'Enter password',
                                           hintStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FolgoMythriseCelestialTheme.of(
+                                                      context)
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -465,20 +490,23 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                                                 BorderRadius.circular(8.0),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FolgoMythriseCelestialTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'siyuanheiti',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .info,
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
                                               letterSpacing: 0.0,
                                             ),
                                         cursorColor:
-                                            FlutterFlowTheme.of(context).info,
+                                            FolgoMythriseCelestialTheme.of(
+                                                    context)
+                                                .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textController3Validator
+                                            .folgoHeartflareAeternum
                                             .asValidator(context),
                                       ),
                                     ),
@@ -501,13 +529,16 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                 child: GestureDetector(
                   onTap: () async {
                     // 获取输入内容
-                    final email = _model.textController1.text.trim();
-                    final password = _model.textController2.text.trim();
-                    final confirmPassword = _model.textController3.text.trim();
+                    final email =
+                        _model.folgoEclipsereignAstralhollowGate.text.trim();
+                    final password =
+                        _model.folgoSpiritfrostEonwharf.text.trim();
+                    final confirmPassword =
+                        _model.folgoVoyageruneMythbound.text.trim();
 
                     // 验证邮箱是否输入
                     if (email.isEmpty) {
-                      GolfLoading.showError(
+                      FolgoEryndaleSovrionLoading.showError(
                         context,
                         message: 'Please enter your email address',
                       );
@@ -516,7 +547,7 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
 
                     // 验证新密码是否输入
                     if (password.isEmpty) {
-                      GolfLoading.showError(
+                      FolgoEryndaleSovrionLoading.showError(
                         context,
                         message: 'Please enter your new password',
                       );
@@ -525,7 +556,7 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
 
                     // 验证确认密码是否输入
                     if (confirmPassword.isEmpty) {
-                      GolfLoading.showError(
+                      FolgoEryndaleSovrionLoading.showError(
                         context,
                         message: 'Please confirm your new password',
                       );
@@ -534,7 +565,7 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
 
                     // 验证两次密码是否一致
                     if (password != confirmPassword) {
-                      GolfLoading.showError(
+                      FolgoEryndaleSovrionLoading.showError(
                         context,
                         message: 'Passwords do not match',
                       );
@@ -542,13 +573,15 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                     }
 
                     // 显示加载动画
-                    GolfLoading.show(context, message: 'Updating password...');
+                    FolgoEryndaleSovrionLoading.show(context,
+                        message: 'Updating password...');
 
                     // 模拟网络延迟
                     await Future.delayed(const Duration(milliseconds: 800));
 
                     // 在用户列表中查找匹配的邮箱
-                    final users = FFAppState().folgoEonforgeMysteriaHallUsers;
+                    final users = FolgoAstralwovenMemoryVaulton()
+                        .folgoEonforgeMysteriaHallUsers;
                     int? matchedUserIndex;
 
                     for (int i = 0; i < users.length; i++) {
@@ -559,20 +592,21 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                     }
 
                     // 关闭加载动画
-                    GolfLoading.dismiss();
+                    FolgoEryndaleSovrionLoading.dismiss();
 
                     // 如果找到匹配的用户
                     if (matchedUserIndex != null) {
                       // 更新用户密码
-                      FFAppState().updateFolgoEonforgeMysteriaHallUsersAtIndex(
+                      FolgoAstralwovenMemoryVaulton()
+                          .updateFolgoEonforgeMysteriaHallUsersAtIndex(
                         matchedUserIndex,
                         (user) => user
                           ..folgoVoxLuminanceChamberUserPassword = password,
                       );
-                      FFAppState().update(() {});
+                      FolgoAstralwovenMemoryVaulton().update(() {});
 
                       // 显示成功提示
-                      GolfLoading.showSuccess(
+                      FolgoEryndaleSovrionLoading.showSuccess(
                         context,
                         message: 'Password updated successfully!',
                         duration: const Duration(milliseconds: 1500),
@@ -584,7 +618,7 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                         context.safePop();
                       }
                     } else {
-                      GolfLoading.showError(
+                      FolgoEryndaleSovrionLoading.showError(
                         context,
                         message: 'Email address not found',
                       );
@@ -606,7 +640,9 @@ class _FolgoCelestialBloomChambersForgetPasswordWidgetState
                       alignment: AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         'Save',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
                               color: Color(0xFF171717),
                               fontSize: 16.0,

@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -47,14 +47,17 @@ class _FolgoPassionWhisperPalaceReportBlockWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return Container(
       width: double.infinity,
       height: 284.0,
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Color(0xFFF5F1CE), FlutterFlowTheme.of(context).info],
+          colors: [
+            Color(0xFFF5F1CE),
+            FolgoMythriseCelestialTheme.of(context).info
+          ],
           stops: [0.0, 1.0],
           begin: AlignmentDirectional(0.0, -1.0),
           end: AlignmentDirectional(0, 1.0),
@@ -100,7 +103,9 @@ class _FolgoPassionWhisperPalaceReportBlockWidgetState
                   alignment: AlignmentDirectional(0.0, 0.0),
                   child: Text(
                     'Report',
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    style: FolgoMythriseCelestialTheme.of(context)
+                        .bodyMedium
+                        .override(
                           fontFamily: 'siyuanheiti',
                           color: Color(0xFF171717),
                           fontSize: 16.0,
@@ -118,26 +123,30 @@ class _FolgoPassionWhisperPalaceReportBlockWidgetState
               highlightColor: Colors.transparent,
               onTap: () async {
                 if (widget.folgoCosmoriaVeilboundTemplePost != null) {
-                  FFAppState().updateFolgoEonforgeMysteriaHallUsersAtIndex(
-                    FFAppState().folgoStardreamHallowedAtriumID,
+                  FolgoAstralwovenMemoryVaulton()
+                      .updateFolgoEonforgeMysteriaHallUsersAtIndex(
+                    FolgoAstralwovenMemoryVaulton()
+                        .folgoStardreamHallowedAtriumID,
                     (e) => e
                       ..updateFolgoVoxLuminanceChamberUserBlackpost(
                         (e) => e.add(widget.folgoCosmoriaVeilboundTemplePost!),
                       ),
                   );
-                  FFAppState().update(() {});
+                  FolgoAstralwovenMemoryVaulton().update(() {});
                 } else {
-                  FFAppState().updateFolgoEonforgeMysteriaHallUsersAtIndex(
-                    FFAppState().folgoStardreamHallowedAtriumID,
+                  FolgoAstralwovenMemoryVaulton()
+                      .updateFolgoEonforgeMysteriaHallUsersAtIndex(
+                    FolgoAstralwovenMemoryVaulton()
+                        .folgoStardreamHallowedAtriumID,
                     (e) => e
                       ..updateFolgoVoxLuminanceChamberUserBlacklist(
                         (e) => e.add(widget.folgoEonwyrmStarluminHarborUser!),
                       ),
                   );
-                  FFAppState().update(() {});
+                  FolgoAstralwovenMemoryVaulton().update(() {});
                 }
 
-                Navigator.pop(context,true);
+                Navigator.pop(context, true);
               },
               child: Container(
                 width: double.infinity,
@@ -150,9 +159,11 @@ class _FolgoPassionWhisperPalaceReportBlockWidgetState
                   alignment: AlignmentDirectional(0.0, 0.0),
                   child: Text(
                     'Block',
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    style: FolgoMythriseCelestialTheme.of(context)
+                        .bodyMedium
+                        .override(
                           fontFamily: 'siyuanheiti',
-                          color: FlutterFlowTheme.of(context).info,
+                          color: FolgoMythriseCelestialTheme.of(context).info,
                           fontSize: 16.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.bold,
@@ -180,7 +191,9 @@ class _FolgoPassionWhisperPalaceReportBlockWidgetState
                   alignment: AlignmentDirectional(0.0, 0.0),
                   child: Text(
                     'Cancel',
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    style: FolgoMythriseCelestialTheme.of(context)
+                        .bodyMedium
+                        .override(
                           fontFamily: 'siyuanheiti',
                           color: Color(0xFF171717),
                           fontSize: 16.0,

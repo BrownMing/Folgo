@@ -1,30 +1,31 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import 'folgo_voicescape_serenity_hall_edit_file_widget.dart'
     show FolgoVoicescapeSerenityHallEditFileWidget;
 import 'package:flutter/material.dart';
 
 class FolgoVoicescapeSerenityHallEditFileModel
-    extends FlutterFlowModel<FolgoVoicescapeSerenityHallEditFileWidget> {
-  // 选择的新头像路径
-  String? selectedPhotoPath;
+    extends FolgoMythriseCelestialModel<
+        FolgoVoicescapeSerenityHallEditFileWidget> {
 
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
+  String? folgoDriavelleSenthorinQuorvax;
 
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
+  FocusNode? folgoStarveilEchochasm;
+  TextEditingController? folgoEclipsereignAstralhollowGate;
+  String? Function(BuildContext, String?)? folgoMoonshatterCelestflowCitadel;
+
+  FocusNode? folgoFatebloomDreamshard;
+  TextEditingController? folgoSpiritfrostEonwharf;
+  String? Function(BuildContext, String?)? folgoLumincrestAetherforge;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
+    folgoStarveilEchochasm?.dispose();
+    folgoEclipsereignAstralhollowGate?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
+    folgoFatebloomDreamshard?.dispose();
+    folgoSpiritfrostEonwharf?.dispose();
   }
 }

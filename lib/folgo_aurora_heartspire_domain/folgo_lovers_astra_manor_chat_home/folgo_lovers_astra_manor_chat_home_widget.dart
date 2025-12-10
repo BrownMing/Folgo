@@ -1,8 +1,8 @@
-import 'package:folgo/flutter_flow/empty_state.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/empty_state.dart';
 
-import '/flutter_flow/flutter_flow_button_tabbar.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_button_tabbar.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -32,7 +32,7 @@ class _FolgoLoversAstraManorChatHomeWidgetState
     super.initState();
     _model = createModel(context, () => FolgoLoversAstraManorChatHomeModel());
 
-    _model.tabBarController = TabController(
+    _model.folgoSolynoxCravelleThandris = TabController(
       vsync: this,
       length: 2,
       initialIndex: 0,
@@ -48,7 +48,7 @@ class _FolgoLoversAstraManorChatHomeWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -98,9 +98,12 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                       ),
                       Text(
                         'Message',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
-                              color: FlutterFlowTheme.of(context).info,
+                              color:
+                                  FolgoMythriseCelestialTheme.of(context).info,
                               fontSize: 18.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -129,26 +132,28 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                               color: Colors.white.withOpacity(0.2),
                               borderRadius: BorderRadius.circular(100.0),
                             ),
-                            child: FlutterFlowButtonTabBar(
+                            child: FolgoMythriseCelestialButtonTabBar(
                               useToggleButtonStyle: false,
-                              labelStyle: FlutterFlowTheme.of(context)
-                                  .titleMedium
-                                  .override(
-                                    fontFamily: 'siyuanheiti',
-                                    fontSize: 18.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                              unselectedLabelStyle: FlutterFlowTheme.of(context)
-                                  .titleMedium
-                                  .override(
-                                    fontFamily: 'siyuanheiti',
-                                    fontSize: 16.0,
-                                    letterSpacing: 0.0,
-                                  ),
+                              labelStyle:
+                                  FolgoMythriseCelestialTheme.of(context)
+                                      .titleMedium
+                                      .override(
+                                        fontFamily: 'siyuanheiti',
+                                        fontSize: 18.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                              unselectedLabelStyle:
+                                  FolgoMythriseCelestialTheme.of(context)
+                                      .titleMedium
+                                      .override(
+                                        fontFamily: 'siyuanheiti',
+                                        fontSize: 16.0,
+                                        letterSpacing: 0.0,
+                                      ),
                               labelColor: Color(0xFF171717),
                               unselectedLabelColor:
-                                  FlutterFlowTheme.of(context).info,
+                                  FolgoMythriseCelestialTheme.of(context).info,
                               decoration: BoxDecoration(
                                 gradient: LinearGradient(
                                   colors: [
@@ -173,7 +178,7 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                   text: 'News',
                                 ),
                               ],
-                              controller: _model.tabBarController,
+                              controller: _model.folgoSolynoxCravelleThandris,
                               onTap: (i) async {
                                 [() async {}, () async {}][i]();
                               },
@@ -182,23 +187,24 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                         ),
                         Expanded(
                           child: TabBarView(
-                            controller: _model.tabBarController,
+                            controller: _model.folgoSolynoxCravelleThandris,
                             children: [
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 24.0, 16.0, 0.0),
                                 child: Builder(
                                   builder: (context) {
-                                    final folgoTimefrostEverveilSanctuary = FFAppState()
-                                        .folgoNebulaEonspireDomeChats
-                                        .where((e) =>
-                                            e.folgoMythicStarweaveChatSenduser ==
-                                            FFAppState()
-                                                .folgoStardreamHallowedAtriumID)
-                                        .toList();
+                                    final folgoTimefrostEverveilSanctuary =
+                                        FolgoAstralwovenMemoryVaulton()
+                                            .folgoNebulaEonspireDomeChats
+                                            .where((e) =>
+                                                e.folgoMythicStarweaveChatSenduser ==
+                                                FolgoAstralwovenMemoryVaulton()
+                                                    .folgoStardreamHallowedAtriumID)
+                                            .toList();
                                     if (folgoTimefrostEverveilSanctuary
                                         .isEmpty) {
-                                      return GolfEmptyState(
+                                      return FolgoVyranthosDelmirra(
                                         title: 'No Posts Yet',
                                         subtitle:
                                             'Be the first to share something!',
@@ -258,7 +264,7 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Image.asset(
-                                                  FFAppState()
+                                                  FolgoAstralwovenMemoryVaulton()
                                                       .folgoEonforgeMysteriaHallUsers
                                                       .elementAtOrNull(
                                                           folgoTimefrostEverveilSanctuaryItem
@@ -280,15 +286,15 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                                             .start,
                                                     children: [
                                                       Text(
-                                                        '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(folgoTimefrostEverveilSanctuaryItem.folgoMythicStarweaveChatReveivceuser)?.folgoVoxLuminanceChamberUserName}',
+                                                        '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(folgoTimefrostEverveilSanctuaryItem.folgoMythicStarweaveChatReveivceuser)?.folgoVoxLuminanceChamberUserName}',
                                                         style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            FolgoMythriseCelestialTheme
+                                                                    .of(context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
                                                                       'siyuanheiti',
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: FolgoMythriseCelestialTheme.of(
                                                                           context)
                                                                       .info,
                                                                   fontSize:
@@ -302,18 +308,20 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                                       ),
                                                       Text(
                                                         '${folgoTimefrostEverveilSanctuaryItem.folgoMythicStarweaveChatLastMsg}',
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'siyuanheiti',
-                                                              color: Color(
-                                                                  0x7FFFFFFF),
-                                                              fontSize: 13.0,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                            ),
+                                                        style:
+                                                            FolgoMythriseCelestialTheme
+                                                                    .of(context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'siyuanheiti',
+                                                                  color: Color(
+                                                                      0x7FFFFFFF),
+                                                                  fontSize:
+                                                                      13.0,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
                                                       ),
                                                     ].divide(
                                                         SizedBox(height: 4.0)),
@@ -333,21 +341,23 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                                         "Hm",
                                                         folgoTimefrostEverveilSanctuaryItem
                                                             .folgoMythicStarweaveChatLastTime!),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'siyuanheiti',
-                                                          color:
-                                                              Color(0x80FFFFFF),
-                                                          fontSize: 12.0,
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                    style:
+                                                        FolgoMythriseCelestialTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'siyuanheiti',
+                                                              color: Color(
+                                                                  0x80FFFFFF),
+                                                              fontSize: 12.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                            ),
                                                   ),
                                                   if (folgoTimefrostEverveilSanctuaryItem
                                                           .folgoMythicStarweaveChatReveivceuser ==
-                                                      FFAppState()
+                                                      FolgoAstralwovenMemoryVaulton()
                                                           .folgoStardreamHallowedAtriumID)
                                                     Container(
                                                       width: 16.0,
@@ -363,22 +373,24 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                                                 0.0, 0.0),
                                                         child: Text(
                                                           '${folgoTimefrostEverveilSanctuaryItem.folgoMythicStarweaveChatUnread.toString()}',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'siyuanheiti',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .info,
-                                                                fontSize: 13.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w600,
-                                                              ),
+                                                          style:
+                                                              FolgoMythriseCelestialTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'siyuanheiti',
+                                                                    color: FolgoMythriseCelestialTheme.of(
+                                                                            context)
+                                                                        .info,
+                                                                    fontSize:
+                                                                        13.0,
+                                                                    letterSpacing:
+                                                                        0.0,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600,
+                                                                  ),
                                                         ),
                                                       ),
                                                     ),
@@ -398,16 +410,17 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                     16.0, 24.0, 16.0, 0.0),
                                 child: Builder(
                                   builder: (context) {
-                                    final folgoAstraldriftCathexisChapel = FFAppState()
-                                        .folgoNebulaEonspireDomeChats
-                                        .where((e) =>
-                                            e.folgoMythicStarweaveChatSenduser ==
-                                            FFAppState()
-                                                .folgoStardreamHallowedAtriumID)
-                                        .toList();
+                                    final folgoAstraldriftCathexisChapel =
+                                        FolgoAstralwovenMemoryVaulton()
+                                            .folgoNebulaEonspireDomeChats
+                                            .where((e) =>
+                                                e.folgoMythicStarweaveChatSenduser ==
+                                                FolgoAstralwovenMemoryVaulton()
+                                                    .folgoStardreamHallowedAtriumID)
+                                            .toList();
                                     if (folgoAstraldriftCathexisChapel
                                         .isEmpty) {
-                                      return GolfEmptyState(
+                                      return FolgoVyranthosDelmirra(
                                         title: 'No Posts Yet',
                                         subtitle:
                                             'Be the first to share something!',
@@ -466,7 +479,7 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Image.asset(
-                                                  FFAppState()
+                                                  FolgoAstralwovenMemoryVaulton()
                                                       .folgoEonforgeMysteriaHallUsers
                                                       .elementAtOrNull(
                                                           folgoAstraldriftCathexisChapelItem
@@ -488,15 +501,15 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                                             .start,
                                                     children: [
                                                       Text(
-                                                        '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(folgoAstraldriftCathexisChapelItem.folgoMythicStarweaveChatReveivceuser)?.folgoVoxLuminanceChamberUserName}',
+                                                        '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(folgoAstraldriftCathexisChapelItem.folgoMythicStarweaveChatReveivceuser)?.folgoVoxLuminanceChamberUserName}',
                                                         style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            FolgoMythriseCelestialTheme
+                                                                    .of(context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
                                                                       'siyuanheiti',
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: FolgoMythriseCelestialTheme.of(
                                                                           context)
                                                                       .info,
                                                                   fontSize:
@@ -510,18 +523,20 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                                       ),
                                                       Text(
                                                         '${folgoAstraldriftCathexisChapelItem.folgoMythicStarweaveChatLastMsg}',
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'siyuanheiti',
-                                                              color: Color(
-                                                                  0x7FFFFFFF),
-                                                              fontSize: 13.0,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                            ),
+                                                        style:
+                                                            FolgoMythriseCelestialTheme
+                                                                    .of(context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'siyuanheiti',
+                                                                  color: Color(
+                                                                      0x7FFFFFFF),
+                                                                  fontSize:
+                                                                      13.0,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
                                                       ),
                                                     ].divide(
                                                         SizedBox(height: 4.0)),
@@ -541,21 +556,23 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                                         "Hm",
                                                         folgoAstraldriftCathexisChapelItem
                                                             .folgoMythicStarweaveChatLastTime!),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'siyuanheiti',
-                                                          color:
-                                                              Color(0x80FFFFFF),
-                                                          fontSize: 12.0,
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                    style:
+                                                        FolgoMythriseCelestialTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'siyuanheiti',
+                                                              color: Color(
+                                                                  0x80FFFFFF),
+                                                              fontSize: 12.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                            ),
                                                   ),
                                                   if (folgoAstraldriftCathexisChapelItem
                                                           .folgoMythicStarweaveChatReveivceuser ==
-                                                      FFAppState()
+                                                      FolgoAstralwovenMemoryVaulton()
                                                           .folgoStardreamHallowedAtriumID)
                                                     Container(
                                                       width: 16.0,
@@ -571,22 +588,24 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                                                                 0.0, 0.0),
                                                         child: Text(
                                                           '${folgoAstraldriftCathexisChapelItem.folgoMythicStarweaveChatUnread.toString()}',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'siyuanheiti',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .info,
-                                                                fontSize: 13.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w600,
-                                                              ),
+                                                          style:
+                                                              FolgoMythriseCelestialTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'siyuanheiti',
+                                                                    color: FolgoMythriseCelestialTheme.of(
+                                                                            context)
+                                                                        .info,
+                                                                    fontSize:
+                                                                        13.0,
+                                                                    letterSpacing:
+                                                                        0.0,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600,
+                                                                  ),
                                                         ),
                                                       ),
                                                     ),

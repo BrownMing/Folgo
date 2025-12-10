@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:folgo/flutter_flow/golf_loading.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_loading.dart';
 
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
@@ -34,20 +34,20 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
     _model =
         createModel(context, () => FolgoSoulwovenPromiseHallPostActiveModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.folgoEclipsereignAstralhollowGate ??= TextEditingController();
+    _model.folgoStarveilEchochasm ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.folgoSpiritfrostEonwharf ??= TextEditingController();
+    _model.folgoFatebloomDreamshard ??= FocusNode();
 
-    _model.textController3 ??= TextEditingController();
-    _model.textFieldFocusNode3 ??= FocusNode();
+    _model.folgoVoyageruneMythbound ??= TextEditingController();
+    _model.folgoWindrelicEchowake ??= FocusNode();
 
-    _model.textController4 ??= TextEditingController();
-    _model.textFieldFocusNode4 ??= FocusNode();
+    _model.folgoDriathuneMyloxenSarivor ??= TextEditingController();
+    _model.folgoKelvyrisOnirvexLantheron ??= FocusNode();
 
-    _model.textController5 ??= TextEditingController();
-    _model.textFieldFocusNode5 ??= FocusNode();
+    _model.folgoLantherexVolunariCrythos ??= TextEditingController();
+    _model.folgoZalvoriaRenthixSolquira ??= FocusNode();
   }
 
   @override
@@ -59,7 +59,7 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -128,11 +128,12 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                         children: [
                           Text(
                             'Event Name',
-                            style: FlutterFlowTheme.of(context)
+                            style: FolgoMythriseCelestialTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'siyuanheiti',
-                                  color: FlutterFlowTheme.of(context).info,
+                                  color: FolgoMythriseCelestialTheme.of(context)
+                                      .info,
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
@@ -155,29 +156,34 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                   child: Container(
                                     width: double.infinity,
                                     child: TextFormField(
-                                      controller: _model.textController1,
-                                      focusNode: _model.textFieldFocusNode1,
+                                      controller: _model
+                                          .folgoEclipsereignAstralhollowGate,
+                                      focusNode: _model.folgoStarveilEchochasm,
                                       autofocus: false,
                                       enabled: true,
                                       textInputAction: TextInputAction.done,
                                       obscureText: false,
                                       decoration: InputDecoration(
                                         isDense: true,
-                                        labelStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .override(
-                                              fontFamily: 'siyuanheiti',
-                                              letterSpacing: 0.0,
-                                            ),
+                                        labelStyle:
+                                            FolgoMythriseCelestialTheme.of(
+                                                    context)
+                                                .labelMedium
+                                                .override(
+                                                  fontFamily: 'siyuanheiti',
+                                                  letterSpacing: 0.0,
+                                                ),
                                         hintText: 'Please enter...',
-                                        hintStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .override(
-                                              fontFamily: 'siyuanheiti',
-                                              color: Color(0x7FFFFFFF),
-                                              fontSize: 13.0,
-                                              letterSpacing: 0.0,
-                                            ),
+                                        hintStyle:
+                                            FolgoMythriseCelestialTheme.of(
+                                                    context)
+                                                .labelMedium
+                                                .override(
+                                                  fontFamily: 'siyuanheiti',
+                                                  color: Color(0x7FFFFFFF),
+                                                  fontSize: 13.0,
+                                                  letterSpacing: 0.0,
+                                                ),
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
                                             color: Color(0x00000000),
@@ -211,19 +217,25 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                               BorderRadius.circular(20.0),
                                         ),
                                       ),
-                                      style: FlutterFlowTheme.of(context)
+                                      style: FolgoMythriseCelestialTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'siyuanheiti',
-                                            color: FlutterFlowTheme.of(context)
-                                                .info,
+                                            color:
+                                                FolgoMythriseCelestialTheme.of(
+                                                        context)
+                                                    .info,
                                             fontSize: 3.0,
                                             letterSpacing: 0.0,
                                           ),
                                       cursorColor:
-                                          FlutterFlowTheme.of(context).info,
+                                          FolgoMythriseCelestialTheme.of(
+                                                  context)
+                                              .info,
                                       enableInteractiveSelection: true,
-                                      validator: _model.textController1Validator
+                                      validator: _model
+                                          .folgoMoonshatterCelestflowCitadel
                                           .asValidator(context),
                                     ),
                                   ),
@@ -236,11 +248,13 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                 0.0, 24.0, 0.0, 0.0),
                             child: Text(
                               'Event Cover',
-                              style: FlutterFlowTheme.of(context)
+                              style: FolgoMythriseCelestialTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'siyuanheiti',
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .info,
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -344,11 +358,13 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                 0.0, 24.0, 0.0, 0.0),
                             child: Text(
                               'Introduction',
-                              style: FlutterFlowTheme.of(context)
+                              style: FolgoMythriseCelestialTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'siyuanheiti',
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .info,
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -370,22 +386,25 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                 child: Container(
                                   width: double.infinity,
                                   child: TextFormField(
-                                    controller: _model.textController2,
-                                    focusNode: _model.textFieldFocusNode2,
+                                    controller: _model.folgoSpiritfrostEonwharf,
+                                    focusNode: _model.folgoFatebloomDreamshard,
                                     autofocus: false,
                                     enabled: true,
                                     textInputAction: TextInputAction.done,
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       isDense: true,
-                                      labelStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .override(
-                                            fontFamily: 'siyuanheiti',
-                                            letterSpacing: 0.0,
-                                          ),
+                                      labelStyle:
+                                          FolgoMythriseCelestialTheme.of(
+                                                  context)
+                                              .labelMedium
+                                              .override(
+                                                fontFamily: 'siyuanheiti',
+                                                letterSpacing: 0.0,
+                                              ),
                                       hintText: 'Please enter...',
-                                      hintStyle: FlutterFlowTheme.of(context)
+                                      hintStyle: FolgoMythriseCelestialTheme.of(
+                                              context)
                                           .labelMedium
                                           .override(
                                             fontFamily: 'siyuanheiti',
@@ -426,20 +445,23 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                             BorderRadius.circular(20.0),
                                       ),
                                     ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'siyuanheiti',
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
-                                          fontSize: 3.0,
-                                          letterSpacing: 0.0,
-                                        ),
+                                    style:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'siyuanheiti',
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
+                                              fontSize: 3.0,
+                                              letterSpacing: 0.0,
+                                            ),
                                     maxLines: 5,
                                     cursorColor:
-                                        FlutterFlowTheme.of(context).info,
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .info,
                                     enableInteractiveSelection: true,
-                                    validator: _model.textController2Validator
+                                    validator: _model.folgoLumincrestAetherforge
                                         .asValidator(context),
                                   ),
                                 ),
@@ -491,10 +513,10 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                             Container(
                                               width: 113.0,
                                               child: TextFormField(
-                                                controller:
-                                                    _model.textController3,
-                                                focusNode:
-                                                    _model.textFieldFocusNode3,
+                                                controller: _model
+                                                    .folgoVoyageruneMythbound,
+                                                focusNode: _model
+                                                    .folgoWindrelicEchowake,
                                                 autofocus: false,
                                                 enabled: true,
                                                 textInputAction:
@@ -503,8 +525,8 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                                 decoration: InputDecoration(
                                                   isDense: true,
                                                   labelStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      FolgoMythriseCelestialTheme
+                                                              .of(context)
                                                           .labelMedium
                                                           .override(
                                                             fontFamily:
@@ -512,19 +534,20 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                                             letterSpacing: 0.0,
                                                           ),
                                                   hintText: 'Mon, 12 Nov 2025',
-                                                  hintStyle: FlutterFlowTheme
-                                                          .of(context)
-                                                      .labelMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'siyuanheiti',
-                                                        color:
-                                                            Color(0xFF171717),
-                                                        fontSize: 13.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                      ),
+                                                  hintStyle:
+                                                      FolgoMythriseCelestialTheme
+                                                              .of(context)
+                                                          .labelMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'siyuanheiti',
+                                                            color: Color(
+                                                                0xFF171717),
+                                                            fontSize: 13.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                          ),
                                                   enabledBorder:
                                                       OutlineInputBorder(
                                                     borderSide: BorderSide(
@@ -582,22 +605,25 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                                     ),
                                                   ),
                                                 ),
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'siyuanheiti',
-                                                      color: Color(0xFF171717),
-                                                      fontSize: 13.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                    ),
+                                                style:
+                                                    FolgoMythriseCelestialTheme
+                                                            .of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'siyuanheiti',
+                                                          color:
+                                                              Color(0xFF171717),
+                                                          fontSize: 13.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
                                                 cursorColor: Color(0xFF171717),
                                                 enableInteractiveSelection:
                                                     true,
                                                 validator: _model
-                                                    .textController3Validator
+                                                    .folgoHeartflareAeternum
                                                     .asValidator(context),
                                               ),
                                             ),
@@ -626,10 +652,10 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                             Container(
                                               width: 89.0,
                                               child: TextFormField(
-                                                controller:
-                                                    _model.textController4,
-                                                focusNode:
-                                                    _model.textFieldFocusNode4,
+                                                controller: _model
+                                                    .folgoDriathuneMyloxenSarivor,
+                                                focusNode: _model
+                                                    .folgoKelvyrisOnirvexLantheron,
                                                 autofocus: false,
                                                 enabled: true,
                                                 textInputAction:
@@ -638,8 +664,8 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                                 decoration: InputDecoration(
                                                   isDense: true,
                                                   labelStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      FolgoMythriseCelestialTheme
+                                                              .of(context)
                                                           .labelMedium
                                                           .override(
                                                             fontFamily:
@@ -647,19 +673,20 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                                             letterSpacing: 0.0,
                                                           ),
                                                   hintText: '15:00 - 18:00',
-                                                  hintStyle: FlutterFlowTheme
-                                                          .of(context)
-                                                      .labelMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'siyuanheiti',
-                                                        color:
-                                                            Color(0xFF171717),
-                                                        fontSize: 13.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                      ),
+                                                  hintStyle:
+                                                      FolgoMythriseCelestialTheme
+                                                              .of(context)
+                                                          .labelMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'siyuanheiti',
+                                                            color: Color(
+                                                                0xFF171717),
+                                                            fontSize: 13.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                          ),
                                                   enabledBorder:
                                                       OutlineInputBorder(
                                                     borderSide: BorderSide(
@@ -717,24 +744,27 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                                     ),
                                                   ),
                                                 ),
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'siyuanheiti',
-                                                      color: Color(0xFF171717),
-                                                      fontSize: 13.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                    ),
+                                                style:
+                                                    FolgoMythriseCelestialTheme
+                                                            .of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'siyuanheiti',
+                                                          color:
+                                                              Color(0xFF171717),
+                                                          fontSize: 13.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
                                                 keyboardType:
                                                     TextInputType.datetime,
                                                 cursorColor: Color(0xFF171717),
                                                 enableInteractiveSelection:
                                                     true,
                                                 validator: _model
-                                                    .textController4Validator
+                                                    .folgoDriathuneMyloxenSarivorValidator
                                                     .asValidator(context),
                                               ),
                                             ),
@@ -774,9 +804,10 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                                 width: double.infinity,
                                                 height: 44.0,
                                                 decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .info,
+                                                  color:
+                                                      FolgoMythriseCelestialTheme
+                                                              .of(context)
+                                                          .info,
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10.0),
@@ -784,10 +815,10 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                                 child: Container(
                                                   width: double.infinity,
                                                   child: TextFormField(
-                                                    controller:
-                                                        _model.textController5,
+                                                    controller: _model
+                                                        .folgoLantherexVolunariCrythos,
                                                     focusNode: _model
-                                                        .textFieldFocusNode5,
+                                                        .folgoZalvoriaRenthixSolquira,
                                                     autofocus: false,
                                                     enabled: true,
                                                     textInputAction:
@@ -796,8 +827,8 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                                     decoration: InputDecoration(
                                                       isDense: true,
                                                       labelStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          FolgoMythriseCelestialTheme
+                                                                  .of(context)
                                                               .labelMedium
                                                               .override(
                                                                 fontFamily:
@@ -808,8 +839,8 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                                       hintText:
                                                           'Please enter...',
                                                       hintStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          FolgoMythriseCelestialTheme
+                                                                  .of(context)
                                                               .labelMedium
                                                               .override(
                                                                 fontFamily:
@@ -865,23 +896,25 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                                                 .circular(10.0),
                                                       ),
                                                     ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'siyuanheiti',
-                                                          color:
-                                                              Color(0xFF171717),
-                                                          fontSize: 13.0,
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                    style:
+                                                        FolgoMythriseCelestialTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'siyuanheiti',
+                                                              color: Color(
+                                                                  0xFF171717),
+                                                              fontSize: 13.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                            ),
                                                     cursorColor:
                                                         Color(0xFF171717),
                                                     enableInteractiveSelection:
                                                         true,
                                                     validator: _model
-                                                        .textController5Validator
+                                                        .aventroLuntherisQualadon
                                                         .asValidator(context),
                                                   ),
                                                 ),
@@ -908,34 +941,38 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                 // 保存数据到临时变量
                                 final photo =
                                     _model.folgoNebulashadeEternalCitadel;
-                                final name = _model.textController1.text;
+                                final name = _model
+                                    .folgoEclipsereignAstralhollowGate.text;
                                 final introduction =
-                                    _model.textController2.text;
-                                final date = _model.textController3.text;
-                                final time = _model.textController4.text;
-                                final location = _model.textController5.text;
-                                final createId =
-                                    FFAppState().folgoStardreamHallowedAtriumID;
+                                    _model.folgoSpiritfrostEonwharf.text;
+                                final date =
+                                    _model.folgoVoyageruneMythbound.text;
+                                final time =
+                                    _model.folgoDriathuneMyloxenSarivor.text;
+                                final location =
+                                    _model.folgoLantherexVolunariCrythos.text;
+                                final createId = FolgoAstralwovenMemoryVaulton()
+                                    .folgoStardreamHallowedAtriumID;
 
-                                GolfLoading.show(context,
+                                FolgoEryndaleSovrionLoading.show(context,
                                     message: 'Publishing...');
 
                                 await Future.delayed(Duration(seconds: 1));
 
-                                GolfLoading.dismiss();
+                                FolgoEryndaleSovrionLoading.dismiss();
 
-                                GolfLoading.showSuccess(
+                                FolgoEryndaleSovrionLoading.showSuccess(
                                   context,
                                   message:
                                       'Submitted successfully! Pending review.',
                                 );
                                 context.safePop();
                                 Future.delayed(Duration(seconds: 300), () {
-                                  FFAppState()
+                                  FolgoAstralwovenMemoryVaulton()
                                       .addToFolgoVastrealmEclipseHavenActives(
                                     FolgoChronoLatticeSanctuaryActiveStruct(
                                       folgoChronoLatticeSanctuaryActiveId:
-                                          FFAppState()
+                                          FolgoAstralwovenMemoryVaulton()
                                               .folgoVastrealmEclipseHavenActives
                                               .length,
                                       folgoChronoLatticeSanctuaryActivePhoto:
@@ -955,7 +992,7 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                           createId,
                                     ),
                                   );
-                                  FFAppState().update(() {});
+                                  FolgoAstralwovenMemoryVaulton().update(() {});
                                 });
                               },
                               child: Container(
@@ -977,15 +1014,16 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                                   alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     'Create',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'siyuanheiti',
-                                          color: Color(0xFF171717),
-                                          fontSize: 16.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                    style:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'siyuanheiti',
+                                              color: Color(0xFF171717),
+                                              fontSize: 16.0,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                   ),
                                 ),
                               ),

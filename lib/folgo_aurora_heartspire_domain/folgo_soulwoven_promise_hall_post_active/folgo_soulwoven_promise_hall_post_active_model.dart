@@ -1,50 +1,52 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import 'folgo_soulwoven_promise_hall_post_active_widget.dart'
     show FolgoSoulwovenPromiseHallPostActiveWidget;
 import 'package:flutter/material.dart';
 
 class FolgoSoulwovenPromiseHallPostActiveModel
-    extends FlutterFlowModel<FolgoSoulwovenPromiseHallPostActiveWidget> {
+    extends FolgoMythriseCelestialModel<
+        FolgoSoulwovenPromiseHallPostActiveWidget> {
   String? folgoNebulashadeEternalCitadel;
 
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
+  FocusNode? folgoStarveilEchochasm;
+  TextEditingController? folgoEclipsereignAstralhollowGate;
+  String? Function(BuildContext, String?)? folgoMoonshatterCelestflowCitadel;
 
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
+  FocusNode? folgoFatebloomDreamshard;
+  TextEditingController? folgoSpiritfrostEonwharf;
+  String? Function(BuildContext, String?)? folgoLumincrestAetherforge;
 
-  FocusNode? textFieldFocusNode3;
-  TextEditingController? textController3;
-  String? Function(BuildContext, String?)? textController3Validator;
+  FocusNode? folgoWindrelicEchowake;
+  TextEditingController? folgoVoyageruneMythbound;
+  String? Function(BuildContext, String?)? folgoHeartflareAeternum;
 
-  FocusNode? textFieldFocusNode4;
-  TextEditingController? textController4;
-  String? Function(BuildContext, String?)? textController4Validator;
+  FocusNode? folgoKelvyrisOnirvexLantheron;
+  TextEditingController? folgoDriathuneMyloxenSarivor;
+  String? Function(BuildContext, String?)?
+      folgoDriathuneMyloxenSarivorValidator;
 
-  FocusNode? textFieldFocusNode5;
-  TextEditingController? textController5;
-  String? Function(BuildContext, String?)? textController5Validator;
+  FocusNode? folgoZalvoriaRenthixSolquira;
+  TextEditingController? folgoLantherexVolunariCrythos;
+  String? Function(BuildContext, String?)? aventroLuntherisQualadon;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
+    folgoStarveilEchochasm?.dispose();
+    folgoEclipsereignAstralhollowGate?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
+    folgoFatebloomDreamshard?.dispose();
+    folgoSpiritfrostEonwharf?.dispose();
 
-    textFieldFocusNode3?.dispose();
-    textController3?.dispose();
+    folgoWindrelicEchowake?.dispose();
+    folgoVoyageruneMythbound?.dispose();
 
-    textFieldFocusNode4?.dispose();
-    textController4?.dispose();
+    folgoKelvyrisOnirvexLantheron?.dispose();
+    folgoDriathuneMyloxenSarivor?.dispose();
 
-    textFieldFocusNode5?.dispose();
-    textController5?.dispose();
+    folgoZalvoriaRenthixSolquira?.dispose();
+    folgoLantherexVolunariCrythos?.dispose();
   }
 }

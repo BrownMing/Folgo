@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'folgo_tender_dreamrise_temple_chat_video_model.dart';
@@ -43,7 +43,7 @@ class _FolgoTenderDreamriseTempleChatVideoWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -55,7 +55,7 @@ class _FolgoTenderDreamriseTempleChatVideoWidgetState
         body: Stack(
           children: [
             Image.asset(
-              FFAppState()
+              FolgoAstralwovenMemoryVaulton()
                   .folgoEonforgeMysteriaHallUsers
                   .elementAtOrNull(widget.folgoCosmicSeraphshadeCourt!)!
                   .folgoVoxLuminanceChamberUserPhoto,
@@ -87,7 +87,7 @@ class _FolgoTenderDreamriseTempleChatVideoWidgetState
                           shape: BoxShape.circle,
                         ),
                         child: Image.asset(
-                          FFAppState()
+                          FolgoAstralwovenMemoryVaulton()
                               .folgoEonforgeMysteriaHallUsers
                               .elementAtOrNull(
                                   widget.folgoCosmicSeraphshadeCourt!)!
@@ -99,20 +99,24 @@ class _FolgoTenderDreamriseTempleChatVideoWidgetState
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 13.0, 0.0, 0.0),
                         child: Text(
-                          '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(widget.folgoCosmicSeraphshadeCourt!)?.folgoVoxLuminanceChamberUserName}',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'siyuanheiti',
-                                    color: FlutterFlowTheme.of(context).info,
-                                    fontSize: 28.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                          '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(widget.folgoCosmicSeraphshadeCourt!)?.folgoVoxLuminanceChamberUserName}',
+                          style: FolgoMythriseCelestialTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: 'siyuanheiti',
+                                color: FolgoMythriseCelestialTheme.of(context)
+                                    .info,
+                                fontSize: 28.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.bold,
+                              ),
                         ),
                       ),
                       Text(
                         'Video call...',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
                               color: Color(0x80FFFFFF),
                               fontSize: 13.0,

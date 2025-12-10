@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:folgo/flutter_flow/golf_loading.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_loading.dart';
 import 'package:image_picker/image_picker.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'folgo_voicescape_serenity_hall_edit_file_model.dart';
@@ -33,11 +33,11 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
     _model =
         createModel(context, () => FolgoVoicescapeSerenityHallEditFileModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.folgoEclipsereignAstralhollowGate ??= TextEditingController();
+    _model.folgoStarveilEchochasm ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.folgoSpiritfrostEonwharf ??= TextEditingController();
+    _model.folgoFatebloomDreamshard ??= FocusNode();
   }
 
   @override
@@ -49,7 +49,7 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -99,9 +99,12 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                       ),
                       Text(
                         'Edit personal profile',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
-                              color: FlutterFlowTheme.of(context).info,
+                              color:
+                                  FolgoMythriseCelestialTheme.of(context).info,
                               fontSize: 18.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -147,7 +150,8 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                                     );
                                     if (image != null) {
                                       safeSetState(() {
-                                        _model.selectedPhotoPath = image.path;
+                                        _model.folgoDriavelleSenthorinQuorvax =
+                                            image.path;
                                       });
                                     }
                                   },
@@ -161,25 +165,27 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                                       children: [
                                         // 显示头像
                                         ClipOval(
-                                          child: _model.selectedPhotoPath !=
-                                                  null
-                                              ? Image.file(
-                                                  File(_model
-                                                      .selectedPhotoPath!),
-                                                  width: 145.0,
-                                                  height: 145.0,
-                                                  fit: BoxFit.cover,
-                                                )
-                                              : Image.asset(
-                                                  FFAppState()
-                                                      .folgoEonforgeMysteriaHallUsers
-                                                      .elementAtOrNull(FFAppState()
-                                                          .folgoStardreamHallowedAtriumID)!
-                                                      .folgoVoxLuminanceChamberUserPhoto,
-                                                  width: 145.0,
-                                                  height: 145.0,
-                                                  fit: BoxFit.cover,
-                                                ),
+                                          child:
+                                              _model.folgoDriavelleSenthorinQuorvax !=
+                                                      null
+                                                  ? Image.file(
+                                                      File(_model
+                                                          .folgoDriavelleSenthorinQuorvax!),
+                                                      width: 145.0,
+                                                      height: 145.0,
+                                                      fit: BoxFit.cover,
+                                                    )
+                                                  : Image.asset(
+                                                      FolgoAstralwovenMemoryVaulton()
+                                                          .folgoEonforgeMysteriaHallUsers
+                                                          .elementAtOrNull(
+                                                              FolgoAstralwovenMemoryVaulton()
+                                                                  .folgoStardreamHallowedAtriumID)!
+                                                          .folgoVoxLuminanceChamberUserPhoto,
+                                                      width: 145.0,
+                                                      height: 145.0,
+                                                      fit: BoxFit.cover,
+                                                    ),
                                         ),
                                         // 编辑图标
                                         Align(
@@ -214,12 +220,13 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                               children: [
                                 Text(
                                   'Name',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: FolgoMythriseCelestialTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'siyuanheiti',
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: FolgoMythriseCelestialTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 20.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
@@ -237,8 +244,10 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController1,
-                                        focusNode: _model.textFieldFocusNode1,
+                                        controller: _model
+                                            .folgoEclipsereignAstralhollowGate,
+                                        focusNode:
+                                            _model.folgoStarveilEchochasm,
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
@@ -246,16 +255,18 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                                         decoration: InputDecoration(
                                           isDense: true,
                                           labelStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FolgoMythriseCelestialTheme.of(
+                                                      context)
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
                                                     letterSpacing: 0.0,
                                                   ),
                                           hintText:
-                                              '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(FFAppState().folgoStardreamHallowedAtriumID)?.folgoVoxLuminanceChamberUserName}',
+                                              '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(FolgoAstralwovenMemoryVaulton().folgoStardreamHallowedAtriumID)?.folgoVoxLuminanceChamberUserName}',
                                           hintStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FolgoMythriseCelestialTheme.of(
+                                                      context)
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -309,20 +320,23 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                                             ),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FolgoMythriseCelestialTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'siyuanheiti',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .info,
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
                                               letterSpacing: 0.0,
                                             ),
                                         cursorColor:
-                                            FlutterFlowTheme.of(context).info,
+                                            FolgoMythriseCelestialTheme.of(
+                                                    context)
+                                                .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textController1Validator
+                                            .folgoMoonshatterCelestflowCitadel
                                             .asValidator(context),
                                       ),
                                     ),
@@ -340,12 +354,13 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                               children: [
                                 Text(
                                   'About Me',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: FolgoMythriseCelestialTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'siyuanheiti',
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: FolgoMythriseCelestialTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 20.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
@@ -361,30 +376,36 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                                   child: Container(
                                     width: double.infinity,
                                     child: TextFormField(
-                                      controller: _model.textController2,
-                                      focusNode: _model.textFieldFocusNode2,
+                                      controller:
+                                          _model.folgoSpiritfrostEonwharf,
+                                      focusNode:
+                                          _model.folgoFatebloomDreamshard,
                                       autofocus: false,
                                       enabled: true,
                                       textInputAction: TextInputAction.done,
                                       obscureText: false,
                                       decoration: InputDecoration(
                                         isDense: true,
-                                        labelStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .override(
-                                              fontFamily: 'siyuanheiti',
-                                              letterSpacing: 0.0,
-                                            ),
+                                        labelStyle:
+                                            FolgoMythriseCelestialTheme.of(
+                                                    context)
+                                                .labelMedium
+                                                .override(
+                                                  fontFamily: 'siyuanheiti',
+                                                  letterSpacing: 0.0,
+                                                ),
                                         hintText:
-                                            '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(FFAppState().folgoStardreamHallowedAtriumID)?.folgoVoxLuminanceChamberUserDescribe}',
-                                        hintStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .override(
-                                              fontFamily: 'siyuanheiti',
-                                              color: Color(0x7FFFFFFF),
-                                              fontSize: 13.0,
-                                              letterSpacing: 0.0,
-                                            ),
+                                            '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(FolgoAstralwovenMemoryVaulton().folgoStardreamHallowedAtriumID)?.folgoVoxLuminanceChamberUserDescribe}',
+                                        hintStyle:
+                                            FolgoMythriseCelestialTheme.of(
+                                                    context)
+                                                .labelMedium
+                                                .override(
+                                                  fontFamily: 'siyuanheiti',
+                                                  color: Color(0x7FFFFFFF),
+                                                  fontSize: 13.0,
+                                                  letterSpacing: 0.0,
+                                                ),
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
                                             color: Color(0x00000000),
@@ -426,18 +447,24 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                                           ),
                                         ),
                                       ),
-                                      style: FlutterFlowTheme.of(context)
+                                      style: FolgoMythriseCelestialTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'siyuanheiti',
-                                            color: FlutterFlowTheme.of(context)
-                                                .info,
+                                            color:
+                                                FolgoMythriseCelestialTheme.of(
+                                                        context)
+                                                    .info,
                                             letterSpacing: 0.0,
                                           ),
                                       cursorColor:
-                                          FlutterFlowTheme.of(context).info,
+                                          FolgoMythriseCelestialTheme.of(
+                                                  context)
+                                              .info,
                                       enableInteractiveSelection: true,
-                                      validator: _model.textController2Validator
+                                      validator: _model
+                                          .folgoLumincrestAetherforge
                                           .asValidator(context),
                                     ),
                                   ),
@@ -463,50 +490,56 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                   highlightColor: Colors.transparent,
                   onTap: () async {
                     // 显示加载
-                    GolfLoading.show(context, message: 'Saving...');
+                    FolgoEryndaleSovrionLoading.show(context,
+                        message: 'Saving...');
 
                     await Future.delayed(Duration(milliseconds: 800));
 
                     // 更新用户信息
-                    final userId = FFAppState().folgoStardreamHallowedAtriumID;
+                    final userId = FolgoAstralwovenMemoryVaulton()
+                        .folgoStardreamHallowedAtriumID;
 
                     // 更新名称（如果有输入）
-                    if (_model.textController1.text.isNotEmpty) {
-                      FFAppState().updateFolgoEonforgeMysteriaHallUsersAtIndex(
+                    if (_model
+                        .folgoEclipsereignAstralhollowGate.text.isNotEmpty) {
+                      FolgoAstralwovenMemoryVaulton()
+                          .updateFolgoEonforgeMysteriaHallUsersAtIndex(
                         userId,
                         (user) => user
                           ..folgoVoxLuminanceChamberUserName =
-                              _model.textController1.text,
+                              _model.folgoEclipsereignAstralhollowGate.text,
                       );
                     }
 
                     // 更新简介（如果有输入）
-                    if (_model.textController2.text.isNotEmpty) {
-                      FFAppState().updateFolgoEonforgeMysteriaHallUsersAtIndex(
+                    if (_model.folgoSpiritfrostEonwharf.text.isNotEmpty) {
+                      FolgoAstralwovenMemoryVaulton()
+                          .updateFolgoEonforgeMysteriaHallUsersAtIndex(
                         userId,
                         (user) => user
                           ..folgoVoxLuminanceChamberUserDescribe =
-                              _model.textController2.text,
+                              _model.folgoSpiritfrostEonwharf.text,
                       );
                     }
 
                     // 更新头像（如果有选择新图片）
-                    if (_model.selectedPhotoPath != null) {
-                      FFAppState().updateFolgoEonforgeMysteriaHallUsersAtIndex(
+                    if (_model.folgoDriavelleSenthorinQuorvax != null) {
+                      FolgoAstralwovenMemoryVaulton()
+                          .updateFolgoEonforgeMysteriaHallUsersAtIndex(
                         userId,
                         (user) => user
                           ..folgoVoxLuminanceChamberUserPhoto =
-                              _model.selectedPhotoPath!,
+                              _model.folgoDriavelleSenthorinQuorvax!,
                       );
                     }
 
-                    FFAppState().update(() {});
+                    FolgoAstralwovenMemoryVaulton().update(() {});
 
                     // 关闭加载
-                    GolfLoading.dismiss();
+                    FolgoEryndaleSovrionLoading.dismiss();
 
                     // 显示成功提示
-                    GolfLoading.showSuccess(
+                    FolgoEryndaleSovrionLoading.showSuccess(
                       context,
                       message: 'Profile updated successfully!',
                     );
@@ -529,7 +562,9 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                       alignment: AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         'Confirm',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
                               color: Color(0xFF171717),
                               fontSize: 16.0,

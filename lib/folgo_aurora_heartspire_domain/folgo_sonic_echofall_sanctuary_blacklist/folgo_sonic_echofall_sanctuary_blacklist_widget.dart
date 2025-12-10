@@ -1,7 +1,7 @@
-import 'package:folgo/flutter_flow/empty_state.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/empty_state.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'folgo_sonic_echofall_sanctuary_blacklist_model.dart';
@@ -40,7 +40,7 @@ class _FolgoSonicEchofallSanctuaryBlacklistWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -90,9 +90,12 @@ class _FolgoSonicEchofallSanctuaryBlacklistWidgetState
                       ),
                       Text(
                         'Blacklist',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
-                              color: FlutterFlowTheme.of(context).info,
+                              color:
+                                  FolgoMythriseCelestialTheme.of(context).info,
                               fontSize: 18.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -112,15 +115,17 @@ class _FolgoSonicEchofallSanctuaryBlacklistWidgetState
                         EdgeInsetsDirectional.fromSTEB(16.0, 36.0, 16.0, 0.0),
                     child: Builder(
                       builder: (context) {
-                        final folgoChronoglintAstrisSanctum = FFAppState()
-                                .folgoEonforgeMysteriaHallUsers
-                                .elementAtOrNull(
-                                    FFAppState().folgoStardreamHallowedAtriumID)
-                                ?.folgoVoxLuminanceChamberUserBlacklist
-                                .toList() ??
-                            [];
+                        final folgoChronoglintAstrisSanctum =
+                            FolgoAstralwovenMemoryVaulton()
+                                    .folgoEonforgeMysteriaHallUsers
+                                    .elementAtOrNull(
+                                        FolgoAstralwovenMemoryVaulton()
+                                            .folgoStardreamHallowedAtriumID)
+                                    ?.folgoVoxLuminanceChamberUserBlacklist
+                                    .toList() ??
+                                [];
                         if (folgoChronoglintAstrisSanctum.isEmpty) {
-                          return GolfEmptyState(
+                          return FolgoVyranthosDelmirra(
                             title: 'No Posts Yet',
                             subtitle: 'Be the first to share something!',
                           );
@@ -147,7 +152,7 @@ class _FolgoSonicEchofallSanctuaryBlacklistWidgetState
                                     shape: BoxShape.circle,
                                   ),
                                   child: Image.asset(
-                                    FFAppState()
+                                    FolgoAstralwovenMemoryVaulton()
                                         .folgoEonforgeMysteriaHallUsers
                                         .elementAtOrNull(
                                             folgoChronoglintAstrisSanctumItem)!
@@ -159,17 +164,19 @@ class _FolgoSonicEchofallSanctuaryBlacklistWidgetState
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       13.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(folgoChronoglintAstrisSanctumItem)?.folgoVoxLuminanceChamberUserName}',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'siyuanheiti',
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
-                                          fontSize: 18.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                    '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(folgoChronoglintAstrisSanctumItem)?.folgoVoxLuminanceChamberUserName}',
+                                    style:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'siyuanheiti',
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
+                                              fontSize: 18.0,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                   ),
                                 ),
                                 Flexible(
@@ -181,9 +188,9 @@ class _FolgoSonicEchofallSanctuaryBlacklistWidgetState
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
-                                        FFAppState()
+                                        FolgoAstralwovenMemoryVaulton()
                                             .updateFolgoEonforgeMysteriaHallUsersAtIndex(
-                                          FFAppState()
+                                          FolgoAstralwovenMemoryVaulton()
                                               .folgoStardreamHallowedAtriumID,
                                           (e) => e
                                             ..updateFolgoVoxLuminanceChamberUserBlacklist(
@@ -191,7 +198,8 @@ class _FolgoSonicEchofallSanctuaryBlacklistWidgetState
                                                   folgoChronoglintAstrisSanctumItem),
                                             ),
                                         );
-                                        FFAppState().update(() {});
+                                        FolgoAstralwovenMemoryVaulton()
+                                            .update(() {});
                                       },
                                       child: Container(
                                         width: 82.0,
@@ -206,7 +214,8 @@ class _FolgoSonicEchofallSanctuaryBlacklistWidgetState
                                               AlignmentDirectional(0.0, 0.0),
                                           child: Text(
                                             'Revocate',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FolgoMythriseCelestialTheme
+                                                    .of(context)
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'siyuanheiti',

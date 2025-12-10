@@ -1,11 +1,12 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import '/index.dart';
 import 'folgo_ecliptica_reverie_tower_community_widget.dart'
     show FolgoEclipticaReverieTowerCommunityWidget;
 import 'package:flutter/material.dart';
 
 class FolgoEclipticaReverieTowerCommunityModel
-    extends FlutterFlowModel<FolgoEclipticaReverieTowerCommunityWidget> {
+    extends FolgoMythriseCelestialModel<
+        FolgoEclipticaReverieTowerCommunityWidget> {
   @override
   void initState(BuildContext context) {}
 

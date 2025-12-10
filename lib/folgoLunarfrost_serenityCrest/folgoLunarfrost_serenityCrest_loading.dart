@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 /// 高尔夫主题的 Loading 和 Toast 组件
 /// 使用方法与 PianoLoading 一致
-class GolfLoading {
+class FolgoEryndaleSovrionLoading {
   static OverlayEntry? _overlayEntry;
   static bool _isShowing = false;
 
@@ -16,7 +16,8 @@ class GolfLoading {
     _isShowing = true;
 
     _overlayEntry = OverlayEntry(
-      builder: (context) => _GolfLoadingWidget(message: message),
+      builder: (context) =>
+          _FolgoEryndaleSovrionLoadingWidget(message: message),
     );
 
     Overlay.of(context).insert(_overlayEntry!);
@@ -99,16 +100,18 @@ class GolfLoading {
 enum _ToastType { success, error, info }
 
 /// 高尔夫球旋转加载动画
-class _GolfLoadingWidget extends StatefulWidget {
+class _FolgoEryndaleSovrionLoadingWidget extends StatefulWidget {
   final String message;
 
-  const _GolfLoadingWidget({required this.message});
+  const _FolgoEryndaleSovrionLoadingWidget({required this.message});
 
   @override
-  State<_GolfLoadingWidget> createState() => _GolfLoadingWidgetState();
+  State<_FolgoEryndaleSovrionLoadingWidget> createState() =>
+      _FolgoEryndaleSovrionLoadingWidgetState();
 }
 
-class _GolfLoadingWidgetState extends State<_GolfLoadingWidget>
+class _FolgoEryndaleSovrionLoadingWidgetState
+    extends State<_FolgoEryndaleSovrionLoadingWidget>
     with TickerProviderStateMixin {
   late AnimationController _ballController;
   late AnimationController _swingController;

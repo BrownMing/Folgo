@@ -1,8 +1,8 @@
-import 'package:folgo/flutter_flow/empty_state.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/empty_state.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_video_player.dart';
 import '/folgo_aurora_heartspire_domain/folgo_passion_whisper_palace_report_block/folgo_passion_whisper_palace_report_block_widget.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +44,7 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -136,20 +136,22 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                             16.0, 24.0, 0.0, 0.0),
                         child: Builder(
                           builder: (context) {
-                            final folgoDreamwovenCelestHarbor = FFAppState()
-                                .folgoEonforgeMysteriaHallUsers
-                                .where((e) =>
-                                    !FFAppState()
-                                        .folgoEonforgeMysteriaHallUsers
-                                        .elementAtOrNull(FFAppState()
-                                            .folgoStardreamHallowedAtriumID)!
-                                        .folgoVoxLuminanceChamberUserBlacklist
-                                        .contains(
-                                            e.folgoVoxLuminanceChamberUserId) &&
-                                    e.folgoVoxLuminanceChamberUserId !=
-                                        FFAppState()
-                                            .folgoStardreamHallowedAtriumID)
-                                .toList();
+                            final folgoDreamwovenCelestHarbor =
+                                FolgoAstralwovenMemoryVaulton()
+                                    .folgoEonforgeMysteriaHallUsers
+                                    .where((e) =>
+                                        !FolgoAstralwovenMemoryVaulton()
+                                            .folgoEonforgeMysteriaHallUsers
+                                            .elementAtOrNull(
+                                                FolgoAstralwovenMemoryVaulton()
+                                                    .folgoStardreamHallowedAtriumID)!
+                                            .folgoVoxLuminanceChamberUserBlacklist
+                                            .contains(e
+                                                .folgoVoxLuminanceChamberUserId) &&
+                                        e.folgoVoxLuminanceChamberUserId !=
+                                            FolgoAstralwovenMemoryVaulton()
+                                                .folgoStardreamHallowedAtriumID)
+                                    .toList();
 
                             return SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
@@ -169,7 +171,7 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                     onTap: () async {
                                       if (folgoDreamwovenCelestHarborItem
                                               .folgoVoxLuminanceChamberUserId !=
-                                          FFAppState()
+                                          FolgoAstralwovenMemoryVaulton()
                                               .folgoStardreamHallowedAtriumID) {
                                         context.pushNamed(
                                           FolgoSeraphicAffectionVaultOtherInfoWidget
@@ -229,12 +231,14 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                         ),
                                         Text(
                                           '${folgoDreamwovenCelestHarborItem.folgoVoxLuminanceChamberUserName}',
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FolgoMythriseCelestialTheme.of(
+                                                  context)
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'siyuanheiti',
                                                 color:
-                                                    FlutterFlowTheme.of(context)
+                                                    FolgoMythriseCelestialTheme
+                                                            .of(context)
                                                         .info,
                                                 fontSize: 13.0,
                                                 letterSpacing: 0.0,
@@ -256,18 +260,20 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                               16.0, 24.0, 16.0, 0.0),
                           child: Builder(
                             builder: (context) {
-                              final folgoEonlightMelancholyVault = FFAppState()
-                                  .folgoTimewornCrescentTempleVideos
-                                  .where((e) => !FFAppState()
-                                      .folgoEonforgeMysteriaHallUsers
-                                      .elementAtOrNull(FFAppState()
-                                          .folgoStardreamHallowedAtriumID)!
-                                      .folgoVoxLuminanceChamberUserBlacklist
-                                      .contains(e
-                                          .folgoWhisperHaloBasilicaVideoCreateId))
-                                  .toList();
+                              final folgoEonlightMelancholyVault =
+                                  FolgoAstralwovenMemoryVaulton()
+                                      .folgoTimewornCrescentTempleVideos
+                                      .where((e) => !FolgoAstralwovenMemoryVaulton()
+                                          .folgoEonforgeMysteriaHallUsers
+                                          .elementAtOrNull(
+                                              FolgoAstralwovenMemoryVaulton()
+                                                  .folgoStardreamHallowedAtriumID)!
+                                          .folgoVoxLuminanceChamberUserBlacklist
+                                          .contains(e
+                                              .folgoWhisperHaloBasilicaVideoCreateId))
+                                      .toList();
                               if (folgoEonlightMelancholyVault.isEmpty) {
-                                return GolfEmptyState(
+                                return FolgoVyranthosDelmirra(
                                   title: 'No Posts Yet',
                                   subtitle: 'Be the first to share something!',
                                 );
@@ -292,7 +298,7 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                   final folgoDreamsunderMythhaven =
                                       folgoEonlightMelancholyVaultItem
                                           .folgoWhisperHaloBasilicaVideoLikeUsers
-                                          .contains(FFAppState()
+                                          .contains(FolgoAstralwovenMemoryVaulton()
                                               .folgoStardreamHallowedAtriumID);
                                   return InkWell(
                                     splashColor: Colors.transparent,
@@ -341,7 +347,7 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                               onTap: () async {
                                                 if (folgoEonlightMelancholyVaultItem
                                                         .folgoWhisperHaloBasilicaVideoCreateId !=
-                                                    FFAppState()
+                                                    FolgoAstralwovenMemoryVaulton()
                                                         .folgoStardreamHallowedAtriumID) {
                                                   context.pushNamed(
                                                     FolgoSeraphicAffectionVaultOtherInfoWidget
@@ -374,7 +380,7 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Image.asset(
-                                                  FFAppState()
+                                                  FolgoAstralwovenMemoryVaulton()
                                                       .folgoEonforgeMysteriaHallUsers
                                                       .elementAtOrNull(
                                                           folgoEonlightMelancholyVaultItem
@@ -388,21 +394,23 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(7.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(folgoEonlightMelancholyVaultItem.folgoWhisperHaloBasilicaVideoCreateId)?.folgoVoxLuminanceChamberUserName}',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'siyuanheiti',
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .info,
-                                                      fontSize: 15.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
+                                                '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(folgoEonlightMelancholyVaultItem.folgoWhisperHaloBasilicaVideoCreateId)?.folgoVoxLuminanceChamberUserName}',
+                                                style:
+                                                    FolgoMythriseCelestialTheme
+                                                            .of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'siyuanheiti',
+                                                          color:
+                                                              FolgoMythriseCelestialTheme
+                                                                      .of(context)
+                                                                  .info,
+                                                          fontSize: 15.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
                                               ),
                                             ),
                                             Flexible(
@@ -414,19 +422,20 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                                       "relative",
                                                       folgoEonlightMelancholyVaultItem
                                                           .folgoWhisperHaloBasilicaVideoCreateTime!),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'siyuanheiti',
-                                                        color:
-                                                            Color(0x80FFFFFF),
-                                                        fontSize: 11.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                      ),
+                                                  style:
+                                                      FolgoMythriseCelestialTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'siyuanheiti',
+                                                            color: Color(
+                                                                0x80FFFFFF),
+                                                            fontSize: 11.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w500,
+                                                          ),
                                                 ),
                                               ),
                                             ),
@@ -445,7 +454,7 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                             ),
                                             child: Stack(
                                               children: [
-                                                RadiantMindAIBuddyVideoPlayer(
+                                                FolgoNebulightEchomireSanctum(
                                                   assetPath:
                                                       folgoEonlightMelancholyVaultItem
                                                           .folgoWhisperHaloBasilicaVideoUrl,
@@ -478,13 +487,13 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                                       folgoEonlightMelancholyVaultItem
                                                           .folgoWhisperHaloBasilicaVideoDescribe,
                                                       style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          FolgoMythriseCelestialTheme
+                                                                  .of(context)
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
                                                                     'siyuanheiti',
-                                                                color: FlutterFlowTheme.of(
+                                                                color: FolgoMythriseCelestialTheme.of(
                                                                         context)
                                                                     .info,
                                                                 fontSize: 16.0,
@@ -503,8 +512,8 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                                     height: 60.0,
                                                     decoration: BoxDecoration(
                                                       color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          FolgoMythriseCelestialTheme
+                                                                  .of(context)
                                                               .info,
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -536,7 +545,7 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                                                   if (folgoEonlightMelancholyVaultItem
                                                                       .folgoWhisperHaloBasilicaVideoLikeUsers
                                                                       .contains(
-                                                                          FFAppState()
+                                                                          FolgoAstralwovenMemoryVaulton()
                                                                               .folgoStardreamHallowedAtriumID)) {
                                                                     return InkWell(
                                                                       splashColor:
@@ -555,16 +564,16 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                                                           () async {
                                                                         HapticFeedback
                                                                             .heavyImpact();
-                                                                        FFAppState()
+                                                                        FolgoAstralwovenMemoryVaulton()
                                                                             .updateFolgoTimewornCrescentTempleVideosAtIndex(
                                                                           folgoEonlightMelancholyVaultItem
                                                                               .folgoWhisperHaloBasilicaVideoId,
                                                                           (e) => e
                                                                             ..updateFolgoWhisperHaloBasilicaVideoLikeUsers(
-                                                                              (e) => e.remove(FFAppState().folgoStardreamHallowedAtriumID),
+                                                                              (e) => e.remove(FolgoAstralwovenMemoryVaulton().folgoStardreamHallowedAtriumID),
                                                                             ),
                                                                         );
-                                                                        FFAppState()
+                                                                        FolgoAstralwovenMemoryVaulton()
                                                                             .update(() {});
                                                                       },
                                                                       child:
@@ -609,16 +618,16 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                                                           () async {
                                                                         HapticFeedback
                                                                             .heavyImpact();
-                                                                        FFAppState()
+                                                                        FolgoAstralwovenMemoryVaulton()
                                                                             .updateFolgoTimewornCrescentTempleVideosAtIndex(
                                                                           folgoEonlightMelancholyVaultItem
                                                                               .folgoWhisperHaloBasilicaVideoId,
                                                                           (e) => e
                                                                             ..updateFolgoWhisperHaloBasilicaVideoLikeUsers(
-                                                                              (e) => e.add(FFAppState().folgoStardreamHallowedAtriumID),
+                                                                              (e) => e.add(FolgoAstralwovenMemoryVaulton().folgoStardreamHallowedAtriumID),
                                                                             ),
                                                                         );
-                                                                        FFAppState()
+                                                                        FolgoAstralwovenMemoryVaulton()
                                                                             .update(() {});
                                                                       },
                                                                       child:
@@ -658,7 +667,7 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                                                             0.0),
                                                                 child: Text(
                                                                   '${folgoEonlightMelancholyVaultItem.folgoWhisperHaloBasilicaVideoLikeUsers.length.toString()} Like',
-                                                                  style: FlutterFlowTheme.of(
+                                                                  style: FolgoMythriseCelestialTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .override(
@@ -715,8 +724,8 @@ class _FolgoEclipticaReverieTowerCommunityWidgetState
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    '${FFAppState().folgoCosmicSeraphshadeComments.where((e) => folgoEonlightMelancholyVaultItem.folgoWhisperHaloBasilicaVideoId == e.folgoAstralHorizonCitadelCommentPostRef).toList().length.toString()}',
-                                                                    style: FlutterFlowTheme.of(
+                                                                    '${FolgoAstralwovenMemoryVaulton().folgoCosmicSeraphshadeComments.where((e) => folgoEonlightMelancholyVaultItem.folgoWhisperHaloBasilicaVideoId == e.folgoAstralHorizonCitadelCommentPostRef).toList().length.toString()}',
+                                                                    style: FolgoMythriseCelestialTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .override(

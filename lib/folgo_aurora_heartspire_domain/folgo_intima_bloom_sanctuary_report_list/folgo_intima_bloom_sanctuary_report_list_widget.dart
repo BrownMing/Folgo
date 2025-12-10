@@ -1,7 +1,7 @@
-import 'package:folgo/flutter_flow/golf_loading.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_loading.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import 'package:flutter/material.dart';
 import 'folgo_intima_bloom_sanctuary_report_list_model.dart';
 export 'folgo_intima_bloom_sanctuary_report_list_model.dart';
@@ -29,8 +29,8 @@ class _FolgoIntimaBloomSanctuaryReportListWidgetState
     _model =
         createModel(context, () => FolgoIntimaBloomSanctuaryReportListModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.folgoCrynvaleOntherionZyrfell ??= TextEditingController();
+    _model.folgoRenquillAstryvonMirestia ??= FocusNode();
   }
 
   @override
@@ -90,9 +90,12 @@ class _FolgoIntimaBloomSanctuaryReportListWidgetState
                       ),
                       Text(
                         'Report',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
-                              color: FlutterFlowTheme.of(context).info,
+                              color:
+                                  FolgoMythriseCelestialTheme.of(context).info,
                               fontSize: 18.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -117,11 +120,12 @@ class _FolgoIntimaBloomSanctuaryReportListWidgetState
                               16.0, 24.0, 0.0, 0.0),
                           child: Text(
                             'Report Type',
-                            style: FlutterFlowTheme.of(context)
+                            style: FolgoMythriseCelestialTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'siyuanheiti',
-                                  color: FlutterFlowTheme.of(context).info,
+                                  color: FolgoMythriseCelestialTheme.of(context)
+                                      .info,
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
@@ -164,7 +168,9 @@ class _FolgoIntimaBloomSanctuaryReportListWidgetState
                                         color: folgoSpiritflareCloudarcanum ==
                                                 folgoNightsylphArcanumHallIndex
                                             ? Color(0xFF78F57D)
-                                            : FlutterFlowTheme.of(context).info,
+                                            : FolgoMythriseCelestialTheme.of(
+                                                    context)
+                                                .info,
                                         borderRadius:
                                             BorderRadius.circular(20.0),
                                       ),
@@ -173,7 +179,8 @@ class _FolgoIntimaBloomSanctuaryReportListWidgetState
                                             AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           '${folgoNightsylphArcanumHallItem}',
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FolgoMythriseCelestialTheme.of(
+                                                  context)
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'siyuanheiti',
@@ -207,30 +214,34 @@ class _FolgoIntimaBloomSanctuaryReportListWidgetState
                               child: Container(
                                 width: 200.0,
                                 child: TextFormField(
-                                  controller: _model.textController,
-                                  focusNode: _model.textFieldFocusNode,
+                                  controller:
+                                      _model.folgoCrynvaleOntherionZyrfell,
+                                  focusNode:
+                                      _model.folgoRenquillAstryvonMirestia,
                                   autofocus: false,
                                   enabled: true,
                                   textInputAction: TextInputAction.done,
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     isDense: true,
-                                    labelStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily: 'siyuanheiti',
-                                          letterSpacing: 0.0,
-                                        ),
+                                    labelStyle:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .labelMedium
+                                            .override(
+                                              fontFamily: 'siyuanheiti',
+                                              letterSpacing: 0.0,
+                                            ),
                                     hintText:
                                         'Supplementary description (optional)',
-                                    hintStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily: 'siyuanheiti',
-                                          color: Color(0x80FFFFFF),
-                                          fontSize: 13.0,
-                                          letterSpacing: 0.0,
-                                        ),
+                                    hintStyle:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .labelMedium
+                                            .override(
+                                              fontFamily: 'siyuanheiti',
+                                              color: Color(0x80FFFFFF),
+                                              fontSize: 13.0,
+                                              letterSpacing: 0.0,
+                                            ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0x00000000),
@@ -260,20 +271,23 @@ class _FolgoIntimaBloomSanctuaryReportListWidgetState
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                   ),
-                                  style: FlutterFlowTheme.of(context)
+                                  style: FolgoMythriseCelestialTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'siyuanheiti',
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: FolgoMythriseCelestialTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 13.0,
                                         letterSpacing: 0.0,
                                       ),
                                   maxLines: 6,
                                   cursorColor:
-                                      FlutterFlowTheme.of(context).info,
+                                      FolgoMythriseCelestialTheme.of(context)
+                                          .info,
                                   enableInteractiveSelection: true,
-                                  validator: _model.textControllerValidator
+                                  validator: _model
+                                      .folgoNostavineErylthosQuantrel
                                       .asValidator(context),
                                 ),
                               ),
@@ -291,12 +305,14 @@ class _FolgoIntimaBloomSanctuaryReportListWidgetState
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                if (_model.textController.text != '') {
+                                if (_model.folgoCrynvaleOntherionZyrfell.text !=
+                                    '') {
                                   context.safePop();
-                                  GolfLoading.showSuccess(context,
+                                  FolgoEryndaleSovrionLoading.showSuccess(
+                                      context,
                                       message: 'Submit successfully!');
                                 } else {
-                                  GolfLoading.showError(context,
+                                  FolgoEryndaleSovrionLoading.showError(context,
                                       message: 'Please enter a description!');
                                 }
                               },
@@ -319,15 +335,16 @@ class _FolgoIntimaBloomSanctuaryReportListWidgetState
                                   alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     'Submit',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'siyuanheiti',
-                                          color: Color(0xFF171717),
-                                          fontSize: 16.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                    style:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'siyuanheiti',
+                                              color: Color(0xFF171717),
+                                              fontSize: 16.0,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                   ),
                                 ),
                               ),

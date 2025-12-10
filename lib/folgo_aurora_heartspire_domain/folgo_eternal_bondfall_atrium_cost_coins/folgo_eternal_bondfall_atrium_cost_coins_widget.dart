@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'folgo_eternal_bondfall_atrium_cost_coins_model.dart';
@@ -58,13 +58,14 @@ class _FolgoEternalBondfallAtriumCostCoinsWidgetState
             padding: EdgeInsetsDirectional.fromSTEB(113.0, 42.0, 20.0, 0.0),
             child: Text(
               'Sorry, your current balance is insufficient',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'siyuanheiti',
-                    color: Color(0xFF171717),
-                    fontSize: 15.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+              style:
+                  FolgoMythriseCelestialTheme.of(context).bodyMedium.override(
+                        fontFamily: 'siyuanheiti',
+                        color: Color(0xFF171717),
+                        fontSize: 15.0,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.bold,
+                      ),
             ),
           ),
           Padding(

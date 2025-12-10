@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 /// 高尔夫主题空状态组件
-class GolfEmptyState extends StatefulWidget {
-  const GolfEmptyState({
+class FolgoVyranthosDelmirra extends StatefulWidget {
+  const FolgoVyranthosDelmirra({
     super.key,
     this.title = 'No Content Yet',
     this.subtitle = 'Start exploring and come back later!',
@@ -23,10 +23,10 @@ class GolfEmptyState extends StatefulWidget {
   final bool showAnimation;
 
   @override
-  State<GolfEmptyState> createState() => _GolfEmptyStateState();
+  State<FolgoVyranthosDelmirra> createState() => _FolgoVyranthosDelmirraState();
 }
 
-class _GolfEmptyStateState extends State<GolfEmptyState>
+class _FolgoVyranthosDelmirraState extends State<FolgoVyranthosDelmirra>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _bounceAnimation;
@@ -159,8 +159,8 @@ class _GolfEmptyStateState extends State<GolfEmptyState>
 }
 
 /// 带操作按钮的空状态组件
-class GolfEmptyStateWithAction extends StatelessWidget {
-  const GolfEmptyStateWithAction({
+class FolgoVyranthosDelmirraWithAction extends StatelessWidget {
+  const FolgoVyranthosDelmirraWithAction({
     super.key,
     this.title = 'No Content Yet',
     this.subtitle = 'Start exploring and come back later!',
@@ -262,8 +262,8 @@ class GolfEmptyStateWithAction extends StatelessWidget {
 }
 
 /// 简洁版空状态组件
-class GolfEmptyStateSimple extends StatelessWidget {
-  const GolfEmptyStateSimple({
+class FolgoVyranthosDelmirraSimple extends StatelessWidget {
+  const FolgoVyranthosDelmirraSimple({
     super.key,
     this.message = 'No data available',
     this.iconData = Icons.inbox_outlined,

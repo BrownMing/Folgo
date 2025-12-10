@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 
 import '/backend/schema/structs/index.dart';
 
-import '/flutter_flow/flutter_flow_util.dart';
+import '../folgoLunarfrost_serenityCrest_util.dart';
 
 import '/index.dart';
 
@@ -51,7 +51,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             )
           : FolgoNimbusContinuumStartWidget(),
       routes: [
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.showSplashImage
@@ -70,34 +70,34 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 )
               : FolgoNimbusContinuumStartWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoNimbusContinuumStartWidget.routeName,
           path: FolgoNimbusContinuumStartWidget.routePath,
           builder: (context, params) => FolgoNimbusContinuumStartWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoMoonwhisperCathedralLoginWidget.routeName,
           path: FolgoMoonwhisperCathedralLoginWidget.routePath,
           builder: (context, params) => FolgoMoonwhisperCathedralLoginWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoStarlitEternityGardenSignUpWidget.routeName,
           path: FolgoStarlitEternityGardenSignUpWidget.routePath,
           builder: (context, params) =>
               FolgoStarlitEternityGardenSignUpWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoCelestialBloomChambersForgetPasswordWidget.routeName,
           path: FolgoCelestialBloomChambersForgetPasswordWidget.routePath,
           builder: (context, params) =>
               FolgoCelestialBloomChambersForgetPasswordWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoLuminaraSerenityHallHomeWidget.routeName,
           path: FolgoLuminaraSerenityHallHomeWidget.routePath,
           builder: (context, params) => FolgoLuminaraSerenityHallHomeWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoEvernightHarmonyVaultDetailsWidget.routeName,
           path: FolgoEvernightHarmonyVaultDetailsWidget.routePath,
           builder: (context, params) => FolgoEvernightHarmonyVaultDetailsWidget(
@@ -107,13 +107,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoEclipticaReverieTowerCommunityWidget.routeName,
           path: FolgoEclipticaReverieTowerCommunityWidget.routePath,
           builder: (context, params) =>
               FolgoEclipticaReverieTowerCommunityWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoNebulightEmbraceHavenVideoWidget.routeName,
           path: FolgoNebulightEmbraceHavenVideoWidget.routePath,
           builder: (context, params) => FolgoNebulightEmbraceHavenVideoWidget(
@@ -127,13 +127,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoDevotionEclipseSanctumPostVideosWidget.routeName,
           path: FolgoDevotionEclipseSanctumPostVideosWidget.routePath,
           builder: (context, params) =>
               FolgoDevotionEclipseSanctumPostVideosWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoEndearmentLunaChapelActiveDetailsWidget.routeName,
           path: FolgoEndearmentLunaChapelActiveDetailsWidget.routePath,
           builder: (context, params) =>
@@ -144,13 +144,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoSoulwovenPromiseHallPostActiveWidget.routeName,
           path: FolgoSoulwovenPromiseHallPostActiveWidget.routePath,
           builder: (context, params) =>
               FolgoSoulwovenPromiseHallPostActiveWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoSeraphicAffectionVaultOtherInfoWidget.routeName,
           path: FolgoSeraphicAffectionVaultOtherInfoWidget.routePath,
           builder: (context, params) =>
@@ -161,18 +161,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoIntimaBloomSanctuaryReportListWidget.routeName,
           path: FolgoIntimaBloomSanctuaryReportListWidget.routePath,
           builder: (context, params) =>
               FolgoIntimaBloomSanctuaryReportListWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoLoversAstraManorChatHomeWidget.routeName,
           path: FolgoLoversAstraManorChatHomeWidget.routePath,
           builder: (context, params) => FolgoLoversAstraManorChatHomeWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoVelvetEmotionSpireMessageWidget.routeName,
           path: FolgoVelvetEmotionSpireMessageWidget.routePath,
           builder: (context, params) => FolgoVelvetEmotionSpireMessageWidget(
@@ -186,7 +186,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoTenderDreamriseTempleChatVideoWidget.routeName,
           path: FolgoTenderDreamriseTempleChatVideoWidget.routePath,
           builder: (context, params) =>
@@ -197,37 +197,37 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoHarmonyResonanceChapelInfomationWidget.routeName,
           path: FolgoHarmonyResonanceChapelInfomationWidget.routePath,
           builder: (context, params) =>
               FolgoHarmonyResonanceChapelInfomationWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoWhisperborneAuralShrineSettingsWidget.routeName,
           path: FolgoWhisperborneAuralShrineSettingsWidget.routePath,
           builder: (context, params) =>
               FolgoWhisperborneAuralShrineSettingsWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoVoicescapeSerenityHallEditFileWidget.routeName,
           path: FolgoVoicescapeSerenityHallEditFileWidget.routePath,
           builder: (context, params) =>
               FolgoVoicescapeSerenityHallEditFileWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoSonicEchofallSanctuaryBlacklistWidget.routeName,
           path: FolgoSonicEchofallSanctuaryBlacklistWidget.routePath,
           builder: (context, params) =>
               FolgoSonicEchofallSanctuaryBlacklistWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoAuralTideborneTempleRechargeWidget.routeName,
           path: FolgoAuralTideborneTempleRechargeWidget.routePath,
           builder: (context, params) =>
               FolgoAuralTideborneTempleRechargeWidget(),
         ),
-        FFRoute(
+        FolgoRimvarinTalyndexOthrelia(
           name: FolgoResonaDreamspireHallTermsServiceWidget.routeName,
           path: FolgoResonaDreamspireHallTermsServiceWidget.routePath,
           builder: (context, params) =>
@@ -252,8 +252,6 @@ extension NavParamExtensions on Map<String, String?> {
 
 extension NavigationExtensions on BuildContext {
   void safePop() {
-    // If there is only one route on the stack, navigate to the initial
-    // page instead of popping.
     if (canPop()) {
       pop();
     } else {
@@ -282,8 +280,6 @@ class FFParameters {
 
   Map<String, dynamic> futureParamValues = {};
 
-  // Parameters are empty if the params map is empty or if the only parameter
-  // present is the special extra parameter reserved for the transition info.
   bool get isEmpty =>
       state.allParams.isEmpty ||
       (state.allParams.length == 1 &&
@@ -332,8 +328,8 @@ class FFParameters {
   }
 }
 
-class FFRoute {
-  const FFRoute({
+class FolgoRimvarinTalyndexOthrelia {
+  const FolgoRimvarinTalyndexOthrelia({
     required this.name,
     required this.path,
     required this.builder,

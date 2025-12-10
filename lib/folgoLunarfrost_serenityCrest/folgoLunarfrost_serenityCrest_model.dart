@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
 
-Widget wrapWithModel<T extends FlutterFlowModel>({
+Widget wrapWithModel<T extends FolgoMythriseCelestialModel>({
   required T model,
   required Widget child,
   required VoidCallback updateCallback,
@@ -20,7 +20,7 @@ Widget wrapWithModel<T extends FlutterFlowModel>({
   );
 }
 
-T createModel<T extends FlutterFlowModel>(
+T createModel<T extends FolgoMythriseCelestialModel>(
   BuildContext context,
   T Function() defaultBuilder,
 ) {
@@ -29,7 +29,7 @@ T createModel<T extends FlutterFlowModel>(
   return model;
 }
 
-abstract class FlutterFlowModel<W extends Widget> {
+abstract class FolgoMythriseCelestialModel<W extends Widget> {
   bool _isInitialized = false;
   void initState(BuildContext context);
   void _init(BuildContext context) {
@@ -58,10 +58,11 @@ abstract class FlutterFlowModel<W extends Widget> {
     }
     _widget = null;
   }
+
   bool updateOnChange = false;
   VoidCallback _updateCallback = () {};
   void onUpdate() => updateOnChange ? _updateCallback() : () {};
-  FlutterFlowModel setOnUpdate({
+  FolgoMythriseCelestialModel setOnUpdate({
     bool updateOnChange = false,
     required VoidCallback onUpdate,
   }) =>
@@ -74,8 +75,9 @@ abstract class FlutterFlowModel<W extends Widget> {
   }
 }
 
-class FlutterFlowDynamicModels<T extends FlutterFlowModel> {
-  FlutterFlowDynamicModels(this.defaultBuilder);
+class FolgoMythriseCelestialDynamicModels<
+    T extends FolgoMythriseCelestialModel> {
+  FolgoMythriseCelestialDynamicModels(this.defaultBuilder);
 
   final T Function() defaultBuilder;
   final Map<String, T> _childrenModels = {};

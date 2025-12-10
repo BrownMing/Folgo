@@ -1,8 +1,8 @@
 import 'package:folgo/backend/schema/structs/folgo_vox_luminance_chamber_user_struct.dart';
-import 'package:folgo/flutter_flow/golf_loading.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_loading.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'folgo_moonwhisper_cathedral_login_model.dart';
@@ -30,11 +30,11 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
     super.initState();
     _model = createModel(context, () => FolgoMoonwhisperCathedralLoginModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.folgoEclipsereignAstralhollowGate ??= TextEditingController();
+    _model.folgoStarveilEchochasm ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.folgoSpiritfrostEonwharf ??= TextEditingController();
+    _model.folgoFatebloomDreamshard ??= FocusNode();
   }
 
   @override
@@ -94,9 +94,12 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                       ),
                       Text(
                         'sign in',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
-                              color: FlutterFlowTheme.of(context).info,
+                              color:
+                                  FolgoMythriseCelestialTheme.of(context).info,
                               fontSize: 18.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -130,16 +133,18 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                                       0.0, 0.0, 0.0, 13.0),
                                   child: Text(
                                     'Email',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'siyuanheiti',
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
-                                          fontSize: 20.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                    style:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'siyuanheiti',
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
+                                              fontSize: 20.0,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                   ),
                                 ),
                                 Container(
@@ -154,8 +159,10 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController1,
-                                        focusNode: _model.textFieldFocusNode1,
+                                        controller: _model
+                                            .folgoEclipsereignAstralhollowGate,
+                                        focusNode:
+                                            _model.folgoStarveilEchochasm,
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
@@ -163,7 +170,8 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                                         decoration: InputDecoration(
                                           isDense: true,
                                           labelStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FolgoMythriseCelestialTheme.of(
+                                                      context)
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -171,7 +179,8 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                                                   ),
                                           hintText: 'Enter email address',
                                           hintStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FolgoMythriseCelestialTheme.of(
+                                                      context)
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -213,20 +222,23 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                                                 BorderRadius.circular(8.0),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FolgoMythriseCelestialTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'siyuanheiti',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .info,
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
                                               letterSpacing: 0.0,
                                             ),
                                         cursorColor:
-                                            FlutterFlowTheme.of(context).info,
+                                            FolgoMythriseCelestialTheme.of(
+                                                    context)
+                                                .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textController1Validator
+                                            .folgoMoonshatterCelestflowCitadel
                                             .asValidator(context),
                                       ),
                                     ),
@@ -252,13 +264,14 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                                     children: [
                                       Text(
                                         'Password',
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FolgoMythriseCelestialTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'siyuanheiti',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .info,
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
@@ -286,7 +299,8 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                                         },
                                         child: Text(
                                           'Forgot password?',
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FolgoMythriseCelestialTheme.of(
+                                                  context)
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'siyuanheiti',
@@ -313,16 +327,19 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController2,
-                                        focusNode: _model.textFieldFocusNode2,
+                                        controller:
+                                            _model.folgoSpiritfrostEonwharf,
+                                        focusNode:
+                                            _model.folgoFatebloomDreamshard,
                                         autofocus: false,
                                         enabled: true,
                                         textInputAction: TextInputAction.done,
-                                        obscureText: false,
+                                        obscureText: true,
                                         decoration: InputDecoration(
                                           isDense: true,
                                           labelStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FolgoMythriseCelestialTheme.of(
+                                                      context)
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -330,7 +347,8 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                                                   ),
                                           hintText: 'Enter password',
                                           hintStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FolgoMythriseCelestialTheme.of(
+                                                      context)
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -372,20 +390,23 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                                                 BorderRadius.circular(8.0),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FolgoMythriseCelestialTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'siyuanheiti',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .info,
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
                                               letterSpacing: 0.0,
                                             ),
                                         cursorColor:
-                                            FlutterFlowTheme.of(context).info,
+                                            FolgoMythriseCelestialTheme.of(
+                                                    context)
+                                                .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textController2Validator
+                                            .folgoLumincrestAetherforge
                                             .asValidator(context),
                                       ),
                                     ),
@@ -421,26 +442,29 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                                 children: [
                                   Text(
                                     'Don\'t have an account? ',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'siyuanheiti',
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
-                                          fontSize: 12.0,
-                                          letterSpacing: 0.0,
-                                        ),
+                                    style:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'siyuanheiti',
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
+                                              fontSize: 12.0,
+                                              letterSpacing: 0.0,
+                                            ),
                                   ),
                                   Text(
                                     'Sign up',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'siyuanheiti',
-                                          color: Color(0xFF78F57D),
-                                          fontSize: 12.0,
-                                          letterSpacing: 0.0,
-                                        ),
+                                    style:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'siyuanheiti',
+                                              color: Color(0xFF78F57D),
+                                              fontSize: 12.0,
+                                              letterSpacing: 0.0,
+                                            ),
                                   ),
                                 ],
                               ),
@@ -460,12 +484,14 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                 child: GestureDetector(
                   onTap: () async {
                     // 获取输入的邮箱和密码
-                    final email = _model.textController1.text.trim();
-                    final password = _model.textController2.text.trim();
+                    final email =
+                        _model.folgoEclipsereignAstralhollowGate.text.trim();
+                    final password =
+                        _model.folgoSpiritfrostEonwharf.text.trim();
 
                     // 验证邮箱和密码不能为空
                     if (email.isEmpty || password.isEmpty) {
-                      GolfLoading.showError(
+                      FolgoEryndaleSovrionLoading.showError(
                         context,
                         message: 'Please enter email and password',
                       );
@@ -473,13 +499,15 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                     }
 
                     // 显示加载动画
-                    GolfLoading.show(context, message: 'Logging in...');
+                    FolgoEryndaleSovrionLoading.show(context,
+                        message: 'Logging in...');
 
                     // 模拟网络延迟
                     await Future.delayed(const Duration(milliseconds: 2000));
 
                     // 在用户列表中查找匹配的用户
-                    final users = FFAppState().folgoEonforgeMysteriaHallUsers;
+                    final users = FolgoAstralwovenMemoryVaulton()
+                        .folgoEonforgeMysteriaHallUsers;
                     FolgoVoxLuminanceChamberUserStruct? matchedUser;
 
                     for (var user in users) {
@@ -492,16 +520,17 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                     }
 
                     // 关闭加载动画
-                    GolfLoading.dismiss();
+                    FolgoEryndaleSovrionLoading.dismiss();
 
                     // 如果找到匹配的用户
                     if (matchedUser != null) {
                       // 保存用户ID到appstate
-                      FFAppState().folgoStardreamHallowedAtriumID =
+                      FolgoAstralwovenMemoryVaulton()
+                              .folgoStardreamHallowedAtriumID =
                           matchedUser.folgoVoxLuminanceChamberUserId;
 
                       // 显示成功提示
-                      GolfLoading.showSuccess(
+                      FolgoEryndaleSovrionLoading.showSuccess(
                         context,
                         message: 'Login successful!',
                         duration: const Duration(milliseconds: 1500),
@@ -516,7 +545,7 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                       }
                     } else {
                       // 登录失败提示
-                      GolfLoading.showError(
+                      FolgoEryndaleSovrionLoading.showError(
                         context,
                         message: 'Invalid email or password',
                       );
@@ -538,7 +567,9 @@ class _FolgoMoonwhisperCathedralLoginWidgetState
                       alignment: AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         'Login',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
                               color: Color(0xFF171717),
                               fontSize: 16.0,

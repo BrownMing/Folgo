@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import '/folgo_astral_weave_folgo_eternum_lattice/folgo_astra_memory_citadel_scores/folgo_astra_memory_citadel_scores_widget.dart';
 import '/folgo_aurora_heartspire_domain/folgo_passion_whisper_palace_report_block/folgo_passion_whisper_palace_report_block_widget.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -47,7 +47,7 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -97,10 +97,13 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                         ),
                       ),
                       Text(
-                        '${FFAppState().folgoInfinityVeilSanctuaryVenues.elementAtOrNull(widget.folgoLunarwhisperHorizonKeep!)?.folgoToneweaveEmotionCoveVenuesTitle}',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        '${FolgoAstralwovenMemoryVaulton().folgoInfinityVeilSanctuaryVenues.elementAtOrNull(widget.folgoLunarwhisperHorizonKeep!)?.folgoToneweaveEmotionCoveVenuesTitle}',
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
-                              color: FlutterFlowTheme.of(context).info,
+                              color:
+                                  FolgoMythriseCelestialTheme.of(context).info,
                               fontSize: 18.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -173,13 +176,14 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                               0.0, 24.0, 0.0, 0.0),
                           child: Builder(
                             builder: (context) {
-                              final folgoStarboundSolitudeHaven = FFAppState()
-                                      .folgoInfinityVeilSanctuaryVenues
-                                      .elementAtOrNull(
-                                          widget.folgoLunarwhisperHorizonKeep!)
-                                      ?.folgoToneweaveEmotionCoveVenuesShow
-                                      .toList() ??
-                                  [];
+                              final folgoStarboundSolitudeHaven =
+                                  FolgoAstralwovenMemoryVaulton()
+                                          .folgoInfinityVeilSanctuaryVenues
+                                          .elementAtOrNull(widget
+                                              .folgoLunarwhisperHorizonKeep!)
+                                          ?.folgoToneweaveEmotionCoveVenuesShow
+                                          .toList() ??
+                                      [];
 
                               return Container(
                                 width: double.infinity,
@@ -202,7 +206,7 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                                     );
                                   },
                                   carouselController:
-                                      _model.carouselController ??=
+                                      _model.folgoMiravexLunitoraSyndelle ??=
                                           CarouselSliderController(),
                                   options: CarouselOptions(
                                     initialPage: max(
@@ -220,7 +224,8 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                                     autoPlay: false,
                                     onPageChanged: (index, _) {
                                       setState(() {
-                                        _model.carouselCurrentIndex = index;
+                                        _model.folgoDrimthaleVorinoxEchavia =
+                                            index;
                                       });
                                     },
                                   ),
@@ -234,7 +239,7 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                               0.0, 16.0, 0.0, 0.0),
                           child: Builder(
                             builder: (context) {
-                              final imageCount = FFAppState()
+                              final imageCount = FolgoAstralwovenMemoryVaulton()
                                       .folgoInfinityVeilSanctuaryVenues
                                       .elementAtOrNull(
                                           widget.folgoLunarwhisperHorizonKeep!)
@@ -245,8 +250,8 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: List.generate(imageCount, (index) {
-                                  final isActive =
-                                      index == _model.carouselCurrentIndex;
+                                  final isActive = index ==
+                                      _model.folgoDrimthaleVorinoxEchavia;
                                   return AnimatedContainer(
                                     duration: Duration(milliseconds: 300),
                                     curve: Curves.easeInOut,
@@ -275,12 +280,14 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                '${FFAppState().folgoInfinityVeilSanctuaryVenues.elementAtOrNull(widget.folgoLunarwhisperHorizonKeep!)?.folgoToneweaveEmotionCoveVenuesTitle}',
-                                style: FlutterFlowTheme.of(context)
+                                '${FolgoAstralwovenMemoryVaulton().folgoInfinityVeilSanctuaryVenues.elementAtOrNull(widget.folgoLunarwhisperHorizonKeep!)?.folgoToneweaveEmotionCoveVenuesTitle}',
+                                style: FolgoMythriseCelestialTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'siyuanheiti',
-                                      color: FlutterFlowTheme.of(context).info,
+                                      color: FolgoMythriseCelestialTheme.of(
+                                              context)
+                                          .info,
                                       fontSize: 24.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
@@ -290,7 +297,8 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                                 width: 48.0,
                                 height: 24.0,
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context).info,
+                                  color: FolgoMythriseCelestialTheme.of(context)
+                                      .info,
                                   borderRadius: BorderRadius.circular(100.0),
                                 ),
                                 child: Row(
@@ -304,8 +312,9 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                                       fit: BoxFit.cover,
                                     ),
                                     Text(
-                                      '${FFAppState().folgoInfinityVeilSanctuaryVenues.elementAtOrNull(widget.folgoLunarwhisperHorizonKeep!)?.folgoToneweaveEmotionCoveVenuesStars.toString()}',
-                                      style: FlutterFlowTheme.of(context)
+                                      '${FolgoAstralwovenMemoryVaulton().folgoInfinityVeilSanctuaryVenues.elementAtOrNull(widget.folgoLunarwhisperHorizonKeep!)?.folgoToneweaveEmotionCoveVenuesStars.toString()}',
+                                      style: FolgoMythriseCelestialTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'siyuanheiti',
@@ -324,12 +333,13 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                           padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 13.0, 15.0, 0.0),
                           child: Text(
-                            '${FFAppState().folgoInfinityVeilSanctuaryVenues.elementAtOrNull(widget.folgoLunarwhisperHorizonKeep!)?.folgoToneweaveEmotionCoveVenuesDescribe}',
-                            style: FlutterFlowTheme.of(context)
+                            '${FolgoAstralwovenMemoryVaulton().folgoInfinityVeilSanctuaryVenues.elementAtOrNull(widget.folgoLunarwhisperHorizonKeep!)?.folgoToneweaveEmotionCoveVenuesDescribe}',
+                            style: FolgoMythriseCelestialTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'siyuanheiti',
-                                  color: FlutterFlowTheme.of(context).info,
+                                  color: FolgoMythriseCelestialTheme.of(context)
+                                      .info,
                                   fontSize: 13.0,
                                   letterSpacing: 0.0,
                                 ),
@@ -347,12 +357,12 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                     children: [
                       Builder(
                         builder: (context) {
-                          if (FFAppState()
+                          if (FolgoAstralwovenMemoryVaulton()
                                   .folgoInfinityVeilSanctuaryVenues
                                   .elementAtOrNull(
                                       widget.folgoLunarwhisperHorizonKeep!)
                                   ?.folgoToneweaveEmotionCoveVenuesLikeUsers
-                                  .contains(FFAppState()
+                                  .contains(FolgoAstralwovenMemoryVaulton()
                                       .folgoStardreamHallowedAtriumID) ??
                               false) {
                             return InkWell(
@@ -362,16 +372,17 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 HapticFeedback.heavyImpact();
-                                FFAppState()
+                                FolgoAstralwovenMemoryVaulton()
                                     .updateFolgoInfinityVeilSanctuaryVenuesAtIndex(
                                   widget.folgoLunarwhisperHorizonKeep!,
                                   (e) => e
                                     ..updateFolgoToneweaveEmotionCoveVenuesLikeUsers(
-                                      (e) => e.remove(FFAppState()
-                                          .folgoStardreamHallowedAtriumID),
+                                      (e) => e.remove(
+                                          FolgoAstralwovenMemoryVaulton()
+                                              .folgoStardreamHallowedAtriumID),
                                     ),
                                 );
-                                FFAppState().update(() {});
+                                FolgoAstralwovenMemoryVaulton().update(() {});
                               },
                               child: AnimatedContainer(
                                 duration: Duration(milliseconds: 300),
@@ -396,16 +407,17 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 HapticFeedback.heavyImpact();
-                                FFAppState()
+                                FolgoAstralwovenMemoryVaulton()
                                     .updateFolgoInfinityVeilSanctuaryVenuesAtIndex(
                                   widget.folgoLunarwhisperHorizonKeep!,
                                   (e) => e
                                     ..updateFolgoToneweaveEmotionCoveVenuesLikeUsers(
-                                      (e) => e.add(FFAppState()
-                                          .folgoStardreamHallowedAtriumID),
+                                      (e) => e.add(
+                                          FolgoAstralwovenMemoryVaulton()
+                                              .folgoStardreamHallowedAtriumID),
                                     ),
                                 );
-                                FFAppState().update(() {});
+                                FolgoAstralwovenMemoryVaulton().update(() {});
                               },
                               child: AnimatedContainer(
                                 duration: Duration(milliseconds: 300),
@@ -467,7 +479,7 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 'Score',
-                                style: FlutterFlowTheme.of(context)
+                                style: FolgoMythriseCelestialTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'siyuanheiti',

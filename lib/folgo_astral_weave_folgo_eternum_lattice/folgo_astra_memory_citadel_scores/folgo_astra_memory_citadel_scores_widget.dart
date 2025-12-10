@@ -1,7 +1,7 @@
-import 'package:folgo/flutter_flow/golf_loading.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_loading.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import 'package:flutter/material.dart';
 import 'folgo_astra_memory_citadel_scores_model.dart';
 export 'folgo_astra_memory_citadel_scores_model.dart';
@@ -70,13 +70,14 @@ class _FolgoAstraMemoryCitadelScoresWidgetState
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 110.0, 0.0),
               child: Text(
                 'What do you think of this golf course？',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'siyuanheiti',
-                      color: Colors.black,
-                      fontSize: 24.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.bold,
-                    ),
+                style:
+                    FolgoMythriseCelestialTheme.of(context).bodyMedium.override(
+                          fontFamily: 'siyuanheiti',
+                          color: Colors.black,
+                          fontSize: 24.0,
+                          letterSpacing: 0.0,
+                          fontWeight: FontWeight.bold,
+                        ),
               ),
             ),
             Expanded(
@@ -85,7 +86,7 @@ class _FolgoAstraMemoryCitadelScoresWidgetState
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).info,
+                    color: FolgoMythriseCelestialTheme.of(context).info,
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   child: Padding(
@@ -98,7 +99,7 @@ class _FolgoAstraMemoryCitadelScoresWidgetState
                         children: [
                           Text(
                             'Facilities',
-                            style: FlutterFlowTheme.of(context)
+                            style: FolgoMythriseCelestialTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'siyuanheiti',
@@ -125,7 +126,7 @@ class _FolgoAstraMemoryCitadelScoresWidgetState
                                 0.0, 16.0, 0.0, 0.0),
                             child: Text(
                               'Service',
-                              style: FlutterFlowTheme.of(context)
+                              style: FolgoMythriseCelestialTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'siyuanheiti',
@@ -153,7 +154,7 @@ class _FolgoAstraMemoryCitadelScoresWidgetState
                                 0.0, 16.0, 0.0, 0.0),
                             child: Text(
                               'Overall',
-                              style: FlutterFlowTheme.of(context)
+                              style: FolgoMythriseCelestialTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'siyuanheiti',
@@ -190,7 +191,8 @@ class _FolgoAstraMemoryCitadelScoresWidgetState
                 child: GestureDetector(
                   onTap: () async {
                     // 显示加载动画
-                    GolfLoading.show(context, message: 'Submitting...');
+                    FolgoEryndaleSovrionLoading.show(context,
+                        message: 'Submitting...');
 
                     // 模拟网络延迟
                     await Future.delayed(const Duration(milliseconds: 800));
@@ -206,24 +208,24 @@ class _FolgoAstraMemoryCitadelScoresWidgetState
                     if (venueIndex != null &&
                         venueIndex >= 0 &&
                         venueIndex <
-                            FFAppState()
+                            FolgoAstralwovenMemoryVaulton()
                                 .folgoInfinityVeilSanctuaryVenues
                                 .length) {
-                      FFAppState()
+                      FolgoAstralwovenMemoryVaulton()
                           .updateFolgoInfinityVeilSanctuaryVenuesAtIndex(
                         venueIndex,
                         (venue) => venue
                           ..folgoToneweaveEmotionCoveVenuesStars =
                               averageRating,
                       );
-                      FFAppState().update(() {});
+                      FolgoAstralwovenMemoryVaulton().update(() {});
                     }
 
                     // 关闭加载动画
-                    GolfLoading.dismiss();
+                    FolgoEryndaleSovrionLoading.dismiss();
 
                     // 显示成功提示
-                    GolfLoading.showSuccess(
+                    FolgoEryndaleSovrionLoading.showSuccess(
                       context,
                       message: 'Rating submitted successfully!',
                       duration: const Duration(milliseconds: 1500),
@@ -253,7 +255,9 @@ class _FolgoAstraMemoryCitadelScoresWidgetState
                       alignment: AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         'Submit',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
                               color: Color(0xFF171717),
                               fontSize: 16.0,

@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import '/folgo_aurora_heartspire_domain/folgo_eternal_bondfall_atrium_cost_coins/folgo_eternal_bondfall_atrium_cost_coins_widget.dart';
 import '/folgo_aurora_heartspire_domain/folgo_passion_whisper_palace_report_block/folgo_passion_whisper_palace_report_block_widget.dart';
 import '/index.dart';
@@ -41,7 +41,7 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -92,9 +92,9 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                             shape: BoxShape.circle,
                           ),
                           child: Image.asset(
-                            FFAppState()
+                            FolgoAstralwovenMemoryVaulton()
                                 .folgoEonforgeMysteriaHallUsers
-                                .elementAtOrNull(FFAppState()
+                                .elementAtOrNull(FolgoAstralwovenMemoryVaulton()
                                     .folgoStardreamHallowedAtriumID)!
                                 .folgoVoxLuminanceChamberUserPhoto,
                             fit: BoxFit.cover,
@@ -111,22 +111,26 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                             children: [
                               Text(
                                 'H!~',
-                                style: FlutterFlowTheme.of(context)
+                                style: FolgoMythriseCelestialTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'siyuanheiti',
-                                      color: FlutterFlowTheme.of(context).info,
+                                      color: FolgoMythriseCelestialTheme.of(
+                                              context)
+                                          .info,
                                       fontSize: 18.0,
                                       letterSpacing: 0.0,
                                     ),
                               ),
                               Text(
-                                '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(FFAppState().folgoStardreamHallowedAtriumID)?.folgoVoxLuminanceChamberUserName}',
-                                style: FlutterFlowTheme.of(context)
+                                '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(FolgoAstralwovenMemoryVaulton().folgoStardreamHallowedAtriumID)?.folgoVoxLuminanceChamberUserName}',
+                                style: FolgoMythriseCelestialTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'siyuanheiti',
-                                      color: FlutterFlowTheme.of(context).info,
+                                      color: FolgoMythriseCelestialTheme.of(
+                                              context)
+                                          .info,
                                       fontSize: 18.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
@@ -218,39 +222,47 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                               TextSpan(
                                                 text:
                                                     'Choose and join a golf event ',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'siyuanheiti',
-                                                      color: Color(0xFF171717),
-                                                      fontSize: 15.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
+                                                style:
+                                                    FolgoMythriseCelestialTheme
+                                                            .of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'siyuanheiti',
+                                                          color:
+                                                              Color(0xFF171717),
+                                                          fontSize: 15.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
                                               ),
                                               TextSpan(
                                                 text: 'or create a new one',
-                                                style: FlutterFlowTheme.of(
+                                                style:
+                                                    FolgoMythriseCelestialTheme
+                                                            .of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'siyuanheiti',
+                                                          color:
+                                                              Color(0xFF171717),
+                                                          fontSize: 13.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                        ),
+                                              )
+                                            ],
+                                            style:
+                                                FolgoMythriseCelestialTheme.of(
                                                         context)
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'siyuanheiti',
-                                                      color: Color(0xFF171717),
-                                                      fontSize: 13.0,
                                                       letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.normal,
                                                     ),
-                                              )
-                                            ],
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'siyuanheiti',
-                                                  letterSpacing: 0.0,
-                                                ),
                                           ),
                                         ),
                                       ),
@@ -346,7 +358,7 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                               ),
                                                               Text(
                                                                 'Create',
-                                                                style: FlutterFlowTheme.of(
+                                                                style: FolgoMythriseCelestialTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .override(
@@ -377,12 +389,12 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                         12.0, 0.0, 0.0, 0.0),
                                                 child: Builder(
                                                   builder: (context) {
-                                                    final folgoHeartweaveEclipseTemple = FFAppState()
+                                                    final folgoHeartweaveEclipseTemple = FolgoAstralwovenMemoryVaulton()
                                                         .folgoVastrealmEclipseHavenActives
-                                                        .where((e) => !FFAppState()
+                                                        .where((e) => !FolgoAstralwovenMemoryVaulton()
                                                             .folgoEonforgeMysteriaHallUsers
                                                             .elementAtOrNull(
-                                                                FFAppState()
+                                                                FolgoAstralwovenMemoryVaulton()
                                                                     .folgoStardreamHallowedAtriumID)!
                                                             .folgoVoxLuminanceChamberUserBlacklist
                                                             .contains(e
@@ -520,8 +532,8 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                           children: [
                                             Text(
                                               'Do you want to learn more about golf? ',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              style: FolgoMythriseCelestialTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -537,7 +549,8 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                               child: Text(
                                                 'Go to the community and take a look!',
                                                 style:
-                                                    FlutterFlowTheme.of(context)
+                                                    FolgoMythriseCelestialTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
@@ -559,12 +572,12 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                 children: [
                                                   Builder(
                                                     builder: (context) {
-                                                      final folgoAffectionLuminspireCourt = FFAppState()
+                                                      final folgoAffectionLuminspireCourt = FolgoAstralwovenMemoryVaulton()
                                                           .folgoEonforgeMysteriaHallUsers
-                                                          .where((e) => !FFAppState()
+                                                          .where((e) => !FolgoAstralwovenMemoryVaulton()
                                                               .folgoEonforgeMysteriaHallUsers
                                                               .elementAtOrNull(
-                                                                  FFAppState()
+                                                                  FolgoAstralwovenMemoryVaulton()
                                                                       .folgoStardreamHallowedAtriumID)!
                                                               .folgoVoxLuminanceChamberUserBlacklist
                                                               .contains(e
@@ -604,7 +617,7 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                                       .cover,
                                                                   image: Image
                                                                       .asset(
-                                                                    FFAppState()
+                                                                    FolgoAstralwovenMemoryVaulton()
                                                                         .folgoEonforgeMysteriaHallUsers
                                                                         .elementAtOrNull(
                                                                             folgoAffectionLuminspireCourtItem.folgoVoxLuminanceChamberUserId)!
@@ -633,18 +646,22 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                                 0.0, 0.0),
                                                     child: Text(
                                                       '40 Join',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'siyuanheiti',
-                                                            color: Colors.black,
-                                                            fontSize: 10.0,
-                                                            letterSpacing: 0.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
+                                                      style:
+                                                          FolgoMythriseCelestialTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'siyuanheiti',
+                                                                color: Colors
+                                                                    .black,
+                                                                fontSize: 10.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w500,
+                                                              ),
                                                     ),
                                                   ),
                                                   Padding(
@@ -669,22 +686,24 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                                 0.0, 0.0),
                                                         child: Text(
                                                           'Go',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'siyuanheiti',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .info,
-                                                                fontSize: 15.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                              ),
+                                                          style:
+                                                              FolgoMythriseCelestialTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'siyuanheiti',
+                                                                    color: FolgoMythriseCelestialTheme.of(
+                                                                            context)
+                                                                        .info,
+                                                                    fontSize:
+                                                                        15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold,
+                                                                  ),
                                                         ),
                                                       ),
                                                     ),
@@ -715,11 +734,13 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                 0.0, 24.0, 0.0, 0.0),
                             child: Text(
                               'Popular Venues',
-                              style: FlutterFlowTheme.of(context)
+                              style: FolgoMythriseCelestialTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'siyuanheiti',
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .info,
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -732,7 +753,7 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                             child: Builder(
                               builder: (context) {
                                 final folgoEmberloveAstraSanctuary =
-                                    FFAppState()
+                                    FolgoAstralwovenMemoryVaulton()
                                         .folgoInfinityVeilSanctuaryVenues
                                         .toList();
 
@@ -817,7 +838,7 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                             if (folgoEmberloveAstraSanctuaryItem
                                                                 .folgoToneweaveEmotionCoveVenuesLikeUsers
                                                                 .contains(
-                                                                    FFAppState()
+                                                                    FolgoAstralwovenMemoryVaulton()
                                                                         .folgoStardreamHallowedAtriumID)) {
                                                               return InkWell(
                                                                 splashColor: Colors
@@ -833,17 +854,17 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                                     () async {
                                                                   HapticFeedback
                                                                       .heavyImpact();
-                                                                  FFAppState()
+                                                                  FolgoAstralwovenMemoryVaulton()
                                                                       .updateFolgoInfinityVeilSanctuaryVenuesAtIndex(
                                                                     folgoEmberloveAstraSanctuaryItem
                                                                         .folgoToneweaveEmotionCoveVenuesId,
                                                                     (e) => e
                                                                       ..updateFolgoToneweaveEmotionCoveVenuesLikeUsers(
                                                                         (e) => e
-                                                                            .remove(FFAppState().folgoStardreamHallowedAtriumID),
+                                                                            .remove(FolgoAstralwovenMemoryVaulton().folgoStardreamHallowedAtriumID),
                                                                       ),
                                                                   );
-                                                                  FFAppState()
+                                                                  FolgoAstralwovenMemoryVaulton()
                                                                       .update(
                                                                           () {});
                                                                 },
@@ -880,17 +901,17 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                                     () async {
                                                                   HapticFeedback
                                                                       .heavyImpact();
-                                                                  FFAppState()
+                                                                  FolgoAstralwovenMemoryVaulton()
                                                                       .updateFolgoInfinityVeilSanctuaryVenuesAtIndex(
                                                                     folgoEmberloveAstraSanctuaryItem
                                                                         .folgoToneweaveEmotionCoveVenuesId,
                                                                     (e) => e
                                                                       ..updateFolgoToneweaveEmotionCoveVenuesLikeUsers(
                                                                         (e) => e
-                                                                            .add(FFAppState().folgoStardreamHallowedAtriumID),
+                                                                            .add(FolgoAstralwovenMemoryVaulton().folgoStardreamHallowedAtriumID),
                                                                       ),
                                                                   );
-                                                                  FFAppState()
+                                                                  FolgoAstralwovenMemoryVaulton()
                                                                       .update(
                                                                           () {});
                                                                 },
@@ -1007,7 +1028,7 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                           height: 24.0,
                                                           decoration:
                                                               BoxDecoration(
-                                                            color: FlutterFlowTheme
+                                                            color: FolgoMythriseCelestialTheme
                                                                     .of(context)
                                                                 .info,
                                                             borderRadius:
@@ -1032,7 +1053,7 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                               ),
                                                               Text(
                                                                 '${folgoEmberloveAstraSanctuaryItem.folgoToneweaveEmotionCoveVenuesStars.toString()}',
-                                                                style: FlutterFlowTheme.of(
+                                                                style: FolgoMythriseCelestialTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .override(
@@ -1061,20 +1082,22 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                   .fromSTEB(8.0, 8.0, 0.0, 0.0),
                                               child: Text(
                                                 '${folgoEmberloveAstraSanctuaryItem.folgoToneweaveEmotionCoveVenuesTitle}',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'siyuanheiti',
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .info,
-                                                      fontSize: 13.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                    ),
+                                                style:
+                                                    FolgoMythriseCelestialTheme
+                                                            .of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'siyuanheiti',
+                                                          color:
+                                                              FolgoMythriseCelestialTheme
+                                                                      .of(context)
+                                                                  .info,
+                                                          fontSize: 13.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
                                               ),
                                             ),
                                             Padding(
@@ -1095,18 +1118,20 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                           0.0, 0.0),
                                                   child: Text(
                                                     '${folgoEmberloveAstraSanctuaryItem.folgoToneweaveEmotionCoveVenuesAcres.toString()} acres',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'siyuanheiti',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .info,
-                                                          fontSize: 12.0,
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                    style:
+                                                        FolgoMythriseCelestialTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'siyuanheiti',
+                                                              color: FolgoMythriseCelestialTheme
+                                                                      .of(context)
+                                                                  .info,
+                                                              fontSize: 12.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                            ),
                                                   ),
                                                 ),
                                               ),

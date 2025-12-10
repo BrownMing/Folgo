@@ -1,7 +1,7 @@
-import 'package:folgo/flutter_flow/golf_loading.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_loading.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'folgo_echoheart_celeste_atrium_delete_acount_model.dart';
@@ -60,13 +60,14 @@ class _FolgoEchoheartCelesteAtriumDeleteAcountWidgetState
             padding: EdgeInsetsDirectional.fromSTEB(113.0, 32.0, 20.0, 0.0),
             child: Text(
               'Deleting the account will clear the account data. Are you sure to delete?',
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'siyuanheiti',
-                    color: Color(0xFF171717),
-                    fontSize: 15.0,
-                    letterSpacing: 0.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+              style:
+                  FolgoMythriseCelestialTheme.of(context).bodyMedium.override(
+                        fontFamily: 'siyuanheiti',
+                        color: Color(0xFF171717),
+                        fontSize: 15.0,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.bold,
+                      ),
             ),
           ),
           Padding(
@@ -103,17 +104,19 @@ class _FolgoEchoheartCelesteAtriumDeleteAcountWidgetState
                       Navigator.pop(context);
 
                       // 显示加载
-                      GolfLoading.show(context, message: 'Deleting account...');
+                      FolgoEryndaleSovrionLoading.show(context,
+                          message: 'Deleting account...');
                       await Future.delayed(const Duration(milliseconds: 1000));
 
                       // 重置用户ID为默认值
-                      FFAppState().folgoStardreamHallowedAtriumID = 0;
+                      FolgoAstralwovenMemoryVaulton()
+                          .folgoStardreamHallowedAtriumID = 0;
 
                       // 清除用户相关数据
-                      FFAppState().update(() {});
+                      FolgoAstralwovenMemoryVaulton().update(() {});
 
-                      GolfLoading.dismiss();
-                      GolfLoading.showSuccess(
+                      FolgoEryndaleSovrionLoading.dismiss();
+                      FolgoEryndaleSovrionLoading.showSuccess(
                         context,
                         message: 'Account deleted successfully!',
                         duration: const Duration(milliseconds: 1500),

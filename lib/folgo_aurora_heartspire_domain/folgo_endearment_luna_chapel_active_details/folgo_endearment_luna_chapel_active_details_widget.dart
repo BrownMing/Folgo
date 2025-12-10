@@ -1,7 +1,7 @@
-import 'package:folgo/flutter_flow/golf_loading.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_loading.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import '/folgo_aurora_heartspire_domain/folgo_passion_whisper_palace_report_block/folgo_passion_whisper_palace_report_block_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -31,8 +31,7 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
-  // 滑动加入状态
-  double _slidePosition = 0.0;
+  double _folgoEvarionXoltheraMindrelis = 0.0;
   bool _folgoMooncrestEternaflow = false;
 
   @override
@@ -51,7 +50,7 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -121,11 +120,12 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                                   padding: MediaQuery.viewInsetsOf(context),
                                   child:
                                       FolgoPassionWhisperPalaceReportBlockWidget(
-                                    folgoEonwyrmStarluminHarborUser: FFAppState()
-                                        .folgoVastrealmEclipseHavenActives
-                                        .elementAtOrNull(widget
-                                            .folgoVastrealmEclipseHavenRef!)!
-                                        .folgoChronoLatticeSanctuaryActiveCreateId,
+                                    folgoEonwyrmStarluminHarborUser:
+                                        FolgoAstralwovenMemoryVaulton()
+                                            .folgoVastrealmEclipseHavenActives
+                                            .elementAtOrNull(widget
+                                                .folgoVastrealmEclipseHavenRef!)!
+                                            .folgoChronoLatticeSanctuaryActiveCreateId,
                                   ),
                                 ),
                               );
@@ -167,7 +167,7 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                           ClipRRect(
                             borderRadius: BorderRadius.circular(20.0),
                             child: Image.asset(
-                              FFAppState()
+                              FolgoAstralwovenMemoryVaulton()
                                   .folgoVastrealmEclipseHavenActives
                                   .elementAtOrNull(
                                       widget.folgoVastrealmEclipseHavenRef!)!
@@ -181,12 +181,14 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 24.0, 0.0, 0.0),
                             child: Text(
-                              '${FFAppState().folgoVastrealmEclipseHavenActives.elementAtOrNull(widget.folgoVastrealmEclipseHavenRef!)?.folgoChronoLatticeSanctuaryActiveName}',
-                              style: FlutterFlowTheme.of(context)
+                              '${FolgoAstralwovenMemoryVaulton().folgoVastrealmEclipseHavenActives.elementAtOrNull(widget.folgoVastrealmEclipseHavenRef!)?.folgoChronoLatticeSanctuaryActiveName}',
+                              style: FolgoMythriseCelestialTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'siyuanheiti',
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .info,
                                     fontSize: 24.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -237,18 +239,21 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                                                 ),
                                               ),
                                               Text(
-                                                '${FFAppState().folgoVastrealmEclipseHavenActives.elementAtOrNull(widget.folgoVastrealmEclipseHavenRef!)?.folgoChronoLatticeSanctuaryActiveDate}',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'siyuanheiti',
-                                                      color: Color(0xFF171717),
-                                                      fontSize: 13.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                    ),
+                                                '${FolgoAstralwovenMemoryVaulton().folgoVastrealmEclipseHavenActives.elementAtOrNull(widget.folgoVastrealmEclipseHavenRef!)?.folgoChronoLatticeSanctuaryActiveDate}',
+                                                style:
+                                                    FolgoMythriseCelestialTheme
+                                                            .of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'siyuanheiti',
+                                                          color:
+                                                              Color(0xFF171717),
+                                                          fontSize: 13.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
                                               ),
                                             ].divide(SizedBox(width: 7.0)),
                                           ),
@@ -268,18 +273,21 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                                                 ),
                                               ),
                                               Text(
-                                                '${FFAppState().folgoVastrealmEclipseHavenActives.elementAtOrNull(widget.folgoVastrealmEclipseHavenRef!)?.folgoChronoLatticeSanctuaryActiveTime}',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'siyuanheiti',
-                                                      color: Color(0xFF171717),
-                                                      fontSize: 13.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                    ),
+                                                '${FolgoAstralwovenMemoryVaulton().folgoVastrealmEclipseHavenActives.elementAtOrNull(widget.folgoVastrealmEclipseHavenRef!)?.folgoChronoLatticeSanctuaryActiveTime}',
+                                                style:
+                                                    FolgoMythriseCelestialTheme
+                                                            .of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'siyuanheiti',
+                                                          color:
+                                                              Color(0xFF171717),
+                                                          fontSize: 13.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
                                               ),
                                             ].divide(SizedBox(width: 7.0)),
                                           ),
@@ -309,9 +317,9 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     7.0, 0.0, 0.0, 0.0),
                                             child: Text(
-                                              '${FFAppState().folgoVastrealmEclipseHavenActives.elementAtOrNull(widget.folgoVastrealmEclipseHavenRef!)?.folgoChronoLatticeSanctuaryActiveLocation}',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              '${FolgoAstralwovenMemoryVaulton().folgoVastrealmEclipseHavenActives.elementAtOrNull(widget.folgoVastrealmEclipseHavenRef!)?.folgoChronoLatticeSanctuaryActiveLocation}',
+                                              style: FolgoMythriseCelestialTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -349,13 +357,14 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                                                     7.0, 0.0, 0.0, 0.0),
                                             child: Builder(
                                               builder: (context) {
-                                                final folgoTimewornCrescentTemple = FFAppState()
-                                                        .folgoVastrealmEclipseHavenActives
-                                                        .elementAtOrNull(widget
-                                                            .folgoVastrealmEclipseHavenRef!)
-                                                        ?.folgoChronoLatticeSanctuaryActiveJoinUsers
-                                                        .toList() ??
-                                                    [];
+                                                final folgoTimewornCrescentTemple =
+                                                    FolgoAstralwovenMemoryVaulton()
+                                                            .folgoVastrealmEclipseHavenActives
+                                                            .elementAtOrNull(widget
+                                                                .folgoVastrealmEclipseHavenRef!)
+                                                            ?.folgoChronoLatticeSanctuaryActiveJoinUsers
+                                                            .toList() ??
+                                                        [];
 
                                                 return Stack(
                                                   children: List.generate(
@@ -387,7 +396,7 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                                                               DecorationImage(
                                                             fit: BoxFit.cover,
                                                             image: Image.asset(
-                                                              FFAppState()
+                                                              FolgoAstralwovenMemoryVaulton()
                                                                   .folgoEonforgeMysteriaHallUsers
                                                                   .elementAtOrNull(
                                                                       folgoTimewornCrescentTempleItem)!
@@ -397,7 +406,7 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                                                           shape:
                                                               BoxShape.circle,
                                                           border: Border.all(
-                                                            color: FlutterFlowTheme
+                                                            color: FolgoMythriseCelestialTheme
                                                                     .of(context)
                                                                 .info,
                                                             width: 1.0,
@@ -415,9 +424,9 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 0.0, 0.0, 0.0),
                                             child: Text(
-                                              '+${FFAppState().folgoVastrealmEclipseHavenActives.elementAtOrNull(widget.folgoVastrealmEclipseHavenRef!)?.folgoChronoLatticeSanctuaryActiveJoinUsers.length.toString()}',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              '+${FolgoAstralwovenMemoryVaulton().folgoVastrealmEclipseHavenActives.elementAtOrNull(widget.folgoVastrealmEclipseHavenRef!)?.folgoChronoLatticeSanctuaryActiveJoinUsers.length.toString()}',
+                                              style: FolgoMythriseCelestialTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -441,11 +450,13 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                                 0.0, 13.0, 0.0, 0.0),
                             child: Text(
                               'Introduction',
-                              style: FlutterFlowTheme.of(context)
+                              style: FolgoMythriseCelestialTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'siyuanheiti',
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .info,
                                     fontSize: 18.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -456,8 +467,8 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 7.0, 0.0, 0.0),
                             child: Text(
-                              '${FFAppState().folgoVastrealmEclipseHavenActives.elementAtOrNull(widget.folgoVastrealmEclipseHavenRef!)?.folgoChronoLatticeSanctuaryActiveIntroduction}',
-                              style: FlutterFlowTheme.of(context)
+                              '${FolgoAstralwovenMemoryVaulton().folgoVastrealmEclipseHavenActives.elementAtOrNull(widget.folgoVastrealmEclipseHavenRef!)?.folgoChronoLatticeSanctuaryActiveIntroduction}',
+                              style: FolgoMythriseCelestialTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'siyuanheiti',
@@ -493,7 +504,7 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                           // 滑动进度背景
                           AnimatedContainer(
                             duration: Duration(milliseconds: 100),
-                            width: _slidePosition + 68.0,
+                            width: _folgoEvarionXoltheraMindrelis + 68.0,
                             height: 52.0,
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
@@ -512,12 +523,15 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                               duration: Duration(milliseconds: 200),
                               opacity: _folgoMooncrestEternaflow
                                   ? 0.0
-                                  : (1.0 - (_slidePosition / maxSlide) * 0.8),
+                                  : (1.0 -
+                                      (_folgoEvarionXoltheraMindrelis /
+                                              maxSlide) *
+                                          0.8),
                               child: GradientText(
                                 _folgoMooncrestEternaflow
                                     ? 'Joined!'
                                     : 'Join Now',
-                                style: FlutterFlowTheme.of(context)
+                                style: FolgoMythriseCelestialTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'siyuanheiti',
@@ -551,15 +565,16 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                                   SizedBox(width: 8.0),
                                   Text(
                                     'Joined!',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'siyuanheiti',
-                                          color: Colors.white,
-                                          fontSize: 16.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                    style:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'siyuanheiti',
+                                              color: Colors.white,
+                                              fontSize: 16.0,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                   ),
                                 ],
                               ),
@@ -567,46 +582,52 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                           // 可滑动的按钮
                           if (!_folgoMooncrestEternaflow)
                             Positioned(
-                              left: _slidePosition,
+                              left: _folgoEvarionXoltheraMindrelis,
                               top: 0,
                               child: GestureDetector(
                                 onHorizontalDragUpdate: (details) {
                                   setState(() {
-                                    _slidePosition += details.delta.dx;
-                                    if (_slidePosition < 0) _slidePosition = 0;
-                                    if (_slidePosition > maxSlide) {
-                                      _slidePosition = maxSlide;
+                                    _folgoEvarionXoltheraMindrelis +=
+                                        details.delta.dx;
+                                    if (_folgoEvarionXoltheraMindrelis < 0)
+                                      _folgoEvarionXoltheraMindrelis = 0;
+                                    if (_folgoEvarionXoltheraMindrelis >
+                                        maxSlide) {
+                                      _folgoEvarionXoltheraMindrelis = maxSlide;
                                     }
                                   });
                                 },
                                 onHorizontalDragEnd: (details) async {
-                                  if (_slidePosition >= maxSlide * 0.8) {
+                                  if (_folgoEvarionXoltheraMindrelis >=
+                                      maxSlide * 0.8) {
                                     // 滑动超过80%，触发加入
                                     setState(() {
-                                      _slidePosition = maxSlide;
+                                      _folgoEvarionXoltheraMindrelis = maxSlide;
                                       _folgoMooncrestEternaflow = true;
                                     });
 
                                     // 更新活动数据，将当前用户添加到参与列表
                                     final activeIndex =
                                         widget.folgoVastrealmEclipseHavenRef;
-                                    final currentUserId = FFAppState()
-                                        .folgoStardreamHallowedAtriumID;
+                                    final currentUserId =
+                                        FolgoAstralwovenMemoryVaulton()
+                                            .folgoStardreamHallowedAtriumID;
 
                                     if (activeIndex != null &&
                                         activeIndex >= 0 &&
                                         activeIndex <
-                                            FFAppState()
+                                            FolgoAstralwovenMemoryVaulton()
                                                 .folgoVastrealmEclipseHavenActives
                                                 .length) {
                                       // 检查用户是否已经加入
-                                      final joinUsers = FFAppState()
-                                          .folgoVastrealmEclipseHavenActives[
-                                              activeIndex]
-                                          .folgoChronoLatticeSanctuaryActiveJoinUsers;
+                                      final joinUsers =
+                                          FolgoAstralwovenMemoryVaulton()
+                                              .folgoVastrealmEclipseHavenActives[
+                                                  activeIndex]
+                                              .folgoChronoLatticeSanctuaryActiveJoinUsers;
 
                                       if (!joinUsers.contains(currentUserId)) {
-                                        FFAppState()
+                                        FolgoAstralwovenMemoryVaulton()
                                             .updateFolgoVastrealmEclipseHavenActivesAtIndex(
                                           activeIndex,
                                           (active) => active
@@ -614,12 +635,13 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                                               (list) => list.add(currentUserId),
                                             ),
                                         );
-                                        FFAppState().update(() {});
+                                        FolgoAstralwovenMemoryVaulton()
+                                            .update(() {});
                                       }
                                     }
 
                                     // 显示成功提示
-                                    GolfLoading.showSuccess(
+                                    FolgoEryndaleSovrionLoading.showSuccess(
                                       context,
                                       message: 'Successfully joined!',
                                       duration:
@@ -628,7 +650,7 @@ class _FolgoEndearmentLunaChapelActiveDetailsWidgetState
                                   } else {
                                     // 滑动不足，回弹
                                     setState(() {
-                                      _slidePosition = 0;
+                                      _folgoEvarionXoltheraMindrelis = 0;
                                     });
                                   }
                                 },

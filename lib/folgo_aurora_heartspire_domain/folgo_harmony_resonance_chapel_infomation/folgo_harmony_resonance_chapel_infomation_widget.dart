@@ -1,8 +1,8 @@
-import 'package:folgo/flutter_flow/empty_state.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/empty_state.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_video_player.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -42,7 +42,7 @@ class _FolgoHarmonyResonanceChapelInfomationWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -55,9 +55,10 @@ class _FolgoHarmonyResonanceChapelInfomationWidgetState
         body: Stack(
           children: [
             Image.asset(
-              FFAppState()
+              FolgoAstralwovenMemoryVaulton()
                   .folgoEonforgeMysteriaHallUsers
-                  .elementAtOrNull(FFAppState().folgoStardreamHallowedAtriumID)!
+                  .elementAtOrNull(FolgoAstralwovenMemoryVaulton()
+                      .folgoStardreamHallowedAtriumID)!
                   .folgoVoxLuminanceChamberUserPhoto,
               width: double.infinity,
               height: 332.0,
@@ -94,13 +95,16 @@ class _FolgoHarmonyResonanceChapelInfomationWidgetState
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 24.0, 0.0, 0.0),
                                     child: Text(
-                                      '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(FFAppState().folgoStardreamHallowedAtriumID)?.folgoVoxLuminanceChamberUserName}',
-                                      style: FlutterFlowTheme.of(context)
+                                      '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(FolgoAstralwovenMemoryVaulton().folgoStardreamHallowedAtriumID)?.folgoVoxLuminanceChamberUserName}',
+                                      style: FolgoMythriseCelestialTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'siyuanheiti',
-                                            color: FlutterFlowTheme.of(context)
-                                                .info,
+                                            color:
+                                                FolgoMythriseCelestialTheme.of(
+                                                        context)
+                                                    .info,
                                             fontSize: 24.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
@@ -111,8 +115,9 @@ class _FolgoHarmonyResonanceChapelInfomationWidgetState
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 0.0),
                                     child: Text(
-                                      '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(FFAppState().folgoStardreamHallowedAtriumID)?.folgoVoxLuminanceChamberUserDescribe}',
-                                      style: FlutterFlowTheme.of(context)
+                                      '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(FolgoAstralwovenMemoryVaulton().folgoStardreamHallowedAtriumID)?.folgoVoxLuminanceChamberUserDescribe}',
+                                      style: FolgoMythriseCelestialTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'siyuanheiti',
@@ -237,22 +242,24 @@ class _FolgoHarmonyResonanceChapelInfomationWidgetState
                                                                   0.0,
                                                                   0.0),
                                                       child: Text(
-                                                        '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(FFAppState().folgoStardreamHallowedAtriumID)?.folgoVoxLuminanceChamberUserCoins.toString()}',
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'siyuanheiti',
-                                                              color:
-                                                                  Colors.black,
-                                                              fontSize: 16.0,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                            ),
+                                                        '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(FolgoAstralwovenMemoryVaulton().folgoStardreamHallowedAtriumID)?.folgoVoxLuminanceChamberUserCoins.toString()}',
+                                                        style:
+                                                            FolgoMythriseCelestialTheme
+                                                                    .of(context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'siyuanheiti',
+                                                                  color: Colors
+                                                                      .black,
+                                                                  fontSize:
+                                                                      16.0,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                ),
                                                       ),
                                                     ),
                                                     Flexible(
@@ -302,16 +309,16 @@ class _FolgoHarmonyResonanceChapelInfomationWidgetState
                                     child: Builder(
                                       builder: (context) {
                                         final folgoWhisperglowReverenceManor =
-                                            FFAppState()
+                                            FolgoAstralwovenMemoryVaulton()
                                                 .folgoTimewornCrescentTempleVideos
                                                 .where((e) =>
                                                     e.folgoWhisperHaloBasilicaVideoCreateId ==
-                                                    FFAppState()
+                                                    FolgoAstralwovenMemoryVaulton()
                                                         .folgoStardreamHallowedAtriumID)
                                                 .toList();
                                         if (folgoWhisperglowReverenceManor
                                             .isEmpty) {
-                                          return GolfEmptyState(
+                                          return FolgoVyranthosDelmirra(
                                             title: 'No Posts Yet',
                                             subtitle:
                                                 'Be the first to share something!',
@@ -346,7 +353,7 @@ class _FolgoHarmonyResonanceChapelInfomationWidgetState
                                               ),
                                               child: Stack(
                                                 children: [
-                                                  RadiantMindAIBuddyVideoPlayer(
+                                                  FolgoNebulightEchomireSanctum(
                                                     assetPath:
                                                         folgoWhisperglowReverenceManorItem
                                                             .folgoWhisperHaloBasilicaVideoUrl,

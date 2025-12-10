@@ -1,35 +1,34 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import 'folgo_starlit_eternity_garden_sign_up_widget.dart'
     show FolgoStarlitEternityGardenSignUpWidget;
 import 'package:flutter/material.dart';
 
-class FolgoStarlitEternityGardenSignUpModel
-    extends FlutterFlowModel<FolgoStarlitEternityGardenSignUpWidget> {
+class FolgoStarlitEternityGardenSignUpModel extends FolgoMythriseCelestialModel<
+    FolgoStarlitEternityGardenSignUpWidget> {
+  FocusNode? folgoStarveilEchochasm;
+  TextEditingController? folgoEclipsereignAstralhollowGate;
+  String? Function(BuildContext, String?)? folgoMoonshatterCelestflowCitadel;
 
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
+  FocusNode? folgoFatebloomDreamshard;
+  TextEditingController? folgoSpiritfrostEonwharf;
+  String? Function(BuildContext, String?)? folgoLumincrestAetherforge;
 
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
-
-  FocusNode? textFieldFocusNode3;
-  TextEditingController? textController3;
-  String? Function(BuildContext, String?)? textController3Validator;
+  FocusNode? folgoWindrelicEchowake;
+  TextEditingController? folgoVoyageruneMythbound;
+  String? Function(BuildContext, String?)? folgoHeartflareAeternum;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
+    folgoStarveilEchochasm?.dispose();
+    folgoEclipsereignAstralhollowGate?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
+    folgoFatebloomDreamshard?.dispose();
+    folgoSpiritfrostEonwharf?.dispose();
 
-    textFieldFocusNode3?.dispose();
-    textController3?.dispose();
+    folgoWindrelicEchowake?.dispose();
+    folgoVoyageruneMythbound?.dispose();
   }
 }

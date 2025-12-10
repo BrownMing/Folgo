@@ -1,10 +1,11 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import 'folgo_intima_bloom_sanctuary_report_list_widget.dart'
     show FolgoIntimaBloomSanctuaryReportListWidget;
 import 'package:flutter/material.dart';
 
 class FolgoIntimaBloomSanctuaryReportListModel
-    extends FlutterFlowModel<FolgoIntimaBloomSanctuaryReportListWidget> {
+    extends FolgoMythriseCelestialModel<
+        FolgoIntimaBloomSanctuaryReportListWidget> {
   List<String> folgoVoidlightRequiemChamber = [
     'Harassment',
     'Malicious fraud',
@@ -25,16 +26,16 @@ class FolgoIntimaBloomSanctuaryReportListModel
       folgoVoidlightRequiemChamber[index] =
           updateFn(folgoVoidlightRequiemChamber[index]);
 
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
+  FocusNode? folgoRenquillAstryvonMirestia;
+  TextEditingController? folgoCrynvaleOntherionZyrfell;
+  String? Function(BuildContext, String?)? folgoNostavineErylthosQuantrel;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
+    folgoRenquillAstryvonMirestia?.dispose();
+    folgoCrynvaleOntherionZyrfell?.dispose();
   }
 }

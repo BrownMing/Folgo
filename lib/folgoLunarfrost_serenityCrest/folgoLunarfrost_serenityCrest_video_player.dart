@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:folgo/flutter_flow/flutter_flow_util.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import 'package:video_player/video_player.dart';
 
-/// 专门用于播放本地 asset 视频，等比例缩放填满父容器，支持圆角
-class RadiantMindAIBuddyVideoPlayer extends StatefulWidget {
-  const RadiantMindAIBuddyVideoPlayer({
+class FolgoNebulightEchomireSanctum extends StatefulWidget {
+  const FolgoNebulightEchomireSanctum({
     super.key,
     required this.assetPath,
     this.autoPlay = false,
@@ -15,45 +14,40 @@ class RadiantMindAIBuddyVideoPlayer extends StatefulWidget {
     this.fit = BoxFit.cover,
   });
 
-  /// 本地资源路径，例如 'assets/videos/demo.mp4'
   final String assetPath;
 
-  /// 是否自动播放
   final bool autoPlay;
 
-  /// 是否循环播放
   final bool looping;
 
-  /// 是否显示控制按钮
   final bool showControls;
 
-  /// 圆角半径
   final double borderRadius;
 
-  /// 视频填充方式，默认 BoxFit.cover 等比例缩放填满
   final BoxFit fit;
+
   final bool pauseOnNavigate;
   @override
-  State<RadiantMindAIBuddyVideoPlayer> createState() =>
-      _RadiantMindAIBuddyVideoPlayerState();
+  State<FolgoNebulightEchomireSanctum> createState() =>
+      _FolgoNebulightEchomireSanctumState();
 }
 
-class _RadiantMindAIBuddyVideoPlayerState
-    extends State<RadiantMindAIBuddyVideoPlayer> with RouteAware {
-  VideoPlayerController? _controller;
-  bool _isInitialized = false;
-  bool _hasError = false;
-  bool _trueBondEmergingConversation = false;
+class _FolgoNebulightEchomireSanctumState
+    extends State<FolgoNebulightEchomireSanctum> with RouteAware {
+  VideoPlayerController? _folgoChronosurgeSilentforgeVale;
+  bool _folgoAuroravineMythborneSpire = false;
+  bool _folgoDreamflareEonbinderRealm = false;
+  bool _folgoSoultraceEveloomCitadel = false;
   @override
   void initState() {
     super.initState();
-    _initializePlayer();
+    _folgoNightwovenEternisphereHarbor();
   }
 
   @override
   void dispose() {
-    _controller?.dispose();
-    if (_trueBondEmergingConversation) {
+    _folgoChronosurgeSilentforgeVale?.dispose();
+    if (_folgoSoultraceEveloomCitadel) {
       routeObserver.unsubscribe(this);
     }
     super.dispose();
@@ -62,14 +56,14 @@ class _RadiantMindAIBuddyVideoPlayerState
   @override
   void didPushNext() {
     if (widget.pauseOnNavigate) {
-      _controller?.pause();
+      _folgoChronosurgeSilentforgeVale?.pause();
     }
   }
 
   @override
   void didPopNext() {
     if (widget.pauseOnNavigate && widget.autoPlay) {
-      _controller?.play();
+      _folgoChronosurgeSilentforgeVale?.play();
     }
   }
 
@@ -77,59 +71,61 @@ class _RadiantMindAIBuddyVideoPlayerState
   void didChangeDependencies() {
     super.didChangeDependencies();
     if (widget.pauseOnNavigate && ModalRoute.of(context) is PageRoute) {
-      _trueBondEmergingConversation = true;
+      _folgoSoultraceEveloomCitadel = true;
       routeObserver.subscribe(this, ModalRoute.of(context)!);
     }
   }
 
   @override
-  void didUpdateWidget(RadiantMindAIBuddyVideoPlayer oldWidget) {
+  void didUpdateWidget(FolgoNebulightEchomireSanctum oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.assetPath != widget.assetPath) {
-      _controller?.dispose();
-      _initializePlayer();
+      _folgoChronosurgeSilentforgeVale?.dispose();
+      _folgoNightwovenEternisphereHarbor();
     }
   }
 
-  Future<void> _initializePlayer() async {
+  Future<void> _folgoNightwovenEternisphereHarbor() async {
     setState(() {
-      _isInitialized = false;
-      _hasError = false;
+      _folgoAuroravineMythborneSpire = false;
+      _folgoDreamflareEonbinderRealm = false;
     });
 
-    _controller = VideoPlayerController.asset(widget.assetPath);
+    _folgoChronosurgeSilentforgeVale =
+        VideoPlayerController.asset(widget.assetPath);
 
     try {
-      await _controller!.initialize();
-      _controller!.setLooping(widget.looping);
+      await _folgoChronosurgeSilentforgeVale!.initialize();
+      _folgoChronosurgeSilentforgeVale!.setLooping(widget.looping);
 
       if (widget.autoPlay) {
-        _controller!.play();
+        _folgoChronosurgeSilentforgeVale!.play();
       }
 
       if (mounted) {
         setState(() {
-          _isInitialized = true;
+          _folgoAuroravineMythborneSpire = true;
         });
       }
     } catch (e) {
       debugPrint('Error initializing video: $e');
       if (mounted) {
         setState(() {
-          _hasError = true;
+          _folgoDreamflareEonbinderRealm = true;
         });
       }
     }
   }
 
   void _togglePlayPause() {
-    if (_controller == null || !_isInitialized) return;
+    if (_folgoChronosurgeSilentforgeVale == null ||
+        !_folgoAuroravineMythborneSpire) return;
 
     setState(() {
-      if (_controller!.value.isPlaying) {
-        _controller!.pause();
+      if (_folgoChronosurgeSilentforgeVale!.value.isPlaying) {
+        _folgoChronosurgeSilentforgeVale!.pause();
       } else {
-        _controller!.play();
+        _folgoChronosurgeSilentforgeVale!.play();
       }
     });
   }
@@ -140,11 +136,10 @@ class _RadiantMindAIBuddyVideoPlayerState
       borderRadius: BorderRadius.circular(widget.borderRadius),
       child: LayoutBuilder(
         builder: (context, constraints) {
-          // 使用父容器的约束尺寸
           final parentWidth = constraints.maxWidth;
           final parentHeight = constraints.maxHeight;
 
-          if (_hasError) {
+          if (_folgoDreamflareEonbinderRealm) {
             return Container(
               width: parentWidth,
               height: parentHeight,
@@ -165,7 +160,8 @@ class _RadiantMindAIBuddyVideoPlayerState
             );
           }
 
-          if (!_isInitialized || _controller == null) {
+          if (!_folgoAuroravineMythborneSpire ||
+              _folgoChronosurgeSilentforgeVale == null) {
             return Container(
               width: parentWidth,
               height: parentHeight,
@@ -187,16 +183,14 @@ class _RadiantMindAIBuddyVideoPlayerState
             child: Stack(
               fit: StackFit.expand,
               children: [
-                // 视频播放器，等比例缩放填满父容器
                 FittedBox(
                   fit: widget.fit,
                   child: SizedBox(
-                    width: _controller!.value.size.width,
-                    height: _controller!.value.size.height,
-                    child: VideoPlayer(_controller!),
+                    width: _folgoChronosurgeSilentforgeVale!.value.size.width,
+                    height: _folgoChronosurgeSilentforgeVale!.value.size.height,
+                    child: VideoPlayer(_folgoChronosurgeSilentforgeVale!),
                   ),
                 ),
-                // 控制层
                 if (widget.showControls) _buildControls(),
               ],
             ),
@@ -208,7 +202,7 @@ class _RadiantMindAIBuddyVideoPlayerState
 
   Widget _buildControls() {
     return ValueListenableBuilder<VideoPlayerValue>(
-      valueListenable: _controller!,
+      valueListenable: _folgoChronosurgeSilentforgeVale!,
       builder: (context, value, child) {
         return GestureDetector(
           onTap: _togglePlayPause,

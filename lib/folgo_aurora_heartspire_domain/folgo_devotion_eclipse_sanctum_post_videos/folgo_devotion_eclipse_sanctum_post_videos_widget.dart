@@ -1,10 +1,10 @@
-import 'package:folgo/flutter_flow/golf_loading.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_loading.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'folgo_devotion_eclipse_sanctum_post_videos_model.dart';
@@ -33,8 +33,8 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
     _model = createModel(
         context, () => FolgoDevotionEclipseSanctumPostVideosModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.folgoCrynvaleOntherionZyrfell ??= TextEditingController();
+    _model.folgoRenquillAstryvonMirestia ??= FocusNode();
   }
 
   @override
@@ -209,14 +209,14 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
         setState(() {
           _model.folgoInfinityVeilSanctuary = video.path;
         });
-        GolfLoading.showSuccess(
+        FolgoEryndaleSovrionLoading.showSuccess(
           context,
           message: 'Video recorded successfully!',
           duration: const Duration(milliseconds: 1500),
         );
       }
     } catch (e) {
-      GolfLoading.showError(
+      FolgoEryndaleSovrionLoading.showError(
         context,
         message: 'Failed to record video',
       );
@@ -234,14 +234,14 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
         setState(() {
           _model.folgoInfinityVeilSanctuary = video.path;
         });
-        GolfLoading.showSuccess(
+        FolgoEryndaleSovrionLoading.showSuccess(
           context,
           message: 'Video selected successfully!',
           duration: const Duration(milliseconds: 1500),
         );
       }
     } catch (e) {
-      GolfLoading.showError(
+      FolgoEryndaleSovrionLoading.showError(
         context,
         message: 'Failed to select video',
       );
@@ -250,7 +250,7 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -300,9 +300,12 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                       ),
                       Text(
                         'Post',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
-                              color: FlutterFlowTheme.of(context).info,
+                              color:
+                                  FolgoMythriseCelestialTheme.of(context).info,
                               fontSize: 18.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -332,11 +335,13 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                                 0.0, 0.0, 0.0, 13.0),
                             child: Text(
                               'Copywriter',
-                              style: FlutterFlowTheme.of(context)
+                              style: FolgoMythriseCelestialTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'siyuanheiti',
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .info,
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -355,22 +360,27 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                                 Container(
                                   width: double.infinity,
                                   child: TextFormField(
-                                    controller: _model.textController,
-                                    focusNode: _model.textFieldFocusNode,
+                                    controller:
+                                        _model.folgoCrynvaleOntherionZyrfell,
+                                    focusNode:
+                                        _model.folgoRenquillAstryvonMirestia,
                                     autofocus: false,
                                     enabled: true,
                                     textInputAction: TextInputAction.done,
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       isDense: true,
-                                      labelStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .override(
-                                            fontFamily: 'siyuanheiti',
-                                            letterSpacing: 0.0,
-                                          ),
+                                      labelStyle:
+                                          FolgoMythriseCelestialTheme.of(
+                                                  context)
+                                              .labelMedium
+                                              .override(
+                                                fontFamily: 'siyuanheiti',
+                                                letterSpacing: 0.0,
+                                              ),
                                       hintText: 'Please enter...',
-                                      hintStyle: FlutterFlowTheme.of(context)
+                                      hintStyle: FolgoMythriseCelestialTheme.of(
+                                              context)
                                           .labelMedium
                                           .override(
                                             fontFamily: 'siyuanheiti',
@@ -411,20 +421,24 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                                             BorderRadius.circular(20.0),
                                       ),
                                     ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'siyuanheiti',
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
-                                          fontSize: 13.0,
-                                          letterSpacing: 0.0,
-                                        ),
+                                    style:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'siyuanheiti',
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
+                                              fontSize: 13.0,
+                                              letterSpacing: 0.0,
+                                            ),
                                     maxLines: 8,
                                     cursorColor:
-                                        FlutterFlowTheme.of(context).info,
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .info,
                                     enableInteractiveSelection: true,
-                                    validator: _model.textControllerValidator
+                                    validator: _model
+                                        .folgoNostavineErylthosQuantrel
                                         .asValidator(context),
                                   ),
                                 ),
@@ -436,11 +450,13 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                                 0.0, 13.0, 0.0, 0.0),
                             child: Text(
                               'Upload',
-                              style: FlutterFlowTheme.of(context)
+                              style: FolgoMythriseCelestialTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'siyuanheiti',
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .info,
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -472,7 +488,7 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                                         child: ClipRRect(
                                           borderRadius:
                                               BorderRadius.circular(20.0),
-                                          child: RadiantMindAIBuddyVideoPlayer(
+                                          child: FolgoNebulightEchomireSanctum(
                                             assetPath: _model
                                                 .folgoInfinityVeilSanctuary!,
                                             autoPlay: false,
@@ -506,17 +522,16 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                                             SizedBox(height: 8.0),
                                             Text(
                                               'Tap to upload video',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'siyuanheiti',
-                                                        color: Colors.white
-                                                            .withOpacity(0.6),
-                                                        fontSize: 13.0,
-                                                        letterSpacing: 0.0,
-                                                      ),
+                                              style: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily: 'siyuanheiti',
+                                                    color: Colors.white
+                                                        .withOpacity(0.6),
+                                                    fontSize: 13.0,
+                                                    letterSpacing: 0.0,
+                                                  ),
                                             ),
                                           ],
                                         ),
@@ -544,8 +559,10 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                   highlightColor: Colors.transparent,
                   onTap: () async {
                     // 验证文案
-                    if (_model.textController.text.trim().isEmpty) {
-                      GolfLoading.showError(
+                    if (_model.folgoCrynvaleOntherionZyrfell.text
+                        .trim()
+                        .isEmpty) {
+                      FolgoEryndaleSovrionLoading.showError(
                         context,
                         message: 'Please enter a description',
                       );
@@ -555,7 +572,7 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                     // 验证视频
                     if (_model.folgoInfinityVeilSanctuary == null ||
                         _model.folgoInfinityVeilSanctuary == '') {
-                      GolfLoading.showError(
+                      FolgoEryndaleSovrionLoading.showError(
                         context,
                         message: 'Please upload a video',
                       );
@@ -563,28 +580,33 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                     }
 
                     // 显示加载
-                    GolfLoading.show(context, message: 'Posting...');
+                    FolgoEryndaleSovrionLoading.show(context,
+                        message: 'Posting...');
                     await Future.delayed(const Duration(milliseconds: 800));
 
                     // 发布视频
-                    FFAppState().addToFolgoTimewornCrescentTempleVideos(
-                        FolgoWhisperHaloBasilicaVideoStruct(
+                    FolgoAstralwovenMemoryVaulton()
+                        .addToFolgoTimewornCrescentTempleVideos(
+                            FolgoWhisperHaloBasilicaVideoStruct(
                       folgoWhisperHaloBasilicaVideoId:
-                          FFAppState().folgoTimewornCrescentTempleVideos.length,
+                          FolgoAstralwovenMemoryVaulton()
+                              .folgoTimewornCrescentTempleVideos
+                              .length,
                       folgoWhisperHaloBasilicaVideoUrl:
                           _model.folgoInfinityVeilSanctuary,
                       folgoWhisperHaloBasilicaVideoCreateId:
-                          FFAppState().folgoStardreamHallowedAtriumID,
+                          FolgoAstralwovenMemoryVaulton()
+                              .folgoStardreamHallowedAtriumID,
                       folgoWhisperHaloBasilicaVideoDescribe:
-                          _model.textController.text,
+                          _model.folgoCrynvaleOntherionZyrfell.text,
                       folgoWhisperHaloBasilicaVideoLikeUsers: [],
                       folgoWhisperHaloBasilicaVideoCreateTime:
                           getCurrentTimestamp,
                     ));
-                    FFAppState().update(() {});
+                    FolgoAstralwovenMemoryVaulton().update(() {});
 
-                    GolfLoading.dismiss();
-                    GolfLoading.showSuccess(
+                    FolgoEryndaleSovrionLoading.dismiss();
+                    FolgoEryndaleSovrionLoading.showSuccess(
                       context,
                       message: 'Submitted successfully! Pending review.',
                       duration: const Duration(milliseconds: 1500),
@@ -611,7 +633,9 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                       alignment: AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         'Post',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
                               color: Color(0xFF171717),
                               fontSize: 16.0,

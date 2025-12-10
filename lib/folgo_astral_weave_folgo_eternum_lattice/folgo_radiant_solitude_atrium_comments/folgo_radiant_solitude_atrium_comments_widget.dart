@@ -1,6 +1,6 @@
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import '/folgo_aurora_heartspire_domain/folgo_passion_whisper_palace_report_block/folgo_passion_whisper_palace_report_block_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -36,8 +36,8 @@ class _FolgoRadiantSolitudeAtriumCommentsWidgetState
     _model =
         createModel(context, () => FolgoRadiantSolitudeAtriumCommentsModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.folgoCrynvaleOntherionZyrfell ??= TextEditingController();
+    _model.folgoRenquillAstryvonMirestia ??= FocusNode();
   }
 
   @override
@@ -49,7 +49,7 @@ class _FolgoRadiantSolitudeAtriumCommentsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return Container(
       width: double.infinity,
@@ -72,13 +72,14 @@ class _FolgoRadiantSolitudeAtriumCommentsWidgetState
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
               child: Text(
                 'Comments',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'siyuanheiti',
-                      color: Colors.black,
-                      fontSize: 24.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.bold,
-                    ),
+                style:
+                    FolgoMythriseCelestialTheme.of(context).bodyMedium.override(
+                          fontFamily: 'siyuanheiti',
+                          color: Colors.black,
+                          fontSize: 24.0,
+                          letterSpacing: 0.0,
+                          fontWeight: FontWeight.bold,
+                        ),
               ),
             ),
             Expanded(
@@ -86,12 +87,13 @@ class _FolgoRadiantSolitudeAtriumCommentsWidgetState
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
                 child: Builder(
                   builder: (context) {
-                    final folgoEchoedDevotionHarbor = FFAppState()
-                        .folgoCosmicSeraphshadeComments
-                        .where((e) =>
-                            widget.folgoPassionborneSeraphChapelPost ==
-                            e.folgoAstralHorizonCitadelCommentPostRef)
-                        .toList();
+                    final folgoEchoedDevotionHarbor =
+                        FolgoAstralwovenMemoryVaulton()
+                            .folgoCosmicSeraphshadeComments
+                            .where((e) =>
+                                widget.folgoPassionborneSeraphChapelPost ==
+                                e.folgoAstralHorizonCitadelCommentPostRef)
+                            .toList();
 
                     return ListView.separated(
                       padding: EdgeInsets.fromLTRB(
@@ -120,7 +122,7 @@ class _FolgoRadiantSolitudeAtriumCommentsWidgetState
                                 shape: BoxShape.circle,
                               ),
                               child: Image.asset(
-                                FFAppState()
+                                FolgoAstralwovenMemoryVaulton()
                                     .folgoEonforgeMysteriaHallUsers
                                     .elementAtOrNull(folgoEchoedDevotionHarborItem
                                         .folgoAstralHorizonCitadelCommentCreateId)!
@@ -137,8 +139,9 @@ class _FolgoRadiantSolitudeAtriumCommentsWidgetState
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(folgoEchoedDevotionHarborItem.folgoAstralHorizonCitadelCommentCreateId)?.folgoVoxLuminanceChamberUserName}',
-                                      style: FlutterFlowTheme.of(context)
+                                      '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(folgoEchoedDevotionHarborItem.folgoAstralHorizonCitadelCommentCreateId)?.folgoVoxLuminanceChamberUserName}',
+                                      style: FolgoMythriseCelestialTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'siyuanheiti',
@@ -151,7 +154,8 @@ class _FolgoRadiantSolitudeAtriumCommentsWidgetState
                                     Text(
                                       folgoEchoedDevotionHarborItem
                                           .folgoAstralHorizonCitadelCommentContent,
-                                      style: FlutterFlowTheme.of(context)
+                                      style: FolgoMythriseCelestialTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'siyuanheiti',
@@ -169,7 +173,8 @@ class _FolgoRadiantSolitudeAtriumCommentsWidgetState
                               children: [
                                 if (folgoEchoedDevotionHarborItem
                                         .folgoAstralHorizonCitadelCommentCreateId !=
-                                    FFAppState().folgoStardreamHallowedAtriumID)
+                                    FolgoAstralwovenMemoryVaulton()
+                                        .folgoStardreamHallowedAtriumID)
                                   InkWell(
                                     splashColor: Colors.transparent,
                                     focusColor: Colors.transparent,
@@ -243,7 +248,7 @@ class _FolgoRadiantSolitudeAtriumCommentsWidgetState
                       width: double.infinity,
                       height: 52.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).info,
+                        color: FolgoMythriseCelestialTheme.of(context).info,
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       child: Row(
@@ -253,29 +258,32 @@ class _FolgoRadiantSolitudeAtriumCommentsWidgetState
                             child: Container(
                               width: double.infinity,
                               child: TextFormField(
-                                controller: _model.textController,
-                                focusNode: _model.textFieldFocusNode,
+                                controller:
+                                    _model.folgoCrynvaleOntherionZyrfell,
+                                focusNode: _model.folgoRenquillAstryvonMirestia,
                                 autofocus: false,
                                 enabled: true,
                                 textInputAction: TextInputAction.done,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   isDense: true,
-                                  labelStyle: FlutterFlowTheme.of(context)
-                                      .labelMedium
-                                      .override(
-                                        fontFamily: 'siyuanheiti',
-                                        letterSpacing: 0.0,
-                                      ),
+                                  labelStyle:
+                                      FolgoMythriseCelestialTheme.of(context)
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'siyuanheiti',
+                                            letterSpacing: 0.0,
+                                          ),
                                   hintText: 'Say Something...',
-                                  hintStyle: FlutterFlowTheme.of(context)
-                                      .labelMedium
-                                      .override(
-                                        fontFamily: 'siyuanheiti',
-                                        color: Color(0xFFACBBC2),
-                                        fontSize: 13.0,
-                                        letterSpacing: 0.0,
-                                      ),
+                                  hintStyle:
+                                      FolgoMythriseCelestialTheme.of(context)
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'siyuanheiti',
+                                            color: Color(0xFFACBBC2),
+                                            fontSize: 13.0,
+                                            letterSpacing: 0.0,
+                                          ),
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
@@ -305,7 +313,7 @@ class _FolgoRadiantSolitudeAtriumCommentsWidgetState
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
                                 ),
-                                style: FlutterFlowTheme.of(context)
+                                style: FolgoMythriseCelestialTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'siyuanheiti',
@@ -313,7 +321,7 @@ class _FolgoRadiantSolitudeAtriumCommentsWidgetState
                                     ),
                                 cursorColor: Color(0xFF171717),
                                 enableInteractiveSelection: true,
-                                validator: _model.textControllerValidator
+                                validator: _model.folgoNostavineErylthosQuantrel
                                     .asValidator(context),
                               ),
                             ),
@@ -324,21 +332,22 @@ class _FolgoRadiantSolitudeAtriumCommentsWidgetState
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              if (_model.textController.text != '') {
-                                FFAppState()
+                              if (_model.folgoCrynvaleOntherionZyrfell.text !=
+                                  '') {
+                                FolgoAstralwovenMemoryVaulton()
                                     .addToFolgoCosmicSeraphshadeComments(
                                         FolgoAstralHorizonCitadelCommentStruct(
                                   folgoAstralHorizonCitadelCommentContent:
-                                      _model.textController.text,
+                                      _model.folgoCrynvaleOntherionZyrfell.text,
                                   folgoAstralHorizonCitadelCommentCreateId:
-                                      FFAppState()
+                                      FolgoAstralwovenMemoryVaulton()
                                           .folgoStardreamHallowedAtriumID,
                                   folgoAstralHorizonCitadelCommentPostRef:
                                       widget.folgoPassionborneSeraphChapelPost,
                                 ));
-                                FFAppState().update(() {});
+                                FolgoAstralwovenMemoryVaulton().update(() {});
                                 safeSetState(() {
-                                  _model.textController?.clear();
+                                  _model.folgoCrynvaleOntherionZyrfell?.clear();
                                 });
                               }
                             },

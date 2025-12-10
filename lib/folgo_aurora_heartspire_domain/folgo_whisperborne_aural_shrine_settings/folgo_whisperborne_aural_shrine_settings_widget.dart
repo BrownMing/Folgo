@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import '/folgo_aurora_heartspire_domain/folgo_echoheart_celeste_atrium_delete_acount/folgo_echoheart_celeste_atrium_delete_acount_widget.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -87,9 +87,12 @@ class _FolgoWhisperborneAuralShrineSettingsWidgetState
                       ),
                       Text(
                         'Settings',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
-                              color: FlutterFlowTheme.of(context).info,
+                              color:
+                                  FolgoMythriseCelestialTheme.of(context).info,
                               fontSize: 18.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -137,12 +140,13 @@ class _FolgoWhisperborneAuralShrineSettingsWidgetState
                               children: [
                                 Text(
                                   'Edit personal profile',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: FolgoMythriseCelestialTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'siyuanheiti',
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: FolgoMythriseCelestialTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
@@ -187,12 +191,13 @@ class _FolgoWhisperborneAuralShrineSettingsWidgetState
                               children: [
                                 Text(
                                   'Blacklist',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: FolgoMythriseCelestialTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'siyuanheiti',
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: FolgoMythriseCelestialTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
@@ -225,7 +230,7 @@ class _FolgoWhisperborneAuralShrineSettingsWidgetState
                                 queryParameters: {
                                   'folgoAstrareverieSolaceDomeUrl':
                                       serializeParam(
-                                    FFAppConstants
+                                    FolgoInfinityDawnreachHaven
                                         .FolgoMoonriseEternisSanctumUser,
                                     ParamType.String,
                                   ),
@@ -238,12 +243,13 @@ class _FolgoWhisperborneAuralShrineSettingsWidgetState
                               children: [
                                 Text(
                                   'User Agreement',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: FolgoMythriseCelestialTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'siyuanheiti',
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: FolgoMythriseCelestialTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
@@ -276,7 +282,7 @@ class _FolgoWhisperborneAuralShrineSettingsWidgetState
                                 queryParameters: {
                                   'folgoAstrareverieSolaceDomeUrl':
                                       serializeParam(
-                                    FFAppConstants
+                                    FolgoInfinityDawnreachHaven
                                         .FolgoVeloriaNightwhisperHallPrivacy,
                                     ParamType.String,
                                   ),
@@ -296,12 +302,13 @@ class _FolgoWhisperborneAuralShrineSettingsWidgetState
                               children: [
                                 Text(
                                   'Privacy Agreement',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: FolgoMythriseCelestialTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'siyuanheiti',
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: FolgoMythriseCelestialTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
@@ -376,7 +383,7 @@ class _FolgoWhisperborneAuralShrineSettingsWidgetState
                                 alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Text(
                                   'Delete Account',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: FolgoMythriseCelestialTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'siyuanheiti',
@@ -423,7 +430,7 @@ class _FolgoWhisperborneAuralShrineSettingsWidgetState
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 'Log Out',
-                                style: FlutterFlowTheme.of(context)
+                                style: FolgoMythriseCelestialTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'siyuanheiti',

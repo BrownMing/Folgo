@@ -1,7 +1,7 @@
-import 'package:folgo/flutter_flow/golf_loading.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_loading.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import '/index.dart';
 import '/backend/schema/structs/index.dart';
 import 'package:flutter/gestures.dart';
@@ -69,9 +69,11 @@ class _FolgoNimbusContinuumStartWidgetState
                   ),
                   Text(
                     'Folgo',
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    style: FolgoMythriseCelestialTheme.of(context)
+                        .bodyMedium
+                        .override(
                           fontFamily: 'siyuanheiti',
-                          color: FlutterFlowTheme.of(context).info,
+                          color: FolgoMythriseCelestialTheme.of(context).info,
                           fontSize: 24.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.bold,
@@ -116,8 +118,10 @@ class _FolgoNimbusContinuumStartWidgetState
                     child: GestureDetector(
                       onTap: () async {
                         // 检查是否已有缓存的用户，没有才创建新账户
-                        if (FFAppState().folgoStardreamHallowedAtriumID < 6) {
-                          final newUserId = FFAppState()
+                        if (FolgoAstralwovenMemoryVaulton()
+                                .folgoStardreamHallowedAtriumID <
+                            6) {
+                          final newUserId = FolgoAstralwovenMemoryVaulton()
                               .folgoEonforgeMysteriaHallUsers
                               .length;
                           final newUser = FolgoVoxLuminanceChamberUserStruct(
@@ -130,19 +134,20 @@ class _FolgoNimbusContinuumStartWidgetState
                             folgoVoxLuminanceChamberUserDescribe: '',
                             folgoVoxLuminanceChamberUserCoins: 0,
                           );
-                          FFAppState()
+                          FolgoAstralwovenMemoryVaulton()
                               .addToFolgoEonforgeMysteriaHallUsers(newUser);
-                          FFAppState().folgoStardreamHallowedAtriumID =
-                              newUserId;
-                          FFAppState().update(() {});
+                          FolgoAstralwovenMemoryVaulton()
+                              .folgoStardreamHallowedAtriumID = newUserId;
+                          FolgoAstralwovenMemoryVaulton().update(() {});
                         }
 
-                        GolfLoading.show(context, message: 'Loading...');
+                        FolgoEryndaleSovrionLoading.show(context,
+                            message: 'Loading...');
 
                         await Future.delayed(
                             const Duration(milliseconds: 2000));
 
-                        GolfLoading.dismiss();
+                        FolgoEryndaleSovrionLoading.dismiss();
                         await Future.delayed(
                             const Duration(milliseconds: 2000));
                         context.pushNamed(
@@ -192,10 +197,11 @@ class _FolgoNimbusContinuumStartWidgetState
                               unselectedWidgetColor: Color(0x7FFFFFFF),
                             ),
                             child: Checkbox(
-                              value: _model.checkboxValue ??= true,
+                              value: _model.folgoVexloriaDannvyrSolthane ??=
+                                  true,
                               onChanged: (newValue) async {
-                                safeSetState(
-                                    () => _model.checkboxValue = newValue!);
+                                safeSetState(() => _model
+                                    .folgoVexloriaDannvyrSolthane = newValue!);
                               },
                               // ignore: unnecessary_null_comparison
                               side: (Color(0x7FFFFFFF) != null)
@@ -204,8 +210,11 @@ class _FolgoNimbusContinuumStartWidgetState
                                       color: Color(0x7FFFFFFF),
                                     )
                                   : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context).info,
+                              activeColor:
+                                  FolgoMythriseCelestialTheme.of(context)
+                                      .primary,
+                              checkColor:
+                                  FolgoMythriseCelestialTheme.of(context).info,
                             ),
                           ),
                         ),
@@ -215,18 +224,20 @@ class _FolgoNimbusContinuumStartWidgetState
                             children: [
                               TextSpan(
                                 text: 'Agree with  ',
-                                style: FlutterFlowTheme.of(context)
+                                style: FolgoMythriseCelestialTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'siyuanheiti',
-                                      color: FlutterFlowTheme.of(context).info,
+                                      color: FolgoMythriseCelestialTheme.of(
+                                              context)
+                                          .info,
                                       fontSize: 12.0,
                                       letterSpacing: 0.0,
                                     ),
                               ),
                               TextSpan(
                                 text: 'User Agreement',
-                                style: FlutterFlowTheme.of(context)
+                                style: FolgoMythriseCelestialTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'siyuanheiti',
@@ -245,7 +256,7 @@ class _FolgoNimbusContinuumStartWidgetState
                                       queryParameters: {
                                         'folgoAstrareverieSolaceDomeUrl':
                                             serializeParam(
-                                          FFAppConstants
+                                          FolgoInfinityDawnreachHaven
                                               .FolgoMoonriseEternisSanctumUser,
                                           ParamType.String,
                                         ),
@@ -263,18 +274,20 @@ class _FolgoNimbusContinuumStartWidgetState
                               ),
                               TextSpan(
                                 text: ' and ',
-                                style: FlutterFlowTheme.of(context)
+                                style: FolgoMythriseCelestialTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'siyuanheiti',
-                                      color: FlutterFlowTheme.of(context).info,
+                                      color: FolgoMythriseCelestialTheme.of(
+                                              context)
+                                          .info,
                                       fontSize: 12.0,
                                       letterSpacing: 0.0,
                                     ),
                               ),
                               TextSpan(
                                 text: 'Privacy Policy.',
-                                style: FlutterFlowTheme.of(context)
+                                style: FolgoMythriseCelestialTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'siyuanheiti',
@@ -292,7 +305,7 @@ class _FolgoNimbusContinuumStartWidgetState
                                       queryParameters: {
                                         'folgoAstrareverieSolaceDomeUrl':
                                             serializeParam(
-                                          FFAppConstants
+                                          FolgoInfinityDawnreachHaven
                                               .FolgoVeloriaNightwhisperHallPrivacy,
                                           ParamType.String,
                                         ),
@@ -309,7 +322,7 @@ class _FolgoNimbusContinuumStartWidgetState
                                   },
                               )
                             ],
-                            style: FlutterFlowTheme.of(context)
+                            style: FolgoMythriseCelestialTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'siyuanheiti',

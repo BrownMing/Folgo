@@ -1,6 +1,6 @@
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import '/folgo_aurora_heartspire_domain/folgo_passion_whisper_palace_report_block/folgo_passion_whisper_palace_report_block_widget.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -37,8 +37,8 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
     super.initState();
     _model = createModel(context, () => FolgoVelvetEmotionSpireMessageModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.folgoCrynvaleOntherionZyrfell ??= TextEditingController();
+    _model.folgoRenquillAstryvonMirestia ??= FocusNode();
   }
 
   @override
@@ -50,7 +50,7 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -112,7 +112,7 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                 shape: BoxShape.circle,
                               ),
                               child: Image.asset(
-                                FFAppState()
+                                FolgoAstralwovenMemoryVaulton()
                                     .folgoEonforgeMysteriaHallUsers
                                     .elementAtOrNull(widget
                                         .folgoEchoedDevotionHarborUserid!)!
@@ -125,12 +125,14 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 7.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(widget.folgoEchoedDevotionHarborUserid!)?.folgoVoxLuminanceChamberUserName}',
-                              style: FlutterFlowTheme.of(context)
+                              '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(widget.folgoEchoedDevotionHarborUserid!)?.folgoVoxLuminanceChamberUserName}',
+                              style: FolgoMythriseCelestialTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'siyuanheiti',
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .info,
                                     fontSize: 15.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -240,12 +242,13 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                         EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
                     child: Builder(
                       builder: (context) {
-                        final folgoPassionborneSeraphChapel = FFAppState()
-                            .folgoEvergloomSerenityMessages
-                            .where((e) =>
-                                widget.folgoLoveraEonreachSanctumChat ==
-                                e.folgoCelestiumNovaMessageChatRef)
-                            .toList();
+                        final folgoPassionborneSeraphChapel =
+                            FolgoAstralwovenMemoryVaulton()
+                                .folgoEvergloomSerenityMessages
+                                .where((e) =>
+                                    widget.folgoLoveraEonreachSanctumChat ==
+                                    e.folgoCelestiumNovaMessageChatRef)
+                                .toList();
 
                         return ListView.builder(
                           padding: EdgeInsets.zero,
@@ -280,7 +283,7 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                                 shape: BoxShape.circle,
                                               ),
                                               child: Image.asset(
-                                                FFAppState()
+                                                FolgoAstralwovenMemoryVaulton()
                                                     .folgoEonforgeMysteriaHallUsers
                                                     .elementAtOrNull(widget
                                                         .folgoEchoedDevotionHarborUserid!)!
@@ -298,9 +301,10 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                                     maxWidth: 250.0,
                                                   ),
                                                   decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .info,
+                                                    color:
+                                                        FolgoMythriseCelestialTheme
+                                                                .of(context)
+                                                            .info,
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             20.0),
@@ -311,19 +315,22 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                                     child: Text(
                                                       folgoPassionborneSeraphChapelItem
                                                           .folgoCelestiumNovaMessageContent,
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'siyuanheiti',
-                                                            color: Color(
-                                                                0xFF171717),
-                                                            fontSize: 15.0,
-                                                            letterSpacing: 0.0,
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                          ),
+                                                      style:
+                                                          FolgoMythriseCelestialTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'siyuanheiti',
+                                                                color: Color(
+                                                                    0xFF171717),
+                                                                fontSize: 15.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
+                                                              ),
                                                     ),
                                                   ),
                                                 ),
@@ -335,7 +342,8 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                   ),
                                 if (folgoPassionborneSeraphChapelItem
                                         .folgoCelestiumNovaMessageCreateId ==
-                                    FFAppState().folgoStardreamHallowedAtriumID)
+                                    FolgoAstralwovenMemoryVaulton()
+                                        .folgoStardreamHallowedAtriumID)
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 24.0, 0.0, 24.0),
@@ -365,19 +373,22 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                                   child: Text(
                                                     folgoPassionborneSeraphChapelItem
                                                         .folgoCelestiumNovaMessageContent,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'siyuanheiti',
-                                                          color:
-                                                              Color(0xFF171717),
-                                                          fontSize: 15.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                        ),
+                                                    style:
+                                                        FolgoMythriseCelestialTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'siyuanheiti',
+                                                              color: Color(
+                                                                  0xFF171717),
+                                                              fontSize: 15.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600,
+                                                            ),
                                                   ),
                                                 ),
                                               ),
@@ -393,10 +404,10 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                                     shape: BoxShape.circle,
                                                   ),
                                                   child: Image.asset(
-                                                    FFAppState()
+                                                    FolgoAstralwovenMemoryVaulton()
                                                         .folgoEonforgeMysteriaHallUsers
                                                         .elementAtOrNull(
-                                                            FFAppState()
+                                                            FolgoAstralwovenMemoryVaulton()
                                                                 .folgoStardreamHallowedAtriumID)!
                                                         .folgoVoxLuminanceChamberUserPhoto,
                                                     fit: BoxFit.cover,
@@ -438,7 +449,7 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                           width: double.infinity,
                           height: 52.0,
                           decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).info,
+                            color: FolgoMythriseCelestialTheme.of(context).info,
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                           child: Row(
@@ -448,22 +459,27 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                 child: Container(
                                   width: double.infinity,
                                   child: TextFormField(
-                                    controller: _model.textController,
-                                    focusNode: _model.textFieldFocusNode,
+                                    controller:
+                                        _model.folgoCrynvaleOntherionZyrfell,
+                                    focusNode:
+                                        _model.folgoRenquillAstryvonMirestia,
                                     autofocus: false,
                                     enabled: true,
                                     textInputAction: TextInputAction.done,
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       isDense: true,
-                                      labelStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .override(
-                                            fontFamily: 'siyuanheiti',
-                                            letterSpacing: 0.0,
-                                          ),
+                                      labelStyle:
+                                          FolgoMythriseCelestialTheme.of(
+                                                  context)
+                                              .labelMedium
+                                              .override(
+                                                fontFamily: 'siyuanheiti',
+                                                letterSpacing: 0.0,
+                                              ),
                                       hintText: 'Say Something...',
-                                      hintStyle: FlutterFlowTheme.of(context)
+                                      hintStyle: FolgoMythriseCelestialTheme.of(
+                                              context)
                                           .labelMedium
                                           .override(
                                             fontFamily: 'siyuanheiti',
@@ -504,15 +520,17 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                             BorderRadius.circular(20.0),
                                       ),
                                     ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'siyuanheiti',
-                                          letterSpacing: 0.0,
-                                        ),
+                                    style:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'siyuanheiti',
+                                              letterSpacing: 0.0,
+                                            ),
                                     cursorColor: Color(0xFF171717),
                                     enableInteractiveSelection: true,
-                                    validator: _model.textControllerValidator
+                                    validator: _model
+                                        .folgoNostavineErylthosQuantrel
                                         .asValidator(context),
                                   ),
                                 ),
@@ -523,29 +541,33 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  if (_model.textController.text != '') {
-                                    FFAppState()
+                                  if (_model
+                                          .folgoCrynvaleOntherionZyrfell.text !=
+                                      '') {
+                                    FolgoAstralwovenMemoryVaulton()
                                         .addToFolgoEvergloomSerenityMessages(
                                             FolgoCelestiumNovaMessageStruct(
-                                      folgoCelestiumNovaMessageContent:
-                                          _model.textController.text,
+                                      folgoCelestiumNovaMessageContent: _model
+                                          .folgoCrynvaleOntherionZyrfell.text,
                                       folgoCelestiumNovaMessageCreateId:
-                                          FFAppState()
+                                          FolgoAstralwovenMemoryVaulton()
                                               .folgoStardreamHallowedAtriumID,
                                       folgoCelestiumNovaMessageChatRef:
                                           widget.folgoLoveraEonreachSanctumChat,
                                     ));
-                                    FFAppState()
+                                    FolgoAstralwovenMemoryVaulton()
                                         .updateFolgoNebulaEonspireDomeChatsAtIndex(
                                       widget.folgoLoveraEonreachSanctumChat!,
                                       (e) => e
                                         ..folgoMythicStarweaveChatSenduser =
-                                            FFAppState()
+                                            FolgoAstralwovenMemoryVaulton()
                                                 .folgoStardreamHallowedAtriumID
                                         ..folgoMythicStarweaveChatLastMsg =
-                                            _model.textController.text,
+                                            _model.folgoCrynvaleOntherionZyrfell
+                                                .text,
                                     );
-                                    FFAppState().update(() {});
+                                    FolgoAstralwovenMemoryVaulton()
+                                        .update(() {});
                                   }
                                 },
                                 child: Container(

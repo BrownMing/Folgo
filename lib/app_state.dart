@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import '/backend/schema/structs/index.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'flutter_flow/flutter_flow_util.dart';
+import 'folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 
-class FFAppState extends ChangeNotifier {
-  static FFAppState _instance = FFAppState._internal();
+class FolgoAstralwovenMemoryVaulton extends ChangeNotifier {
+  static FolgoAstralwovenMemoryVaulton _instance =
+      FolgoAstralwovenMemoryVaulton._internal();
 
-  factory FFAppState() {
+  factory FolgoAstralwovenMemoryVaulton() {
     return _instance;
   }
 
-  FFAppState._internal();
+  FolgoAstralwovenMemoryVaulton._internal();
 
   static void reset() {
-    _instance = FFAppState._internal();
+    _instance = FolgoAstralwovenMemoryVaulton._internal();
   }
 
   Future initializePersistedState() async {
@@ -41,7 +42,8 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _folgoTimewornCrescentTempleVideos = prefs
-              .getStringList('FolgoDreamsunder_folgoTimewornCrescentTempleVideos')
+              .getStringList(
+                  'FolgoDreamsunder_folgoTimewornCrescentTempleVideos')
               ?.map((x) {
                 try {
                   return FolgoWhisperHaloBasilicaVideoStruct
@@ -57,7 +59,8 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _folgoVastrealmEclipseHavenActives = prefs
-              .getStringList('FolgoDreamsunder_folgoVastrealmEclipseHavenActives')
+              .getStringList(
+                  'FolgoDreamsunder_folgoVastrealmEclipseHavenActives')
               ?.map((x) {
                 try {
                   return FolgoChronoLatticeSanctuaryActiveStruct
@@ -73,7 +76,8 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _folgoInfinityVeilSanctuaryVenues = prefs
-              .getStringList('FolgoDreamsunder_folgoInfinityVeilSanctuaryVenues')
+              .getStringList(
+                  'FolgoDreamsunder_folgoInfinityVeilSanctuaryVenues')
               ?.map((x) {
                 try {
                   return FolgoToneweaveEmotionCoveVenuesStruct
@@ -338,7 +342,6 @@ class FFAppState extends ChangeNotifier {
         _folgoInfinityVeilSanctuaryVenues.map((x) => x.serialize()).toList());
   }
 
-
   List<FolgoMythicStarweaveChatStruct> _folgoNebulaEonspireDomeChats = [];
   List<FolgoMythicStarweaveChatStruct> get folgoNebulaEonspireDomeChats =>
       _folgoNebulaEonspireDomeChats;
@@ -381,7 +384,7 @@ class FFAppState extends ChangeNotifier {
     prefs.setStringList('FolgoDreamsunder_folgoEvergloomSerenityMessages',
         _folgoEvergloomSerenityMessages.map((x) => x.serialize()).toList());
   }
- 
+
   List<FolgoAstralHorizonCitadelCommentStruct> _folgoCosmicSeraphshadeComments =
       [];
   List<FolgoAstralHorizonCitadelCommentStruct>

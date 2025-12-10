@@ -1,9 +1,9 @@
-import 'package:folgo/flutter_flow/empty_state.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/empty_state.dart';
 
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_video_player.dart';
 import '/folgo_aurora_heartspire_domain/folgo_passion_whisper_palace_report_block/folgo_passion_whisper_palace_report_block_widget.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +49,7 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -62,7 +62,7 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
         body: Stack(
           children: [
             Image.asset(
-              FFAppState()
+              FolgoAstralwovenMemoryVaulton()
                   .folgoEonforgeMysteriaHallUsers
                   .elementAtOrNull(widget.folgoCelestforgeDreamholdBasilica!)!
                   .folgoVoxLuminanceChamberUserPhoto,
@@ -101,13 +101,16 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 24.0, 0.0, 0.0),
                                     child: Text(
-                                      '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(widget.folgoCelestforgeDreamholdBasilica!)?.folgoVoxLuminanceChamberUserName}',
-                                      style: FlutterFlowTheme.of(context)
+                                      '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(widget.folgoCelestforgeDreamholdBasilica!)?.folgoVoxLuminanceChamberUserName}',
+                                      style: FolgoMythriseCelestialTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'siyuanheiti',
-                                            color: FlutterFlowTheme.of(context)
-                                                .info,
+                                            color:
+                                                FolgoMythriseCelestialTheme.of(
+                                                        context)
+                                                    .info,
                                             fontSize: 24.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
@@ -118,8 +121,9 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 0.0),
                                     child: Text(
-                                      '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(widget.folgoCelestforgeDreamholdBasilica!)?.folgoVoxLuminanceChamberUserDescribe}',
-                                      style: FlutterFlowTheme.of(context)
+                                      '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(widget.folgoCelestforgeDreamholdBasilica!)?.folgoVoxLuminanceChamberUserDescribe}',
+                                      style: FolgoMythriseCelestialTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'siyuanheiti',
@@ -139,34 +143,37 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
                                       children: [
                                         GestureDetector(
                                           onTap: () async {
-                                            final currentUserId = FFAppState()
-                                                .folgoStardreamHallowedAtriumID;
+                                            final currentUserId =
+                                                FolgoAstralwovenMemoryVaulton()
+                                                    .folgoStardreamHallowedAtriumID;
                                             final otherUserId = widget
                                                 .folgoCelestforgeDreamholdBasilica!;
 
-                                            final existingChatIndex = FFAppState()
-                                                .folgoNebulaEonspireDomeChats
-                                                .indexWhere((chat) =>
-                                                    (chat.folgoMythicStarweaveChatSenduser ==
-                                                            currentUserId &&
-                                                        chat.folgoMythicStarweaveChatReveivceuser ==
-                                                            otherUserId) ||
-                                                    (chat.folgoMythicStarweaveChatSenduser ==
-                                                            otherUserId &&
-                                                        chat.folgoMythicStarweaveChatReveivceuser ==
-                                                            currentUserId));
+                                            final existingChatIndex =
+                                                FolgoAstralwovenMemoryVaulton()
+                                                    .folgoNebulaEonspireDomeChats
+                                                    .indexWhere((chat) =>
+                                                        (chat.folgoMythicStarweaveChatSenduser ==
+                                                                currentUserId &&
+                                                            chat.folgoMythicStarweaveChatReveivceuser ==
+                                                                otherUserId) ||
+                                                        (chat.folgoMythicStarweaveChatSenduser ==
+                                                                otherUserId &&
+                                                            chat.folgoMythicStarweaveChatReveivceuser ==
+                                                                currentUserId));
 
                                             int chatId;
                                             if (existingChatIndex != -1) {
-                                              chatId = FFAppState()
+                                              chatId = FolgoAstralwovenMemoryVaulton()
                                                   .folgoNebulaEonspireDomeChats[
                                                       existingChatIndex]
                                                   .folgoMythicStarweaveChatId;
                                             } else {
-                                              chatId = FFAppState()
-                                                  .folgoNebulaEonspireDomeChats
-                                                  .length;
-                                              FFAppState()
+                                              chatId =
+                                                  FolgoAstralwovenMemoryVaulton()
+                                                      .folgoNebulaEonspireDomeChats
+                                                      .length;
+                                              FolgoAstralwovenMemoryVaulton()
                                                   .addToFolgoNebulaEonspireDomeChats(
                                                 FolgoMythicStarweaveChatStruct(
                                                   folgoMythicStarweaveChatId:
@@ -215,9 +222,9 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
                                             width: 165.0,
                                             height: 46.0,
                                             decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .info,
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
                                               borderRadius:
                                                   BorderRadius.circular(100.0),
                                             ),
@@ -227,7 +234,8 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
                                               child: Text(
                                                 'Message',
                                                 style:
-                                                    FlutterFlowTheme.of(context)
+                                                    FolgoMythriseCelestialTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
@@ -284,7 +292,8 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
                                               child: Text(
                                                 'Video Call',
                                                 style:
-                                                    FlutterFlowTheme.of(context)
+                                                    FolgoMythriseCelestialTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
@@ -307,16 +316,17 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
                                         16.0, 24.0, 16.0, 0.0),
                                     child: Builder(
                                       builder: (context) {
-                                        final folgoMythbornEclipticaSpire = FFAppState()
-                                            .folgoTimewornCrescentTempleVideos
-                                            .where((e) =>
-                                                widget
-                                                    .folgoCelestforgeDreamholdBasilica ==
-                                                e.folgoWhisperHaloBasilicaVideoCreateId)
-                                            .toList();
+                                        final folgoMythbornEclipticaSpire =
+                                            FolgoAstralwovenMemoryVaulton()
+                                                .folgoTimewornCrescentTempleVideos
+                                                .where((e) =>
+                                                    widget
+                                                        .folgoCelestforgeDreamholdBasilica ==
+                                                    e.folgoWhisperHaloBasilicaVideoCreateId)
+                                                .toList();
                                         if (folgoMythbornEclipticaSpire
                                             .isEmpty) {
-                                          return GolfEmptyState(
+                                          return FolgoVyranthosDelmirra(
                                             title: 'No Posts Yet',
                                             subtitle:
                                                 'Be the first to share something!',
@@ -350,7 +360,7 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
                                               ),
                                               child: Stack(
                                                 children: [
-                                                  RadiantMindAIBuddyVideoPlayer(
+                                                  FolgoNebulightEchomireSanctum(
                                                     assetPath:
                                                         folgoMythbornEclipticaSpireItem
                                                             .folgoWhisperHaloBasilicaVideoUrl,

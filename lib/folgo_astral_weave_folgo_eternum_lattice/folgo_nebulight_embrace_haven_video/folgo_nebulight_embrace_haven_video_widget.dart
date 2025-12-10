@@ -1,8 +1,8 @@
 import 'package:folgo/folgo_aurora_heartspire_domain/folgo_seraphic_affection_vault_other_info/folgo_seraphic_affection_vault_other_info_widget.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_video_player.dart';
 import '/folgo_astral_weave_folgo_eternum_lattice/folgo_radiant_solitude_atrium_comments/folgo_radiant_solitude_atrium_comments_widget.dart';
 import '/folgo_aurora_heartspire_domain/folgo_passion_whisper_palace_report_block/folgo_passion_whisper_palace_report_block_widget.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +50,7 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -67,8 +67,8 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
               decoration: BoxDecoration(),
               child: Stack(
                 children: [
-                  RadiantMindAIBuddyVideoPlayer(
-                    assetPath: FFAppState()
+                  FolgoNebulightEchomireSanctum(
+                    assetPath: FolgoAstralwovenMemoryVaulton()
                         .folgoTimewornCrescentTempleVideos
                         .elementAtOrNull(
                             widget.folgoSoulkissNebulaCathedralPost!)!
@@ -175,7 +175,8 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                               width: 60.0,
                               height: 152.0,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).info,
+                                color: FolgoMythriseCelestialTheme.of(context)
+                                    .info,
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               child: Padding(
@@ -189,28 +190,31 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            if (FFAppState()
+                                            if (FolgoAstralwovenMemoryVaulton()
                                                     .folgoTimewornCrescentTempleVideos
                                                     .elementAtOrNull(widget
                                                         .folgoSoulkissNebulaCathedralPost!)
                                                     ?.folgoWhisperHaloBasilicaVideoLikeUsers
-                                                    .contains(FFAppState()
-                                                        .folgoStardreamHallowedAtriumID) ??
+                                                    .contains(
+                                                        FolgoAstralwovenMemoryVaulton()
+                                                            .folgoStardreamHallowedAtriumID) ??
                                                 false) {
                                               return GestureDetector(
                                                 onTap: () async {
                                                   HapticFeedback.heavyImpact();
-                                                  FFAppState()
+                                                  FolgoAstralwovenMemoryVaulton()
                                                       .updateFolgoTimewornCrescentTempleVideosAtIndex(
                                                     widget
                                                         .folgoSoulkissNebulaCathedralPost!,
                                                     (e) => e
                                                       ..updateFolgoWhisperHaloBasilicaVideoLikeUsers(
-                                                        (e) => e.remove(FFAppState()
-                                                            .folgoStardreamHallowedAtriumID),
+                                                        (e) => e.remove(
+                                                            FolgoAstralwovenMemoryVaulton()
+                                                                .folgoStardreamHallowedAtriumID),
                                                       ),
                                                   );
-                                                  FFAppState().update(() {});
+                                                  FolgoAstralwovenMemoryVaulton()
+                                                      .update(() {});
                                                 },
                                                 child: AnimatedContainer(
                                                   duration: Duration(
@@ -232,17 +236,19 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                               return GestureDetector(
                                                 onTap: () async {
                                                   HapticFeedback.heavyImpact();
-                                                  FFAppState()
+                                                  FolgoAstralwovenMemoryVaulton()
                                                       .updateFolgoTimewornCrescentTempleVideosAtIndex(
                                                     widget
                                                         .folgoSoulkissNebulaCathedralPost!,
                                                     (e) => e
                                                       ..updateFolgoWhisperHaloBasilicaVideoLikeUsers(
-                                                        (e) => e.add(FFAppState()
-                                                            .folgoStardreamHallowedAtriumID),
+                                                        (e) => e.add(
+                                                            FolgoAstralwovenMemoryVaulton()
+                                                                .folgoStardreamHallowedAtriumID),
                                                       ),
                                                   );
-                                                  FFAppState().update(() {});
+                                                  FolgoAstralwovenMemoryVaulton()
+                                                      .update(() {});
                                                 },
                                                 child: AnimatedContainer(
                                                   duration: Duration(
@@ -268,18 +274,20 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 2.0, 0.0, 0.0),
                                           child: Text(
-                                            '${FFAppState().folgoTimewornCrescentTempleVideos.elementAtOrNull(widget.folgoSoulkissNebulaCathedralPost!)?.folgoWhisperHaloBasilicaVideoLikeUsers.length.toString()}',
-                                            style: FlutterFlowTheme.of(context)
+                                            '${FolgoAstralwovenMemoryVaulton().folgoTimewornCrescentTempleVideos.elementAtOrNull(widget.folgoSoulkissNebulaCathedralPost!)?.folgoWhisperHaloBasilicaVideoLikeUsers.length.toString()}',
+                                            style: FolgoMythriseCelestialTheme
+                                                    .of(context)
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'siyuanheiti',
-                                                  color: FFAppState()
+                                                  color: FolgoAstralwovenMemoryVaulton()
                                                           .folgoTimewornCrescentTempleVideos
                                                           .elementAtOrNull(widget
                                                               .folgoSoulkissNebulaCathedralPost!)!
                                                           .folgoWhisperHaloBasilicaVideoLikeUsers
-                                                          .contains(FFAppState()
-                                                              .folgoStardreamHallowedAtriumID)
+                                                          .contains(
+                                                              FolgoAstralwovenMemoryVaulton()
+                                                                  .folgoStardreamHallowedAtriumID)
                                                       ? Color(0xFFFD37AF)
                                                       : Color(0xFF171717),
                                                   fontSize: 13.0,
@@ -346,9 +354,9 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 2.0, 0.0, 0.0),
                                             child: Text(
-                                              '${FFAppState().folgoCosmicSeraphshadeComments.where((e) => widget.folgoSoulkissNebulaCathedralPost == e.folgoAstralHorizonCitadelCommentPostRef).toList().length.toString()}',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              '${FolgoAstralwovenMemoryVaulton().folgoCosmicSeraphshadeComments.where((e) => widget.folgoSoulkissNebulaCathedralPost == e.folgoAstralHorizonCitadelCommentPostRef).toList().length.toString()}',
+                                              style: FolgoMythriseCelestialTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -379,12 +387,12 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                   children: [
                                     GestureDetector(
                                       onTap: () async {
-                                        if (FFAppState()
+                                        if (FolgoAstralwovenMemoryVaulton()
                                                 .folgoEonforgeMysteriaHallUsers
                                                 .elementAtOrNull(widget
                                                     .folgoTenderflareEternityVaultUserid!)!
                                                 .folgoVoxLuminanceChamberUserId !=
-                                            FFAppState()
+                                            FolgoAstralwovenMemoryVaulton()
                                                 .folgoStardreamHallowedAtriumID) {
                                           context.pushNamed(
                                             FolgoSeraphicAffectionVaultOtherInfoWidget
@@ -392,7 +400,7 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                             queryParameters: {
                                               'folgoCelestforgeDreamholdBasilica':
                                                   serializeParam(
-                                                FFAppState()
+                                                FolgoAstralwovenMemoryVaulton()
                                                     .folgoEonforgeMysteriaHallUsers
                                                     .elementAtOrNull(widget
                                                         .folgoTenderflareEternityVaultUserid!)!
@@ -420,7 +428,7 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                           shape: BoxShape.circle,
                                         ),
                                         child: Image.asset(
-                                          FFAppState()
+                                          FolgoAstralwovenMemoryVaulton()
                                               .folgoEonforgeMysteriaHallUsers
                                               .elementAtOrNull(widget
                                                   .folgoTenderflareEternityVaultUserid!)!
@@ -433,14 +441,15 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           7.0, 0.0, 0.0, 0.0),
                                       child: Text(
-                                        '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(widget.folgoTenderflareEternityVaultUserid!)?.folgoVoxLuminanceChamberUserName}',
-                                        style: FlutterFlowTheme.of(context)
+                                        '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(widget.folgoTenderflareEternityVaultUserid!)?.folgoVoxLuminanceChamberUserName}',
+                                        style: FolgoMythriseCelestialTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'siyuanheiti',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .info,
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
                                               fontSize: 15.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
@@ -453,16 +462,18 @@ class _FolgoNebulightEmbraceHavenVideoWidgetState
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 13.0, 0.0, 0.0),
                                   child: Text(
-                                    '${FFAppState().folgoTimewornCrescentTempleVideos.elementAtOrNull(widget.folgoSoulkissNebulaCathedralPost!)?.folgoWhisperHaloBasilicaVideoDescribe}',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'siyuanheiti',
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
-                                          fontSize: 16.0,
-                                          letterSpacing: 0.0,
-                                        ),
+                                    '${FolgoAstralwovenMemoryVaulton().folgoTimewornCrescentTempleVideos.elementAtOrNull(widget.folgoSoulkissNebulaCathedralPost!)?.folgoWhisperHaloBasilicaVideoDescribe}',
+                                    style:
+                                        FolgoMythriseCelestialTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'siyuanheiti',
+                                              color: FolgoMythriseCelestialTheme
+                                                      .of(context)
+                                                  .info,
+                                              fontSize: 16.0,
+                                              letterSpacing: 0.0,
+                                            ),
                                   ),
                                 ),
                               ],

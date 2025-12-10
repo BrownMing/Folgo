@@ -1,7 +1,7 @@
-import 'package:folgo/flutter_flow/iap_service.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_service.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
+import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'folgo_aural_tideborne_temple_recharge_model.dart';
@@ -24,8 +24,7 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
-  // 选中的商品索引
-  int? _selectedIndex;
+  int? _folgoZenthoriaVallixunCrysage;
 
   @override
   void initState() {
@@ -34,7 +33,7 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
         createModel(context, () => FolgoAuralTideborneTempleRechargeModel());
 
     // 初始化 IAP 服务
-    IAPManager.initialize();
+    SolvarinElythranoxFolmeroZerathium.initialize();
   }
 
   @override
@@ -45,31 +44,33 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
   }
 
   // 购买商品
-  Future<void> _purchaseProduct(RechargeProduct product) async {
-    await IAPManager.purchase(
+  Future<void> _folgoMontherisSkylaronVeltrune(
+      ZorynthalExuviaroLamethrysVoligo product) async {
+    await SolvarinElythranoxFolmeroZerathium.purchase(
       context,
       product,
       onSuccess: (diamonds) {
-        // 更新用户钻石数量
-        final currentCoins = FFAppState()
+        final currentCoins = FolgoAstralwovenMemoryVaulton()
                 .folgoEonforgeMysteriaHallUsers
-                .elementAtOrNull(FFAppState().folgoStardreamHallowedAtriumID)
+                .elementAtOrNull(FolgoAstralwovenMemoryVaulton()
+                    .folgoStardreamHallowedAtriumID)
                 ?.folgoVoxLuminanceChamberUserCoins ??
             0;
 
-        FFAppState().updateFolgoEonforgeMysteriaHallUsersAtIndex(
-          FFAppState().folgoStardreamHallowedAtriumID,
+        FolgoAstralwovenMemoryVaulton()
+            .updateFolgoEonforgeMysteriaHallUsersAtIndex(
+          FolgoAstralwovenMemoryVaulton().folgoStardreamHallowedAtriumID,
           (user) =>
               user..folgoVoxLuminanceChamberUserCoins = currentCoins + diamonds,
         );
-        FFAppState().update(() {});
+        FolgoAstralwovenMemoryVaulton().update(() {});
       },
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FolgoAstralwovenMemoryVaulton>();
 
     return GestureDetector(
       onTap: () {
@@ -119,9 +120,12 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
                       ),
                       Text(
                         'Recharge',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FolgoMythriseCelestialTheme.of(context)
+                            .bodyMedium
+                            .override(
                               fontFamily: 'siyuanheiti',
-                              color: FlutterFlowTheme.of(context).info,
+                              color:
+                                  FolgoMythriseCelestialTheme.of(context).info,
                               fontSize: 18.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
@@ -155,12 +159,14 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   6.0, 0.0, 0.0, 0.0),
                               child: Text(
-                                '${FFAppState().folgoEonforgeMysteriaHallUsers.elementAtOrNull(FFAppState().folgoStardreamHallowedAtriumID)?.folgoVoxLuminanceChamberUserCoins.toString()}',
-                                style: FlutterFlowTheme.of(context)
+                                '${FolgoAstralwovenMemoryVaulton().folgoEonforgeMysteriaHallUsers.elementAtOrNull(FolgoAstralwovenMemoryVaulton().folgoStardreamHallowedAtriumID)?.folgoVoxLuminanceChamberUserCoins.toString()}',
+                                style: FolgoMythriseCelestialTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'siyuanheiti',
-                                      color: FlutterFlowTheme.of(context).info,
+                                      color: FolgoMythriseCelestialTheme.of(
+                                              context)
+                                          .info,
                                       fontSize: 16.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
@@ -183,19 +189,21 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
                                 childAspectRatio: 0.7,
                               ),
                               scrollDirection: Axis.vertical,
-                              itemCount: RechargeProducts.products.length,
+                              itemCount: CaldrienXavorithLumarioFexundrel
+                                  .mythraloVenthorixQuazarienDelythos.length,
                               itemBuilder: (context, index) {
-                                final product =
-                                    RechargeProducts.products[index];
-                                final isSelected = _selectedIndex == index;
+                                final product = CaldrienXavorithLumarioFexundrel
+                                    .mythraloVenthorixQuazarienDelythos[index];
+                                final isSelected =
+                                    _folgoZenthoriaVallixunCrysage == index;
 
                                 return GestureDetector(
                                   onTap: () async {
-                                    // 先发起购买，再更新选中状态（避免 setState 导致闪烁）
-                                    await _purchaseProduct(product);
+                                    await _folgoMontherisSkylaronVeltrune(
+                                        product);
                                     if (mounted) {
                                       setState(() {
-                                        _selectedIndex = index;
+                                        _folgoZenthoriaVallixunCrysage = index;
                                       });
                                     }
                                   },
@@ -206,7 +214,9 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
                                     decoration: BoxDecoration(
                                       color: isSelected
                                           ? Color(0xFF78F57D)
-                                          : FlutterFlowTheme.of(context).info,
+                                          : FolgoMythriseCelestialTheme.of(
+                                                  context)
+                                              .info,
                                       borderRadius: BorderRadius.circular(20.0),
                                       border: isSelected
                                           ? Border.all(
@@ -240,8 +250,8 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
                                                     0.0, 2.0, 0.0, 0.0),
                                             child: Text(
                                               '${product.diamonds}',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              style: FolgoMythriseCelestialTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'siyuanheiti',
@@ -268,20 +278,22 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
                                                   0.0, 0.0),
                                               child: Text(
                                                 '\$${product.price.toStringAsFixed(2)}',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'siyuanheiti',
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .info,
-                                                      fontSize: 11.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
+                                                style:
+                                                    FolgoMythriseCelestialTheme
+                                                            .of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'siyuanheiti',
+                                                          color:
+                                                              FolgoMythriseCelestialTheme
+                                                                      .of(context)
+                                                                  .info,
+                                                          fontSize: 11.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
                                               ),
                                             ),
                                           ),

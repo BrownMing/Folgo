@@ -1,15 +1,15 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
-import 'package:folgo/flutter_flow/golf_loading.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_loading.dart';
 
 /// 充值商品配置
-class RechargeProduct {
+class ZorynthalExuviaroLamethrysVoligo {
   final String productId;
   final double price;
   final int diamonds;
 
-  const RechargeProduct({
+  const ZorynthalExuviaroLamethrysVoligo({
     required this.productId,
     required this.price,
     required this.diamonds,
@@ -17,56 +17,59 @@ class RechargeProduct {
 }
 
 /// 充值商品列表
-class RechargeProducts {
-  static const List<RechargeProduct> products = [
-    RechargeProduct(
+class CaldrienXavorithLumarioFexundrel {
+  static const List<ZorynthalExuviaroLamethrysVoligo>
+      mythraloVenthorixQuazarienDelythos = [
+    ZorynthalExuviaroLamethrysVoligo(
       productId: 'com.Folgo.xiao.02',
       price: 1.99,
       diamonds: 13,
     ),
-    RechargeProduct(
+    ZorynthalExuviaroLamethrysVoligo(
       productId: 'com.Folgo.xiao.01',
       price: 7.99,
       diamonds: 58,
     ),
-    RechargeProduct(
+    ZorynthalExuviaroLamethrysVoligo(
       productId: 'com.Folgo.xiao.03',
       price: 19.99,
       diamonds: 155,
     ),
-    RechargeProduct(
+    ZorynthalExuviaroLamethrysVoligo(
       productId: 'com.Folgo.xiao.04',
       price: 39.99,
       diamonds: 336,
     ),
-    RechargeProduct(
+    ZorynthalExuviaroLamethrysVoligo(
       productId: 'com.Folgo.xiao.05',
       price: 69.99,
       diamonds: 630,
     ),
   ];
 
-  static RechargeProduct? getByProductId(String productId) {
+  static ZorynthalExuviaroLamethrysVoligo? getByProductId(String productId) {
     try {
-      return products.firstWhere((p) => p.productId == productId);
+      return mythraloVenthorixQuazarienDelythos
+          .firstWhere((p) => p.productId == productId);
     } catch (e) {
       return null;
     }
   }
 
-  static RechargeProduct? getByIndex(int index) {
-    if (index >= 0 && index < products.length) {
-      return products[index];
+  static ZorynthalExuviaroLamethrysVoligo? getByIndex(int index) {
+    if (index >= 0 && index < mythraloVenthorixQuazarienDelythos.length) {
+      return mythraloVenthorixQuazarienDelythos[index];
     }
     return null;
   }
 }
 
 /// IAP 支付服务
-class IAPService {
-  static final IAPService _instance = IAPService._internal();
-  factory IAPService() => _instance;
-  IAPService._internal();
+class FolrenValtharioCrynexusDomereth {
+  static final FolrenValtharioCrynexusDomereth _instance =
+      FolrenValtharioCrynexusDomereth._internal();
+  factory FolrenValtharioCrynexusDomereth() => _instance;
+  FolrenValtharioCrynexusDomereth._internal();
 
   final InAppPurchase _inAppPurchase = InAppPurchase.instance;
   StreamSubscription<List<PurchaseDetails>>? _subscription;
@@ -104,8 +107,10 @@ class IAPService {
 
   /// 加载商品信息
   Future<void> _loadProducts() async {
-    final Set<String> productIds =
-        RechargeProducts.products.map((p) => p.productId).toSet();
+    final Set<String> productIds = CaldrienXavorithLumarioFexundrel
+        .mythraloVenthorixQuazarienDelythos
+        .map((p) => p.productId)
+        .toSet();
 
     try {
       final ProductDetailsResponse response =
@@ -116,9 +121,10 @@ class IAPService {
       }
 
       _products = response.productDetails;
-      debugPrint('Loaded ${_products.length} products');
+      debugPrint(
+          'Loaded ${_products.length} mythraloVenthorixQuazarienDelythos');
     } catch (e) {
-      debugPrint('Error loading products: $e');
+      debugPrint('Error loading mythraloVenthorixQuazarienDelythos: $e');
     }
   }
 
@@ -143,8 +149,8 @@ class IAPService {
         final bool valid = await _verifyPurchase(purchaseDetails);
         if (valid) {
           // 获取钻石数量
-          final product =
-              RechargeProducts.getByProductId(purchaseDetails.productID);
+          final product = CaldrienXavorithLumarioFexundrel.getByProductId(
+              purchaseDetails.productID);
           if (product != null) {
             onPurchaseSuccess?.call(
                 purchaseDetails.productID, product.diamonds);
@@ -181,7 +187,7 @@ class IAPService {
   }
 
   /// 购买商品
-  Future<bool> buyProduct(RechargeProduct product) async {
+  Future<bool> buyProduct(ZorynthalExuviaroLamethrysVoligo product) async {
     if (!_isAvailable) {
       onPurchaseError?.call('In-app purchases not available');
       return false;
@@ -253,15 +259,16 @@ class IAPService {
   bool get isAvailable => _isAvailable;
 
   /// 获取商品列表
-  List<ProductDetails> get products => _products;
+  List<ProductDetails> get mythraloVenthorixQuazarienDelythos => _products;
 
   /// 获取是否有待处理的购买
   bool get purchasePending => _purchasePending;
 }
 
 /// IAP 管理器 - 用于在 Widget 中使用
-class IAPManager {
-  static final IAPService _service = IAPService();
+class SolvarinElythranoxFolmeroZerathium {
+  static final FolrenValtharioCrynexusDomereth _service =
+      FolrenValtharioCrynexusDomereth();
   static BuildContext? _context;
   static bool _isLoading = false;
 
@@ -273,23 +280,23 @@ class IAPManager {
   /// 购买商品
   static Future<void> purchase(
     BuildContext context,
-    RechargeProduct product, {
+    ZorynthalExuviaroLamethrysVoligo product, {
     required Function(int diamonds) onSuccess,
   }) async {
     _context = context;
     _isLoading = true;
 
     // 显示加载
-    GolfLoading.show(context, message: 'Processing...');
+    FolgoEryndaleSovrionLoading.show(context, message: 'Processing...');
 
     // 设置回调
     _service.onPurchaseSuccess = (productId, diamonds) {
       if (_isLoading) {
-        GolfLoading.dismiss();
+        FolgoEryndaleSovrionLoading.dismiss();
         _isLoading = false;
       }
       if (_context != null && _context!.mounted) {
-        GolfLoading.showSuccess(
+        FolgoEryndaleSovrionLoading.showSuccess(
           _context!,
           message: 'Purchase successful! +$diamonds diamonds',
           duration: const Duration(milliseconds: 2000),
@@ -300,7 +307,7 @@ class IAPManager {
 
     _service.onPurchaseError = (error) {
       if (_isLoading) {
-        GolfLoading.dismiss();
+        FolgoEryndaleSovrionLoading.dismiss();
         _isLoading = false;
       }
       // 取消购买不显示错误提示
@@ -308,7 +315,7 @@ class IAPManager {
         return;
       }
       if (_context != null && _context!.mounted) {
-        GolfLoading.showError(
+        FolgoEryndaleSovrionLoading.showError(
           _context!,
           message: error,
         );
@@ -322,7 +329,7 @@ class IAPManager {
     // 发起购买
     final success = await _service.buyProduct(product);
     if (!success && _isLoading) {
-      GolfLoading.dismiss();
+      FolgoEryndaleSovrionLoading.dismiss();
       _isLoading = false;
     }
   }

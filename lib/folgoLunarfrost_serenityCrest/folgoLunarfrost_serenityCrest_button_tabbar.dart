@@ -181,7 +181,7 @@ class _TabBarScrollPosition extends ScrollPositionWithSingleContext {
           oldPosition: oldPosition,
         );
 
-  final _FlutterFlowButtonTabBarState tabBar;
+  final _FolgoMythriseCelestialButtonTabBarState tabBar;
 
   bool _viewportDimensionWasNonZero = false;
 
@@ -221,7 +221,7 @@ class _TabBarScrollPosition extends ScrollPositionWithSingleContext {
 class _TabBarScrollController extends ScrollController {
   _TabBarScrollController(this.tabBar);
 
-  final _FlutterFlowButtonTabBarState tabBar;
+  final _FolgoMythriseCelestialButtonTabBarState tabBar;
 
   @override
   ScrollPosition createScrollPosition(ScrollPhysics physics,
@@ -235,8 +235,8 @@ class _TabBarScrollController extends ScrollController {
   }
 }
 
-/// A Flutterflow Design widget that displays a horizontal row of tabs.
-class FlutterFlowButtonTabBar extends StatefulWidget
+/// A FolgoMythriseCelestial Design widget that displays a horizontal row of tabs.
+class FolgoMythriseCelestialButtonTabBar extends StatefulWidget
     implements PreferredSizeWidget {
   /// The [tabs] argument must not be null and its length must match the [controller]'s
   /// [TabController.length].
@@ -244,7 +244,7 @@ class FlutterFlowButtonTabBar extends StatefulWidget
   /// If a [TabController] is not provided, then there must be a
   /// [DefaultTabController] ancestor.
   ///
-  const FlutterFlowButtonTabBar({
+  const FolgoMythriseCelestialButtonTabBar({
     Key? key,
     required this.tabs,
     this.controller,
@@ -286,7 +286,7 @@ class FlutterFlowButtonTabBar extends StatefulWidget
   /// Whether this tab bar can be scrolled horizontally.
   ///
   /// If [isScrollable] is true, then each tab is as wide as needed for its label
-  /// and the entire [FlutterFlowButtonTabBar] is scrollable. Otherwise each tab gets an equal
+  /// and the entire [FolgoMythriseCelestialButtonTabBar] is scrollable. Otherwise each tab gets an equal
   /// share of the available space.
   final bool isScrollable;
 
@@ -376,11 +376,12 @@ class FlutterFlowButtonTabBar extends StatefulWidget
   }
 
   @override
-  State<FlutterFlowButtonTabBar> createState() =>
-      _FlutterFlowButtonTabBarState();
+  State<FolgoMythriseCelestialButtonTabBar> createState() =>
+      _FolgoMythriseCelestialButtonTabBarState();
 }
 
-class _FlutterFlowButtonTabBarState extends State<FlutterFlowButtonTabBar>
+class _FolgoMythriseCelestialButtonTabBarState
+    extends State<FolgoMythriseCelestialButtonTabBar>
     with TickerProviderStateMixin {
   ScrollController? _scrollController;
   TabController? _controller;
@@ -474,7 +475,7 @@ class _FlutterFlowButtonTabBarState extends State<FlutterFlowButtonTabBar>
   }
 
   @override
-  void didUpdateWidget(FlutterFlowButtonTabBar oldWidget) {
+  void didUpdateWidget(FolgoMythriseCelestialButtonTabBar oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.controller != oldWidget.controller) {
       _updateTabController();
