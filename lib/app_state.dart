@@ -20,12 +20,12 @@ class FFAppState extends ChangeNotifier {
     prefs = await SharedPreferences.getInstance();
     _safeInit(() {
       _folgoStardreamHallowedAtriumID =
-          prefs.getInt('ff_folgoStardreamHallowedAtriumID') ??
+          prefs.getInt('FolgoDreamsunder_folgoStardreamHallowedAtriumID') ??
               _folgoStardreamHallowedAtriumID;
     });
     _safeInit(() {
       _folgoEonforgeMysteriaHallUsers = prefs
-              .getStringList('ff_folgoEonforgeMysteriaHallUsers')
+              .getStringList('FolgoDreamsunder_folgoEonforgeMysteriaHallUsers')
               ?.map((x) {
                 try {
                   return FolgoVoxLuminanceChamberUserStruct.fromSerializableMap(
@@ -41,7 +41,7 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _folgoTimewornCrescentTempleVideos = prefs
-              .getStringList('ff_folgoTimewornCrescentTempleVideos')
+              .getStringList('FolgoDreamsunder_folgoTimewornCrescentTempleVideos')
               ?.map((x) {
                 try {
                   return FolgoWhisperHaloBasilicaVideoStruct
@@ -57,7 +57,7 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _folgoVastrealmEclipseHavenActives = prefs
-              .getStringList('ff_folgoVastrealmEclipseHavenActives')
+              .getStringList('FolgoDreamsunder_folgoVastrealmEclipseHavenActives')
               ?.map((x) {
                 try {
                   return FolgoChronoLatticeSanctuaryActiveStruct
@@ -73,7 +73,7 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _folgoInfinityVeilSanctuaryVenues = prefs
-              .getStringList('ff_folgoInfinityVeilSanctuaryVenues')
+              .getStringList('FolgoDreamsunder_folgoInfinityVeilSanctuaryVenues')
               ?.map((x) {
                 try {
                   return FolgoToneweaveEmotionCoveVenuesStruct
@@ -89,7 +89,7 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _folgoNebulaEonspireDomeChats = prefs
-              .getStringList('ff_folgoNebulaEonspireDomeChats')
+              .getStringList('FolgoDreamsunder_folgoNebulaEonspireDomeChats')
               ?.map((x) {
                 try {
                   return FolgoMythicStarweaveChatStruct.fromSerializableMap(
@@ -105,7 +105,7 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _folgoEvergloomSerenityMessages = prefs
-              .getStringList('ff_folgoEvergloomSerenityMessages')
+              .getStringList('FolgoDreamsunder_folgoEvergloomSerenityMessages')
               ?.map((x) {
                 try {
                   return FolgoCelestiumNovaMessageStruct.fromSerializableMap(
@@ -121,7 +121,7 @@ class FFAppState extends ChangeNotifier {
     });
     _safeInit(() {
       _folgoCosmicSeraphshadeComments = prefs
-              .getStringList('ff_folgoCosmicSeraphshadeComments')
+              .getStringList('FolgoDreamsunder_folgoCosmicSeraphshadeComments')
               ?.map((x) {
                 try {
                   return FolgoAstralHorizonCitadelCommentStruct
@@ -148,7 +148,7 @@ class FFAppState extends ChangeNotifier {
   int get folgoStardreamHallowedAtriumID => _folgoStardreamHallowedAtriumID;
   set folgoStardreamHallowedAtriumID(int value) {
     _folgoStardreamHallowedAtriumID = value;
-    prefs.setInt('ff_folgoStardreamHallowedAtriumID', value);
+    prefs.setInt('FolgoDreamsunder_folgoStardreamHallowedAtriumID', value);
   }
 
   List<FolgoVoxLuminanceChamberUserStruct> _folgoEonforgeMysteriaHallUsers = [
@@ -170,27 +170,27 @@ class FFAppState extends ChangeNotifier {
   set folgoEonforgeMysteriaHallUsers(
       List<FolgoVoxLuminanceChamberUserStruct> value) {
     _folgoEonforgeMysteriaHallUsers = value;
-    prefs.setStringList('ff_folgoEonforgeMysteriaHallUsers',
+    prefs.setStringList('FolgoDreamsunder_folgoEonforgeMysteriaHallUsers',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToFolgoEonforgeMysteriaHallUsers(
       FolgoVoxLuminanceChamberUserStruct value) {
     folgoEonforgeMysteriaHallUsers.add(value);
-    prefs.setStringList('ff_folgoEonforgeMysteriaHallUsers',
+    prefs.setStringList('FolgoDreamsunder_folgoEonforgeMysteriaHallUsers',
         _folgoEonforgeMysteriaHallUsers.map((x) => x.serialize()).toList());
   }
 
   void removeFromFolgoEonforgeMysteriaHallUsers(
       FolgoVoxLuminanceChamberUserStruct value) {
     folgoEonforgeMysteriaHallUsers.remove(value);
-    prefs.setStringList('ff_folgoEonforgeMysteriaHallUsers',
+    prefs.setStringList('FolgoDreamsunder_folgoEonforgeMysteriaHallUsers',
         _folgoEonforgeMysteriaHallUsers.map((x) => x.serialize()).toList());
   }
 
   void removeAtIndexFromFolgoEonforgeMysteriaHallUsers(int index) {
     folgoEonforgeMysteriaHallUsers.removeAt(index);
-    prefs.setStringList('ff_folgoEonforgeMysteriaHallUsers',
+    prefs.setStringList('FolgoDreamsunder_folgoEonforgeMysteriaHallUsers',
         _folgoEonforgeMysteriaHallUsers.map((x) => x.serialize()).toList());
   }
 
@@ -202,7 +202,7 @@ class FFAppState extends ChangeNotifier {
   ) {
     folgoEonforgeMysteriaHallUsers[index] =
         updateFn(_folgoEonforgeMysteriaHallUsers[index]);
-    prefs.setStringList('ff_folgoEonforgeMysteriaHallUsers',
+    prefs.setStringList('FolgoDreamsunder_folgoEonforgeMysteriaHallUsers',
         _folgoEonforgeMysteriaHallUsers.map((x) => x.serialize()).toList());
   }
 
@@ -227,14 +227,14 @@ class FFAppState extends ChangeNotifier {
   set folgoTimewornCrescentTempleVideos(
       List<FolgoWhisperHaloBasilicaVideoStruct> value) {
     _folgoTimewornCrescentTempleVideos = value;
-    prefs.setStringList('ff_folgoTimewornCrescentTempleVideos',
+    prefs.setStringList('FolgoDreamsunder_folgoTimewornCrescentTempleVideos',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToFolgoTimewornCrescentTempleVideos(
       FolgoWhisperHaloBasilicaVideoStruct value) {
     folgoTimewornCrescentTempleVideos.add(value);
-    prefs.setStringList('ff_folgoTimewornCrescentTempleVideos',
+    prefs.setStringList('FolgoDreamsunder_folgoTimewornCrescentTempleVideos',
         _folgoTimewornCrescentTempleVideos.map((x) => x.serialize()).toList());
   }
 
@@ -246,7 +246,7 @@ class FFAppState extends ChangeNotifier {
   ) {
     folgoTimewornCrescentTempleVideos[index] =
         updateFn(_folgoTimewornCrescentTempleVideos[index]);
-    prefs.setStringList('ff_folgoTimewornCrescentTempleVideos',
+    prefs.setStringList('FolgoDreamsunder_folgoTimewornCrescentTempleVideos',
         _folgoTimewornCrescentTempleVideos.map((x) => x.serialize()).toList());
   }
 
@@ -265,14 +265,14 @@ class FFAppState extends ChangeNotifier {
   set folgoVastrealmEclipseHavenActives(
       List<FolgoChronoLatticeSanctuaryActiveStruct> value) {
     _folgoVastrealmEclipseHavenActives = value;
-    prefs.setStringList('ff_folgoVastrealmEclipseHavenActives',
+    prefs.setStringList('FolgoDreamsunder_folgoVastrealmEclipseHavenActives',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToFolgoVastrealmEclipseHavenActives(
       FolgoChronoLatticeSanctuaryActiveStruct value) {
     folgoVastrealmEclipseHavenActives.add(value);
-    prefs.setStringList('ff_folgoVastrealmEclipseHavenActives',
+    prefs.setStringList('FolgoDreamsunder_folgoVastrealmEclipseHavenActives',
         _folgoVastrealmEclipseHavenActives.map((x) => x.serialize()).toList());
   }
 
@@ -284,7 +284,7 @@ class FFAppState extends ChangeNotifier {
   ) {
     folgoVastrealmEclipseHavenActives[index] =
         updateFn(_folgoVastrealmEclipseHavenActives[index]);
-    prefs.setStringList('ff_folgoVastrealmEclipseHavenActives',
+    prefs.setStringList('FolgoDreamsunder_folgoVastrealmEclipseHavenActives',
         _folgoVastrealmEclipseHavenActives.map((x) => x.serialize()).toList());
   }
 
@@ -302,27 +302,27 @@ class FFAppState extends ChangeNotifier {
   set folgoInfinityVeilSanctuaryVenues(
       List<FolgoToneweaveEmotionCoveVenuesStruct> value) {
     _folgoInfinityVeilSanctuaryVenues = value;
-    prefs.setStringList('ff_folgoInfinityVeilSanctuaryVenues',
+    prefs.setStringList('FolgoDreamsunder_folgoInfinityVeilSanctuaryVenues',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToFolgoInfinityVeilSanctuaryVenues(
       FolgoToneweaveEmotionCoveVenuesStruct value) {
     folgoInfinityVeilSanctuaryVenues.add(value);
-    prefs.setStringList('ff_folgoInfinityVeilSanctuaryVenues',
+    prefs.setStringList('FolgoDreamsunder_folgoInfinityVeilSanctuaryVenues',
         _folgoInfinityVeilSanctuaryVenues.map((x) => x.serialize()).toList());
   }
 
   void removeFromFolgoInfinityVeilSanctuaryVenues(
       FolgoToneweaveEmotionCoveVenuesStruct value) {
     folgoInfinityVeilSanctuaryVenues.remove(value);
-    prefs.setStringList('ff_folgoInfinityVeilSanctuaryVenues',
+    prefs.setStringList('FolgoDreamsunder_folgoInfinityVeilSanctuaryVenues',
         _folgoInfinityVeilSanctuaryVenues.map((x) => x.serialize()).toList());
   }
 
   void removeAtIndexFromFolgoInfinityVeilSanctuaryVenues(int index) {
     folgoInfinityVeilSanctuaryVenues.removeAt(index);
-    prefs.setStringList('ff_folgoInfinityVeilSanctuaryVenues',
+    prefs.setStringList('FolgoDreamsunder_folgoInfinityVeilSanctuaryVenues',
         _folgoInfinityVeilSanctuaryVenues.map((x) => x.serialize()).toList());
   }
 
@@ -334,29 +334,23 @@ class FFAppState extends ChangeNotifier {
   ) {
     folgoInfinityVeilSanctuaryVenues[index] =
         updateFn(_folgoInfinityVeilSanctuaryVenues[index]);
-    prefs.setStringList('ff_folgoInfinityVeilSanctuaryVenues',
+    prefs.setStringList('FolgoDreamsunder_folgoInfinityVeilSanctuaryVenues',
         _folgoInfinityVeilSanctuaryVenues.map((x) => x.serialize()).toList());
   }
 
-  void insertAtIndexInFolgoInfinityVeilSanctuaryVenues(
-      int index, FolgoToneweaveEmotionCoveVenuesStruct value) {
-    folgoInfinityVeilSanctuaryVenues.insert(index, value);
-    prefs.setStringList('ff_folgoInfinityVeilSanctuaryVenues',
-        _folgoInfinityVeilSanctuaryVenues.map((x) => x.serialize()).toList());
-  }
 
   List<FolgoMythicStarweaveChatStruct> _folgoNebulaEonspireDomeChats = [];
   List<FolgoMythicStarweaveChatStruct> get folgoNebulaEonspireDomeChats =>
       _folgoNebulaEonspireDomeChats;
   set folgoNebulaEonspireDomeChats(List<FolgoMythicStarweaveChatStruct> value) {
     _folgoNebulaEonspireDomeChats = value;
-    prefs.setStringList('ff_folgoNebulaEonspireDomeChats',
+    prefs.setStringList('FolgoDreamsunder_folgoNebulaEonspireDomeChats',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToFolgoNebulaEonspireDomeChats(FolgoMythicStarweaveChatStruct value) {
     folgoNebulaEonspireDomeChats.add(value);
-    prefs.setStringList('ff_folgoNebulaEonspireDomeChats',
+    prefs.setStringList('FolgoDreamsunder_folgoNebulaEonspireDomeChats',
         _folgoNebulaEonspireDomeChats.map((x) => x.serialize()).toList());
   }
 
@@ -367,7 +361,7 @@ class FFAppState extends ChangeNotifier {
   ) {
     folgoNebulaEonspireDomeChats[index] =
         updateFn(_folgoNebulaEonspireDomeChats[index]);
-    prefs.setStringList('ff_folgoNebulaEonspireDomeChats',
+    prefs.setStringList('FolgoDreamsunder_folgoNebulaEonspireDomeChats',
         _folgoNebulaEonspireDomeChats.map((x) => x.serialize()).toList());
   }
 
@@ -377,14 +371,14 @@ class FFAppState extends ChangeNotifier {
   set folgoEvergloomSerenityMessages(
       List<FolgoCelestiumNovaMessageStruct> value) {
     _folgoEvergloomSerenityMessages = value;
-    prefs.setStringList('ff_folgoEvergloomSerenityMessages',
+    prefs.setStringList('FolgoDreamsunder_folgoEvergloomSerenityMessages',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToFolgoEvergloomSerenityMessages(
       FolgoCelestiumNovaMessageStruct value) {
     folgoEvergloomSerenityMessages.add(value);
-    prefs.setStringList('ff_folgoEvergloomSerenityMessages',
+    prefs.setStringList('FolgoDreamsunder_folgoEvergloomSerenityMessages',
         _folgoEvergloomSerenityMessages.map((x) => x.serialize()).toList());
   }
  
@@ -395,14 +389,14 @@ class FFAppState extends ChangeNotifier {
   set folgoCosmicSeraphshadeComments(
       List<FolgoAstralHorizonCitadelCommentStruct> value) {
     _folgoCosmicSeraphshadeComments = value;
-    prefs.setStringList('ff_folgoCosmicSeraphshadeComments',
+    prefs.setStringList('FolgoDreamsunder_folgoCosmicSeraphshadeComments',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToFolgoCosmicSeraphshadeComments(
       FolgoAstralHorizonCitadelCommentStruct value) {
     folgoCosmicSeraphshadeComments.add(value);
-    prefs.setStringList('ff_folgoCosmicSeraphshadeComments',
+    prefs.setStringList('FolgoDreamsunder_folgoCosmicSeraphshadeComments',
         _folgoCosmicSeraphshadeComments.map((x) => x.serialize()).toList());
   }
 
@@ -414,7 +408,7 @@ class FFAppState extends ChangeNotifier {
   ) {
     folgoCosmicSeraphshadeComments[index] =
         updateFn(_folgoCosmicSeraphshadeComments[index]);
-    prefs.setStringList('ff_folgoCosmicSeraphshadeComments',
+    prefs.setStringList('FolgoDreamsunder_folgoCosmicSeraphshadeComments',
         _folgoCosmicSeraphshadeComments.map((x) => x.serialize()).toList());
   }
 }

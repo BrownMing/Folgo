@@ -1,3 +1,8 @@
+import 'dart:io';
+
+import 'package:folgo/flutter_flow/golf_loading.dart';
+import 'package:image_picker/image_picker.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -127,52 +132,74 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Container(
-                                  width: 145.0,
-                                  height: 145.0,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: Image.asset(
-                                        FFAppState()
-                                            .folgoEonforgeMysteriaHallUsers
-                                            .elementAtOrNull(FFAppState()
-                                                .folgoStardreamHallowedAtriumID)!
-                                            .folgoVoxLuminanceChamberUserPhoto,
-                                      ).image,
+                                InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    final ImagePicker picker = ImagePicker();
+                                    final XFile? image = await picker.pickImage(
+                                      source: ImageSource.gallery,
+                                      maxWidth: 512,
+                                      maxHeight: 512,
+                                      imageQuality: 80,
+                                    );
+                                    if (image != null) {
+                                      safeSetState(() {
+                                        _model.selectedPhotoPath = image.path;
+                                      });
+                                    }
+                                  },
+                                  child: Container(
+                                    width: 145.0,
+                                    height: 145.0,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
                                     ),
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Stack(
-                                    children: [
-                                      Align(
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Container(
-                                          width: double.infinity,
-                                          height: double.infinity,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
+                                    child: Stack(
+                                      children: [
+                                        // 显示头像
+                                        ClipOval(
+                                          child: _model.selectedPhotoPath !=
+                                                  null
+                                              ? Image.file(
+                                                  File(_model
+                                                      .selectedPhotoPath!),
+                                                  width: 145.0,
+                                                  height: 145.0,
+                                                  fit: BoxFit.cover,
+                                                )
+                                              : Image.asset(
+                                                  FFAppState()
+                                                      .folgoEonforgeMysteriaHallUsers
+                                                      .elementAtOrNull(FFAppState()
+                                                          .folgoStardreamHallowedAtriumID)!
+                                                      .folgoVoxLuminanceChamberUserPhoto,
+                                                  width: 145.0,
+                                                  height: 145.0,
+                                                  fit: BoxFit.cover,
+                                                ),
                                         ),
-                                      ),
-                                      Align(
-                                        alignment:
-                                            AlignmentDirectional(1.0, 1.0),
-                                        child: Container(
-                                          width: 44.0,
-                                          height: 44.0,
-                                          decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                              fit: BoxFit.cover,
-                                              image: Image.asset(
-                                                'assets/images/dfgshdgfiuysd_cxgvsdyufgstuydigfstd.png',
-                                              ).image,
+                                        // 编辑图标
+                                        Align(
+                                          alignment:
+                                              AlignmentDirectional(1.0, 1.0),
+                                          child: Container(
+                                            width: 44.0,
+                                            height: 44.0,
+                                            decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                fit: BoxFit.cover,
+                                                image: Image.asset(
+                                                  'assets/images/dfgshdgfiuysd_cxgvsdyufgstuydigfstd.png',
+                                                ).image,
+                                              ),
                                             ),
                                           ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ],
@@ -435,6 +462,55 @@ class _FolgoVoicescapeSerenityHallEditFileWidgetState
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
+                    // 显示加载
+                    GolfLoading.show(context, message: 'Saving...');
+
+                    await Future.delayed(Duration(milliseconds: 800));
+
+                    // 更新用户信息
+                    final userId = FFAppState().folgoStardreamHallowedAtriumID;
+
+                    // 更新名称（如果有输入）
+                    if (_model.textController1.text.isNotEmpty) {
+                      FFAppState().updateFolgoEonforgeMysteriaHallUsersAtIndex(
+                        userId,
+                        (user) => user
+                          ..folgoVoxLuminanceChamberUserName =
+                              _model.textController1.text,
+                      );
+                    }
+
+                    // 更新简介（如果有输入）
+                    if (_model.textController2.text.isNotEmpty) {
+                      FFAppState().updateFolgoEonforgeMysteriaHallUsersAtIndex(
+                        userId,
+                        (user) => user
+                          ..folgoVoxLuminanceChamberUserDescribe =
+                              _model.textController2.text,
+                      );
+                    }
+
+                    // 更新头像（如果有选择新图片）
+                    if (_model.selectedPhotoPath != null) {
+                      FFAppState().updateFolgoEonforgeMysteriaHallUsersAtIndex(
+                        userId,
+                        (user) => user
+                          ..folgoVoxLuminanceChamberUserPhoto =
+                              _model.selectedPhotoPath!,
+                      );
+                    }
+
+                    FFAppState().update(() {});
+
+                    // 关闭加载
+                    GolfLoading.dismiss();
+
+                    // 显示成功提示
+                    GolfLoading.showSuccess(
+                      context,
+                      message: 'Profile updated successfully!',
+                    );
+
                     context.safePop();
                   },
                   child: Container(

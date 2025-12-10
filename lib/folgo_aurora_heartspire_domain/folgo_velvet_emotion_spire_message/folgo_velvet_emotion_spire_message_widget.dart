@@ -204,12 +204,17 @@ class _FolgoVelvetEmotionSpireMessageWidgetState
                                           FolgoPassionWhisperPalaceReportBlockWidget(
                                         folgoEonwyrmStarluminHarborUser: widget
                                             .folgoEchoedDevotionHarborUserid!,
-                                        folgoCosmoriaVeilboundTemplePost: 0,
                                       ),
                                     ),
                                   );
                                 },
-                              ).then((value) => safeSetState(() {}));
+                              ).then((value) => safeSetState(() {
+                                    if (value == true) {
+                                      Future.delayed(
+                                          Duration(milliseconds: 1800));
+                                      Navigator.pop(context);
+                                    }
+                                  }));
                             },
                             child: Container(
                               width: 44.0,

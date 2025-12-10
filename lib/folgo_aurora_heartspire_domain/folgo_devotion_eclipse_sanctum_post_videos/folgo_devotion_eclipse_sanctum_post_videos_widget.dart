@@ -586,7 +586,7 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                     GolfLoading.dismiss();
                     GolfLoading.showSuccess(
                       context,
-                      message: 'Posted successfully!',
+                      message: 'Submitted successfully! Pending review.',
                       duration: const Duration(milliseconds: 1500),
                     );
 

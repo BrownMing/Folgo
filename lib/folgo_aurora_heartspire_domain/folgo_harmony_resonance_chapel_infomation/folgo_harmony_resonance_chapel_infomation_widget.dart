@@ -353,6 +353,7 @@ class _FolgoHarmonyResonanceChapelInfomationWidgetState
                                                     autoPlay: false,
                                                     looping: true,
                                                     showControls: false,
+                                                    borderRadius: 20.0,
                                                   ),
                                                 ],
                                               ),

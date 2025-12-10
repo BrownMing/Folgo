@@ -396,7 +396,7 @@ class _FolgoWhisperborneAuralShrineSettingsWidgetState
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
-                            context.pushNamed(
+                            context.goNamed(
                               FolgoMoonwhisperCathedralLoginWidget.routeName,
                               extra: <String, dynamic>{
                                 kTransitionInfoKey: TransitionInfo(

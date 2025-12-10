@@ -1,7 +1,12 @@
+import 'dart:io';
+
+import 'package:folgo/flutter_flow/golf_loading.dart';
+
 import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import 'folgo_soulwoven_promise_hall_post_active_model.dart';
 export 'folgo_soulwoven_promise_hall_post_active_model.dart';
@@ -250,47 +255,84 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  Container(
-                                    width: 128.0,
-                                    height: 128.0,
-                                    decoration: BoxDecoration(
-                                      color: Color(0x34FFFFFF),
-                                      borderRadius: BorderRadius.circular(20.0),
-                                    ),
-                                    child: Stack(
-                                      children: [
-                                        if (_model.folgoNebulashadeEternalCitadel !=
-                                                null &&
-                                            _model.folgoNebulashadeEternalCitadel !=
-                                                '')
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(20.0),
-                                            child: Image.asset(
-                                              _model
-                                                  .folgoNebulashadeEternalCitadel!,
-                                              width: double.infinity,
-                                              height: double.infinity,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        Align(
-                                          alignment:
-                                              AlignmentDirectional(0.0, 0.0),
-                                          child: Container(
-                                            width: 54.0,
-                                            height: 54.0,
-                                            decoration: BoxDecoration(
-                                              image: DecorationImage(
+                                  InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      final ImagePicker picker = ImagePicker();
+                                      final XFile? image =
+                                          await picker.pickImage(
+                                        source: ImageSource.gallery,
+                                        maxWidth: 1024,
+                                        maxHeight: 1024,
+                                        imageQuality: 80,
+                                      );
+                                      if (image != null) {
+                                        safeSetState(() {
+                                          _model.folgoNebulashadeEternalCitadel =
+                                              image.path;
+                                        });
+                                      }
+                                    },
+                                    child: Container(
+                                      width: 128.0,
+                                      height: 128.0,
+                                      decoration: BoxDecoration(
+                                        color: Color(0x34FFFFFF),
+                                        borderRadius:
+                                            BorderRadius.circular(20.0),
+                                      ),
+                                      child: Stack(
+                                        children: [
+                                          if (_model.folgoNebulashadeEternalCitadel !=
+                                                  null &&
+                                              _model.folgoNebulashadeEternalCitadel !=
+                                                  '')
+                                            ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(20.0),
+                                              child: Image.file(
+                                                File(_model
+                                                    .folgoNebulashadeEternalCitadel!),
+                                                width: double.infinity,
+                                                height: double.infinity,
                                                 fit: BoxFit.cover,
-                                                image: Image.asset(
-                                                  'assets/images/dfgshdgfiuysd_cxgvsdyufgstuydigfstd.png',
-                                                ).image,
+                                                errorBuilder: (context, error,
+                                                    stackTrace) {
+                                                  return Image.asset(
+                                                    _model
+                                                        .folgoNebulashadeEternalCitadel!,
+                                                    width: double.infinity,
+                                                    height: double.infinity,
+                                                    fit: BoxFit.cover,
+                                                  );
+                                                },
                                               ),
                                             ),
-                                          ),
-                                        ),
-                                      ],
+                                          if (_model.folgoNebulashadeEternalCitadel ==
+                                                  null ||
+                                              _model.folgoNebulashadeEternalCitadel ==
+                                                  '')
+                                            Align(
+                                              alignment: AlignmentDirectional(
+                                                  0.0, 0.0),
+                                              child: Container(
+                                                width: 54.0,
+                                                height: 54.0,
+                                                decoration: BoxDecoration(
+                                                  image: DecorationImage(
+                                                    fit: BoxFit.cover,
+                                                    image: Image.asset(
+                                                      'assets/images/dfgshdgfiuysd_cxgvsdyufgstuydigfstd.png',
+                                                    ).image,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ].divide(SizedBox(width: 13.0)),
@@ -863,32 +905,58 @@ class _FolgoSoulwovenPromiseHallPostActiveWidgetState
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                FFAppState()
-                                    .addToFolgoVastrealmEclipseHavenActives(
-                                        FolgoChronoLatticeSanctuaryActiveStruct(
-                                  folgoChronoLatticeSanctuaryActiveId:
-                                      FFAppState()
-                                          .folgoVastrealmEclipseHavenActives
-                                          .length,
-                                  folgoChronoLatticeSanctuaryActivePhoto:
-                                      _model.folgoNebulashadeEternalCitadel,
-                                  folgoChronoLatticeSanctuaryActiveName:
-                                      _model.textController1.text,
-                                  folgoChronoLatticeSanctuaryActiveIntroduction:
-                                      _model.textController2.text,
-                                  folgoChronoLatticeSanctuaryActiveDate:
-                                      _model.textController3.text,
-                                  folgoChronoLatticeSanctuaryActiveTime:
-                                      _model.textController4.text,
-                                  folgoChronoLatticeSanctuaryActiveLocation:
-                                      _model.textController5.text,
-                                  folgoChronoLatticeSanctuaryActiveJoinUsers: [
-                                  ],
-                                  folgoChronoLatticeSanctuaryActiveCreateId:
-                                      FFAppState()
-                                          .folgoStardreamHallowedAtriumID,
-                                ));
-                                FFAppState().update(() {});
+                                // 保存数据到临时变量
+                                final photo =
+                                    _model.folgoNebulashadeEternalCitadel;
+                                final name = _model.textController1.text;
+                                final introduction =
+                                    _model.textController2.text;
+                                final date = _model.textController3.text;
+                                final time = _model.textController4.text;
+                                final location = _model.textController5.text;
+                                final createId =
+                                    FFAppState().folgoStardreamHallowedAtriumID;
+
+                                GolfLoading.show(context,
+                                    message: 'Publishing...');
+
+                                await Future.delayed(Duration(seconds: 1));
+
+                                GolfLoading.dismiss();
+
+                                GolfLoading.showSuccess(
+                                  context,
+                                  message:
+                                      'Submitted successfully! Pending review.',
+                                );
+                                context.safePop();
+                                Future.delayed(Duration(seconds: 300), () {
+                                  FFAppState()
+                                      .addToFolgoVastrealmEclipseHavenActives(
+                                    FolgoChronoLatticeSanctuaryActiveStruct(
+                                      folgoChronoLatticeSanctuaryActiveId:
+                                          FFAppState()
+                                              .folgoVastrealmEclipseHavenActives
+                                              .length,
+                                      folgoChronoLatticeSanctuaryActivePhoto:
+                                          photo,
+                                      folgoChronoLatticeSanctuaryActiveName:
+                                          name,
+                                      folgoChronoLatticeSanctuaryActiveIntroduction:
+                                          introduction,
+                                      folgoChronoLatticeSanctuaryActiveDate:
+                                          date,
+                                      folgoChronoLatticeSanctuaryActiveTime:
+                                          time,
+                                      folgoChronoLatticeSanctuaryActiveLocation:
+                                          location,
+                                      folgoChronoLatticeSanctuaryActiveJoinUsers: [],
+                                      folgoChronoLatticeSanctuaryActiveCreateId:
+                                          createId,
+                                    ),
+                                  );
+                                  FFAppState().update(() {});
+                                });
                               },
                               child: Container(
                                 width: double.infinity,

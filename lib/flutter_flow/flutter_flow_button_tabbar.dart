@@ -655,28 +655,36 @@ class _FlutterFlowButtonTabBarState extends State<FlutterFlowButtonTabBar>
     final Color? borderColor = Color.lerp(
         widget.unselectedBorderColor, widget.borderColor, animationValue);
 
-    BoxDecoration? boxDecoration = BoxDecoration.lerp(
-        BoxDecoration(
-          color: widget.unselectedDecoration?.color ??
-              widget.unselectedBackgroundColor ??
-              Colors.transparent,
-          boxShadow: widget.unselectedDecoration?.boxShadow,
-          gradient: widget.unselectedDecoration?.gradient,
-          borderRadius: widget.useToggleButtonStyle
-              ? null
-              : BorderRadius.circular(widget.borderRadius),
-        ),
-        BoxDecoration(
-          color: widget.decoration?.color ??
-              widget.backgroundColor ??
-              Colors.transparent,
-          boxShadow: widget.decoration?.boxShadow,
-          gradient: widget.decoration?.gradient,
-          borderRadius: widget.useToggleButtonStyle
-              ? null
-              : BorderRadius.circular(widget.borderRadius),
-        ),
-        animationValue);
+    // Handle gradient separately since BoxDecoration.lerp doesn't interpolate gradients well
+    final Gradient? selectedGradient = widget.decoration?.gradient;
+    final Gradient? unselectedGradient = widget.unselectedDecoration?.gradient;
+    Gradient? finalGradient;
+    if (selectedGradient != null || unselectedGradient != null) {
+      // If we have gradients, use the selected one when animationValue > 0.5
+      finalGradient =
+          animationValue > 0.5 ? selectedGradient : unselectedGradient;
+    }
+
+    BoxDecoration? boxDecoration = BoxDecoration(
+      color: finalGradient != null
+          ? null
+          : Color.lerp(
+              widget.unselectedDecoration?.color ??
+                  widget.unselectedBackgroundColor ??
+                  Colors.transparent,
+              widget.decoration?.color ??
+                  widget.backgroundColor ??
+                  Colors.transparent,
+              animationValue,
+            ),
+      boxShadow: animationValue > 0.5
+          ? widget.decoration?.boxShadow
+          : widget.unselectedDecoration?.boxShadow,
+      gradient: finalGradient,
+      borderRadius: widget.useToggleButtonStyle
+          ? null
+          : BorderRadius.circular(widget.borderRadius),
+    );
 
     if (widget.useToggleButtonStyle &&
         widget.borderWidth > 0 &&
@@ -745,13 +753,11 @@ class _FlutterFlowButtonTabBarState extends State<FlutterFlowButtonTabBar>
                   ),
           ),
         ),
-        child: Ink(
+        child: Container(
           decoration: boxDecoration,
-          child: Container(
-            padding: widget.labelPadding,
-            alignment: Alignment.center,
-            child: child,
-          ),
+          padding: widget.labelPadding,
+          alignment: Alignment.center,
+          child: child,
         ),
       ),
     );

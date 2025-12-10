@@ -120,46 +120,64 @@ class _FolgoLoversAstraManorChatHomeWidgetState
                         EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
                     child: Column(
                       children: [
-                        Align(
-                          alignment: Alignment(0.0, 0),
-                          child: FlutterFlowButtonTabBar(
-                            useToggleButtonStyle: false,
-                            labelStyle: FlutterFlowTheme.of(context)
-                                .titleMedium
-                                .override(
-                                  fontFamily: 'siyuanheiti',
-                                  fontSize: 18.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.bold,
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                          child: Container(
+                            width: double.infinity,
+                            height: 46,
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(100.0),
+                            ),
+                            child: FlutterFlowButtonTabBar(
+                              useToggleButtonStyle: false,
+                              labelStyle: FlutterFlowTheme.of(context)
+                                  .titleMedium
+                                  .override(
+                                    fontFamily: 'siyuanheiti',
+                                    fontSize: 18.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                              unselectedLabelStyle: FlutterFlowTheme.of(context)
+                                  .titleMedium
+                                  .override(
+                                    fontFamily: 'siyuanheiti',
+                                    fontSize: 16.0,
+                                    letterSpacing: 0.0,
+                                  ),
+                              labelColor: Color(0xFF171717),
+                              unselectedLabelColor:
+                                  FlutterFlowTheme.of(context).info,
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [
+                                    Color(0xFFB6E63E),
+                                    Color(0xFF2AD2BE)
+                                  ],
+                                  begin: Alignment.centerLeft,
+                                  end: Alignment.centerRight,
                                 ),
-                            unselectedLabelStyle: FlutterFlowTheme.of(context)
-                                .titleMedium
-                                .override(
-                                  fontFamily: 'siyuanheiti',
-                                  fontSize: 16.0,
-                                  letterSpacing: 0.0,
+                                borderRadius: BorderRadius.circular(100.0),
+                              ),
+                              borderWidth: 0.0,
+                              borderRadius: 100.0,
+                              elevation: 0.0,
+                              buttonMargin: EdgeInsetsDirectional.fromSTEB(
+                                  3.0, 3.0, 3.0, 3.0),
+                              tabs: [
+                                Tab(
+                                  text: 'All',
                                 ),
-                            labelColor: Color(0xFF171717),
-                            unselectedLabelColor:
-                                FlutterFlowTheme.of(context).info,
-                            backgroundColor: Color(0xFF2AD2BE),
-                            borderWidth: 0.0,
-                            borderRadius: 100.0,
-                            elevation: 0.0,
-                            buttonMargin: EdgeInsetsDirectional.fromSTEB(
-                                8.0, 0.0, 8.0, 0.0),
-                            tabs: [
-                              Tab(
-                                text: 'All',
-                              ),
-                              Tab(
-                                text: 'News',
-                              ),
-                            ],
-                            controller: _model.tabBarController,
-                            onTap: (i) async {
-                              [() async {}, () async {}][i]();
-                            },
+                                Tab(
+                                  text: 'News',
+                                ),
+                              ],
+                              controller: _model.tabBarController,
+                              onTap: (i) async {
+                                [() async {}, () async {}][i]();
+                              },
+                            ),
                           ),
                         ),
                         Expanded(

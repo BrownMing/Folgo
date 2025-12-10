@@ -1,5 +1,6 @@
 import 'package:folgo/flutter_flow/empty_state.dart';
 
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
@@ -136,24 +137,66 @@ class _FolgoSeraphicAffectionVaultOtherInfoWidgetState
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        InkWell(
-                                          splashColor: Colors.transparent,
-                                          focusColor: Colors.transparent,
-                                          hoverColor: Colors.transparent,
-                                          highlightColor: Colors.transparent,
+                                        GestureDetector(
                                           onTap: () async {
+                                            final currentUserId = FFAppState()
+                                                .folgoStardreamHallowedAtriumID;
+                                            final otherUserId = widget
+                                                .folgoCelestforgeDreamholdBasilica!;
+
+                                            final existingChatIndex = FFAppState()
+                                                .folgoNebulaEonspireDomeChats
+                                                .indexWhere((chat) =>
+                                                    (chat.folgoMythicStarweaveChatSenduser ==
+                                                            currentUserId &&
+                                                        chat.folgoMythicStarweaveChatReveivceuser ==
+                                                            otherUserId) ||
+                                                    (chat.folgoMythicStarweaveChatSenduser ==
+                                                            otherUserId &&
+                                                        chat.folgoMythicStarweaveChatReveivceuser ==
+                                                            currentUserId));
+
+                                            int chatId;
+                                            if (existingChatIndex != -1) {
+                                              chatId = FFAppState()
+                                                  .folgoNebulaEonspireDomeChats[
+                                                      existingChatIndex]
+                                                  .folgoMythicStarweaveChatId;
+                                            } else {
+                                              chatId = FFAppState()
+                                                  .folgoNebulaEonspireDomeChats
+                                                  .length;
+                                              FFAppState()
+                                                  .addToFolgoNebulaEonspireDomeChats(
+                                                FolgoMythicStarweaveChatStruct(
+                                                  folgoMythicStarweaveChatId:
+                                                      chatId,
+                                                  folgoMythicStarweaveChatSenduser:
+                                                      currentUserId,
+                                                  folgoMythicStarweaveChatReveivceuser:
+                                                      otherUserId,
+                                                  folgoMythicStarweaveChatLastMsg:
+                                                      '[message]',
+                                                  folgoMythicStarweaveChatUnread:
+                                                      0,
+                                                  folgoMythicStarweaveChatLastTime:
+                                                      DateTime.now(),
+                                                ),
+                                              );
+                                            }
+
                                             context.pushNamed(
                                               FolgoVelvetEmotionSpireMessageWidget
                                                   .routeName,
                                               queryParameters: {
                                                 'folgoLoveraEonreachSanctumChat':
                                                     serializeParam(
-                                                  0,
+                                                  chatId,
                                                   ParamType.int,
                                                 ),
                                                 'folgoEchoedDevotionHarborUserid':
                                                     serializeParam(
-                                                  0,
+                                                  otherUserId,
                                                   ParamType.int,
                                                 ),
                                               }.withoutNulls,
