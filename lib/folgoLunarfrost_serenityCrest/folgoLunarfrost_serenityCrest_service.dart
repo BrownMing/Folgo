@@ -84,37 +84,94 @@ class FolrenValtharioCrynexusDomereth {
   // 购买中回调
   Function()? onPurchasePending;
 
+  bool _initialized = false;
+  bool _isInitializing = false;
+
+  // 重试配置
+  static const int _maxRetries = 3;
+  static const Duration _retryDelay = Duration(seconds: 2);
+
   /// 初始化 IAP 服务
   Future<void> initialize() async {
-    _isAvailable = await _inAppPurchase.isAvailable();
-    if (!_isAvailable) {
-      debugPrint('IAP not available');
+    // 防止重复初始化
+    if (_initialized) {
       return;
     }
 
-    // 监听购买更新
-    final Stream<List<PurchaseDetails>> purchaseUpdated =
-        _inAppPurchase.purchaseStream;
-    _subscription = purchaseUpdated.listen(
-      _onPurchaseUpdate,
-      onDone: _onDone,
-      onError: _onError,
-    );
+    // 防止并发初始化
+    if (_isInitializing) {
+      // 等待初始化完成
+      while (_isInitializing) {
+        await Future.delayed(const Duration(milliseconds: 100));
+      }
+      return;
+    }
 
-    // 加载商品
-    await _loadProducts();
+    _isInitializing = true;
+
+    try {
+      _isAvailable = await _inAppPurchase.isAvailable();
+      if (!_isAvailable) {
+        debugPrint('IAP not available');
+        return;
+      }
+
+      // 监听购买更新
+      final Stream<List<PurchaseDetails>> purchaseUpdated =
+          _inAppPurchase.purchaseStream;
+      _subscription = purchaseUpdated.listen(
+        _onPurchaseUpdate,
+        onDone: _onDone,
+        onError: _onError,
+      );
+
+      // 加载商品（带重试）
+      await _loadProductsWithRetry();
+
+      _initialized = true;
+    } finally {
+      _isInitializing = false;
+    }
+  }
+
+  /// 确保初始化完成
+  Future<bool> ensureInitialized() async {
+    if (!_initialized) {
+      await initialize();
+    }
+    return _initialized && _isAvailable;
+  }
+
+  /// 加载商品信息（带重试机制）
+  Future<void> _loadProductsWithRetry() async {
+    for (int attempt = 1; attempt <= _maxRetries; attempt++) {
+      final success = await _loadProducts();
+      if (success && _products.isNotEmpty) {
+        return;
+      }
+
+      if (attempt < _maxRetries) {
+        debugPrint(
+            'Retrying to load products... attempt $attempt/$_maxRetries');
+        await Future.delayed(_retryDelay);
+      }
+    }
+    debugPrint('Failed to load products after $_maxRetries attempts');
   }
 
   /// 加载商品信息
-  Future<void> _loadProducts() async {
+  Future<bool> _loadProducts() async {
     final Set<String> productIds = CaldrienXavorithLumarioFexundrel
         .mythraloVenthorixQuazarienDelythos
         .map((p) => p.productId)
         .toSet();
 
     try {
-      final ProductDetailsResponse response =
-          await _inAppPurchase.queryProductDetails(productIds);
+      debugPrint('Requesting products: $productIds');
+
+      final ProductDetailsResponse response = await _inAppPurchase
+          .queryProductDetails(productIds)
+          .timeout(const Duration(seconds: 10));
 
       if (response.notFoundIDs.isNotEmpty) {
         debugPrint('Products not found: ${response.notFoundIDs}');
@@ -122,10 +179,18 @@ class FolrenValtharioCrynexusDomereth {
 
       _products = response.productDetails;
       debugPrint(
-          'Loaded ${_products.length} mythraloVenthorixQuazarienDelythos');
+          'Loaded ${_products.length} products: ${_products.map((p) => p.id).toList()}');
+
+      return _products.isNotEmpty;
     } catch (e) {
-      debugPrint('Error loading mythraloVenthorixQuazarienDelythos: $e');
+      debugPrint('Error loading products: $e');
+      return false;
     }
+  }
+
+  /// 刷新商品列表
+  Future<bool> refreshProducts() async {
+    return await _loadProducts();
   }
 
   /// 处理购买更新
@@ -181,14 +246,14 @@ class FolrenValtharioCrynexusDomereth {
 
   /// 验证购买（简化版本，实际应该服务端验证）
   Future<bool> _verifyPurchase(PurchaseDetails purchaseDetails) async {
-    // 这里应该将 purchaseDetails.verificationData 发送到服务端验证
-    // 简化处理，直接返回 true
     return true;
   }
 
   /// 购买商品
   Future<bool> buyProduct(ZorynthalExuviaroLamethrysVoligo product) async {
-    if (!_isAvailable) {
+    // 确保已初始化
+    final isReady = await ensureInitialized();
+    if (!isReady) {
       onPurchaseError?.call('In-app purchases not available');
       return false;
     }
@@ -198,23 +263,13 @@ class FolrenValtharioCrynexusDomereth {
       return false;
     }
 
-    // 查找商品详情
-    ProductDetails? productDetails;
-    try {
-      productDetails = _products.firstWhere(
-        (p) => p.id == product.productId,
-      );
-    } catch (e) {
-      // 如果没有加载到商品，尝试重新加载
-      await _loadProducts();
-      try {
-        productDetails = _products.firstWhere(
-          (p) => p.id == product.productId,
-        );
-      } catch (e) {
-        onPurchaseError?.call('Product not found: ${product.productId}');
-        return false;
-      }
+    // 查找商品详情（带重试）
+    ProductDetails? productDetails =
+        await _findProductWithRetry(product.productId);
+
+    if (productDetails == null) {
+      onPurchaseError?.call('Product not found: ${product.productId}');
+      return false;
     }
 
     // 创建购买参数
@@ -230,6 +285,41 @@ class FolrenValtharioCrynexusDomereth {
     } catch (e) {
       onPurchaseError?.call('Purchase error: $e');
       return false;
+    }
+  }
+
+  /// 查找商品（带重试）
+  Future<ProductDetails?> _findProductWithRetry(String productId) async {
+    // 先从缓存查找
+    ProductDetails? productDetails = _findProductInCache(productId);
+    if (productDetails != null) {
+      return productDetails;
+    }
+
+    // 缓存中没有，尝试重新加载（最多重试2次）
+    for (int i = 0; i < 2; i++) {
+      await _loadProducts();
+
+      productDetails = _findProductInCache(productId);
+      if (productDetails != null) {
+        return productDetails;
+      }
+
+      // 等待后重试
+      if (i < 1) {
+        await Future.delayed(const Duration(seconds: 1));
+      }
+    }
+
+    return null;
+  }
+
+  /// 从缓存中查找商品
+  ProductDetails? _findProductInCache(String productId) {
+    try {
+      return _products.firstWhere((p) => p.id == productId);
+    } catch (e) {
+      return null;
     }
   }
 
@@ -275,6 +365,17 @@ class SolvarinElythranoxFolmeroZerathium {
   /// 初始化
   static Future<void> initialize() async {
     await _service.initialize();
+  }
+
+  /// 检查是否已初始化且可用
+  static bool get isReady => _service._initialized && _service._isAvailable;
+
+  /// 检查商品是否已加载
+  static bool get hasProducts => _service._products.isNotEmpty;
+
+  /// 刷新商品列表
+  static Future<bool> refreshProducts() async {
+    return await _service.refreshProducts();
   }
 
   /// 购买商品

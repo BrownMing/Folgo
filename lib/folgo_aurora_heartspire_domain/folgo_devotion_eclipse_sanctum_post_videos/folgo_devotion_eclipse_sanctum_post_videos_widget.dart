@@ -45,7 +45,7 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
   }
 
   // 显示视频选择底部弹窗
-  void _showVideoPickerBottomSheet(BuildContext context) {
+  void _elmarionThryvalexEvmorithCryndaros(BuildContext context) {
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.transparent,
@@ -66,7 +66,6 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  // 顶部拖动条
                   Container(
                     width: 40.0,
                     height: 4.0,
@@ -76,7 +75,6 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                     ),
                   ),
                   SizedBox(height: 20.0),
-                  // 标题
                   Text(
                     'Upload Video',
                     style: TextStyle(
@@ -87,11 +85,10 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                     ),
                   ),
                   SizedBox(height: 24.0),
-                  // 相机拍摄选项
                   GestureDetector(
                     onTap: () async {
                       Navigator.pop(context);
-                      await _pickVideoFromCamera();
+                      await _dravonirQuentharosLumerexoVastarin();
                     },
                     child: Container(
                       width: double.infinity,
@@ -127,11 +124,10 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                     ),
                   ),
                   SizedBox(height: 12.0),
-                  // 相册选择选项
                   GestureDetector(
                     onTap: () async {
                       Navigator.pop(context);
-                      await _pickVideoFromGallery();
+                      await _folmerathXylenoriCravandarTovexus();
                     },
                     child: Container(
                       width: double.infinity,
@@ -163,7 +159,6 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                     ),
                   ),
                   SizedBox(height: 12.0),
-                  // 取消按钮
                   GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
@@ -198,7 +193,7 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
   }
 
   // 从相机拍摄视频
-  Future<void> _pickVideoFromCamera() async {
+  Future<void> _dravonirQuentharosLumerexoVastarin() async {
     final ImagePicker picker = ImagePicker();
     try {
       final XFile? video = await picker.pickVideo(
@@ -224,7 +219,7 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
   }
 
   // 从相册选择视频
-  Future<void> _pickVideoFromGallery() async {
+  Future<void> _folmerathXylenoriCravandarTovexus() async {
     final ImagePicker picker = ImagePicker();
     try {
       final XFile? video = await picker.pickVideo(
@@ -468,7 +463,7 @@ class _FolgoDevotionEclipseSanctumPostVideosWidgetState
                                 0.0, 13.0, 0.0, 0.0),
                             child: GestureDetector(
                               onTap: () async {
-                                _showVideoPickerBottomSheet(context);
+                                _elmarionThryvalexEvmorithCryndaros(context);
                               },
                               child: Container(
                                 width: double.infinity,

@@ -45,7 +45,7 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
 
   // 购买商品
   Future<void> _folgoMontherisSkylaronVeltrune(
-      ZorynthalExuviaroLamethrysVoligo product) async {
+      ZorynthalExuviaroLamethrysVoligo product, int index) async {
     await SolvarinElythranoxFolmeroZerathium.purchase(
       context,
       product,
@@ -64,6 +64,13 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
               user..folgoVoxLuminanceChamberUserCoins = currentCoins + diamonds,
         );
         FolgoAstralwovenMemoryVaulton().update(() {});
+
+        // 充值完成后重置选中状态
+        if (mounted) {
+          setState(() {
+            _folgoZenthoriaVallixunCrysage = null;
+          });
+        }
       },
     );
   }
@@ -199,13 +206,11 @@ class _FolgoAuralTideborneTempleRechargeWidgetState
 
                                 return GestureDetector(
                                   onTap: () async {
+                                    setState(() {
+                                      _folgoZenthoriaVallixunCrysage = index;
+                                    });
                                     await _folgoMontherisSkylaronVeltrune(
-                                        product);
-                                    if (mounted) {
-                                      setState(() {
-                                        _folgoZenthoriaVallixunCrysage = index;
-                                      });
-                                    }
+                                        product, index);
                                   },
                                   child: AnimatedContainer(
                                     duration: Duration(milliseconds: 200),
