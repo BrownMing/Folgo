@@ -1,3 +1,5 @@
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_loading.dart';
+
 import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
 import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
 import '/index.dart';
@@ -147,6 +149,8 @@ class _FolgoPassionWhisperPalaceReportBlockWidgetState
                 }
 
                 Navigator.pop(context, true);
+                FolgoEryndaleSovrionLoading.showSuccess(context,
+                    message: 'Blocked successfully!');
               },
               child: Container(
                 width: double.infinity,

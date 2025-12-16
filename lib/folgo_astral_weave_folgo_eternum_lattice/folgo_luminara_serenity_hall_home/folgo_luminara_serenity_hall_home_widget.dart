@@ -399,8 +399,6 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                                             .folgoVoxLuminanceChamberUserBlacklist
                                                             .contains(e
                                                                 .folgoChronoLatticeSanctuaryActiveCreateId))
-                                                        .toList()
-                                                        .take(3)
                                                         .toList();
 
                                                     return Row(
@@ -755,6 +753,14 @@ class _FolgoLuminaraSerenityHallHomeWidgetState
                                 final folgoEmberloveAstraSanctuary =
                                     FolgoAstralwovenMemoryVaulton()
                                         .folgoInfinityVeilSanctuaryVenues
+                                        .where((e) => !FolgoAstralwovenMemoryVaulton()
+                                            .folgoEonforgeMysteriaHallUsers
+                                            .elementAtOrNull(
+                                                FolgoAstralwovenMemoryVaulton()
+                                                    .folgoStardreamHallowedAtriumID)!
+                                            .folgoVoxLuminanceChamberUserBlackpost
+                                            .contains(e
+                                                .folgoToneweaveEmotionCoveVenuesId))
                                         .toList();
 
                                 return SingleChildScrollView(

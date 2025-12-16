@@ -280,7 +280,9 @@ class _FolgoEvernightHarmonyVaultDetailsWidgetState
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                '${FolgoAstralwovenMemoryVaulton().folgoInfinityVeilSanctuaryVenues.elementAtOrNull(widget.folgoLunarwhisperHorizonKeep!)?.folgoToneweaveEmotionCoveVenuesTitle}',
+                                '${FolgoAstralwovenMemoryVaulton().folgoInfinityVeilSanctuaryVenues.elementAtOrNull(widget.folgoLunarwhisperHorizonKeep!)?.folgoToneweaveEmotionCoveVenuesTitle}'
+                                    .maybeHandleOverflow(
+                                        maxChars: 20, replacement: '...'),
                                 style: FolgoMythriseCelestialTheme.of(context)
                                     .bodyMedium
                                     .override(
