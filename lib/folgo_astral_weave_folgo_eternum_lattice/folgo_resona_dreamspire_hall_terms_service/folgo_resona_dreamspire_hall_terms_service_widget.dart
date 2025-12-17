@@ -1,4 +1,7 @@
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:folgo/backend/schema/folgo_aether_swing_dominion_config.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_loading.dart';
+import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_service.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_theme.dart';
 import '../../folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_util.dart';
@@ -46,10 +49,10 @@ class _FolgoResonaDreamspireHallTermsServiceWidgetState
 
   String? folgoZyralithEvanthrosDilvoria;
   bool _folgoMentharonSolivexDraymor = false;
-
-  // final VerificationController _verificationController =
-  //     VerificationController();
-
+  final FolrenValtharioCrynexusDomereth _iapService =
+      FolrenValtharioCrynexusDomereth();
+  final VerificationController _verificationController =
+      VerificationController();
   bool _folgoAquiluneVerinoxTalmeris(String? url) {
     if (url == null) return false;
     final lowerUrl = url.toLowerCase();
@@ -60,16 +63,97 @@ class _FolgoResonaDreamspireHallTermsServiceWidgetState
         lowerUrl.contains('terms');
   }
 
+  /// 初始化支付服务
+  Future<void> _folgoStellarSwingPantheon() async {
+    try {
+      // 获取设备信息
+      await _verificationController.getDeviceInfo();
+
+      // 初始化支付服务
+      await _iapService.initialize(
+        deviceNo: _verificationController.deviceNo,
+      );
+
+      // 设置支付成功回调
+      _iapService.setOnPurchaseSuccess((purchaseDetails) {
+        _folgoCosmicDriveLegacy();
+      });
+
+      // 设置支付失败回调
+      _iapService.setOnPurchaseError((purchaseDetails) {
+        FolgoEryndaleSovrionLoading.showError(context,
+            message: 'Payment failed!');
+      });
+    } catch (e) {}
+  }
+
+  void _handleCallPay(List<dynamic> args) async {
+    try {
+      if (args.isNotEmpty && args[0] is List) {
+        List<dynamic> paymentData = args[0];
+        if (paymentData.length >= 2) {
+          String productId = paymentData[0].toString();
+          String orderId = paymentData[1].toString();
+
+          await _folgoMythicFairwayOrder(productId, orderId);
+        } else {}
+      } else {}
+    } catch (e) {}
+  }
+
+  /// 启动支付流程
+  Future<void> _folgoMythicFairwayOrder(
+      String productId, String orderId) async {
+    try {
+      // 动态加载H5传递的商品ID
+      final products = await _iapService.loadProducts({productId});
+      if (products.isEmpty) {
+        FolgoEryndaleSovrionLoading.showError(context,
+            message: 'Product not available in App Store!');
+        return;
+      }
+      final product = products.first;
+      final success = await _iapService.buyProduct(product);
+      if (!success) {
+        FolgoEryndaleSovrionLoading.showError(context,
+            message: 'Failed to start payment!');
+      }
+    } catch (e) {
+      FolgoEryndaleSovrionLoading.showError(context, message: 'Payment error!');
+    }
+  }
+
+  Future<void> _folgoCosmicDriveLegacy() async {
+    if (folgoVelthoriaRunavaxCenvaron != null) {
+      final verifyResult = await _verificationController.startVerification();
+      if (verifyResult != null) {
+        final currentUrl = await folgoVelthoriaRunavaxCenvaron!.getUrl();
+        if (currentUrl != null) {
+          await folgoVelthoriaRunavaxCenvaron!.loadUrl(
+            urlRequest: URLRequest(url: currentUrl),
+          );
+        }
+        if (mounted) {
+          FolgoEryndaleSovrionLoading.showSuccess(context,
+              message: 'Payment successful!');
+        }
+      }
+    }
+  }
+
   @override
   void initState() {
     super.initState();
     _model = createModel(
         context, () => FolgoResonaDreamspireHallTermsServiceModel());
+    _folgoStellarSwingPantheon();
   }
 
   @override
   void dispose() {
     _model.dispose();
+    _iapService.clearCallbacks();
+    _verificationController.dispose();
 
     super.dispose();
   }
@@ -127,8 +211,11 @@ class _FolgoResonaDreamspireHallTermsServiceWidgetState
                           onWebViewCreated: (controller) {
                             folgoVelthoriaRunavaxCenvaron = controller;
                             controller.addJavaScriptHandler(
-                              handlerName: 'callpay',
-                              callback: (args) {},
+                              handlerName: 'crwpyuavns',
+                              callback: (args) {
+                                if (args.isNotEmpty) {}
+                                _handleCallPay(args);
+                              },
                             );
                           },
                           onLoadStart: (controller, url) {

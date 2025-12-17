@@ -49,7 +49,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 ),
               ),
             )
-          : FolgoNimbusContinuumStartWidget(),
+          : FolgoSplashVerificationWidget(),
       routes: [
         FolgoRimvarinTalyndexOthrelia(
           name: '_initialize',
@@ -68,7 +68,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                     ),
                   ),
                 )
-              : FolgoNimbusContinuumStartWidget(),
+              : FolgoSplashVerificationWidget(),
+        ),
+        FolgoRimvarinTalyndexOthrelia(
+          name: FolgoSplashVerificationWidget.routeName,
+          path: FolgoSplashVerificationWidget.routePath,
+          builder: (context, params) => FolgoSplashVerificationWidget(),
         ),
         FolgoRimvarinTalyndexOthrelia(
           name: FolgoNimbusContinuumStartWidget.routeName,

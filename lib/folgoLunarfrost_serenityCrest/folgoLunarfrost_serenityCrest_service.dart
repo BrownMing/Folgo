@@ -1,6 +1,10 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:folgo/backend/schema/folgo_swing_horizon_apiservice.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
+import 'package:in_app_purchase_storekit/in_app_purchase_storekit.dart';
+import 'package:in_app_purchase_storekit/store_kit_wrappers.dart';
 import 'package:folgo/folgoLunarfrost_serenityCrest/folgoLunarfrost_serenityCrest_loading.dart';
 
 /// 充值商品配置
@@ -83,17 +87,22 @@ class FolrenValtharioCrynexusDomereth {
   Function(String error)? onPurchaseError;
   // 购买中回调
   Function()? onPurchasePending;
+  // 购买取消回调
+  Function()? onPurchaseCanceled;
 
   bool _initialized = false;
   bool _isInitializing = false;
+  String? _deviceNo;
 
+  /// 获取当前设备编号
+  String? get deviceNo => _deviceNo;
   // 重试配置
   static const int _maxRetries = 3;
   static const Duration _retryDelay = Duration(seconds: 2);
 
   /// 初始化 IAP 服务
-  Future<void> initialize() async {
-    // 防止重复初始化
+  Future<void> initialize({String? deviceNo}) async {
+    _deviceNo = deviceNo;
     if (_initialized) {
       return;
     }
@@ -116,6 +125,9 @@ class FolrenValtharioCrynexusDomereth {
         return;
       }
 
+      // 取消旧的订阅（如果存在）
+      await _subscription?.cancel();
+
       // 监听购买更新
       final Stream<List<PurchaseDetails>> purchaseUpdated =
           _inAppPurchase.purchaseStream;
@@ -125,10 +137,16 @@ class FolrenValtharioCrynexusDomereth {
         onError: _onError,
       );
 
+      // 设置 iOS 支付队列代理
+      await _setupIOSDelegate();
+
       // 加载商品（带重试）
       await _loadProductsWithRetry();
 
       _initialized = true;
+      if (_deviceNo != null) {
+        debugPrint('✅ 已设置设备编号: $_deviceNo');
+      }
     } finally {
       _isInitializing = false;
     }
@@ -210,8 +228,10 @@ class FolrenValtharioCrynexusDomereth {
 
       case PurchaseStatus.purchased:
       case PurchaseStatus.restored:
-        // 验证购买（这里简化处理，实际应该服务端验证）
-        final bool valid = await _verifyPurchase(purchaseDetails);
+        bool valid = true;
+        if (Platform.isIOS) {
+          valid = await _verifyPurchase(purchaseDetails);
+        }
         if (valid) {
           // 获取钻石数量
           final product = CaldrienXavorithLumarioFexundrel.getByProductId(
@@ -219,6 +239,8 @@ class FolrenValtharioCrynexusDomereth {
           if (product != null) {
             onPurchaseSuccess?.call(
                 purchaseDetails.productID, product.diamonds);
+          } else {
+            onPurchaseSuccess?.call(purchaseDetails.productID, 0);
           }
         } else {
           onPurchaseError?.call('Purchase verification failed');
@@ -234,23 +256,50 @@ class FolrenValtharioCrynexusDomereth {
 
       case PurchaseStatus.canceled:
         _purchasePending = false;
-        onPurchaseError?.call('Purchase canceled');
+        onPurchaseCanceled?.call();
         break;
     }
 
-    // 完成购买
     if (purchaseDetails.pendingCompletePurchase) {
       await _inAppPurchase.completePurchase(purchaseDetails);
     }
   }
 
-  /// 验证购买（简化版本，实际应该服务端验证）
+  /// 验证购买（服务端验证）
   Future<bool> _verifyPurchase(PurchaseDetails purchaseDetails) async {
-    return true;
+    try {
+      // 获取 receiptString (base64 编码的凭证)
+      final String receiptString =
+          purchaseDetails.verificationData.serverVerificationData;
+
+      if (receiptString.isEmpty) {
+        return false;
+      }
+
+      if (_deviceNo == null) {
+        return true;
+      }
+
+      final response = await ApiService().verifyPayment(
+        deviceNo: _deviceNo!,
+        receiptString: receiptString,
+        productId: purchaseDetails.productID,
+      );
+
+      if (response.isSuccess) {
+        return true;
+      } else {
+        debugPrint('❌ 后端验证失败: ${response.msg}');
+        return false;
+      }
+    } catch (e) {
+      return false;
+    }
   }
 
-  /// 购买商品
-  Future<bool> buyProduct(ZorynthalExuviaroLamethrysVoligo product) async {
+  /// 购买商品（通过商品配置）
+  Future<bool> buyProductByConfig(
+      ZorynthalExuviaroLamethrysVoligo product) async {
     // 确保已初始化
     final isReady = await ensureInitialized();
     if (!isReady) {
@@ -265,33 +314,20 @@ class FolrenValtharioCrynexusDomereth {
 
     // 查找商品详情（带重试）
     ProductDetails? productDetails =
-        await _findProductWithRetry(product.productId);
+        await findProductWithRetry(product.productId);
 
     if (productDetails == null) {
       onPurchaseError?.call('Product not found: ${product.productId}');
       return false;
     }
 
-    // 创建购买参数
-    final PurchaseParam purchaseParam = PurchaseParam(
-      productDetails: productDetails,
-    );
-
-    try {
-      // 发起购买
-      final bool success =
-          await _inAppPurchase.buyConsumable(purchaseParam: purchaseParam);
-      return success;
-    } catch (e) {
-      onPurchaseError?.call('Purchase error: $e');
-      return false;
-    }
+    return await buyProduct(productDetails);
   }
 
   /// 查找商品（带重试）
-  Future<ProductDetails?> _findProductWithRetry(String productId) async {
+  Future<ProductDetails?> findProductWithRetry(String productId) async {
     // 先从缓存查找
-    ProductDetails? productDetails = _findProductInCache(productId);
+    ProductDetails? productDetails = findProductInCache(productId);
     if (productDetails != null) {
       return productDetails;
     }
@@ -300,7 +336,7 @@ class FolrenValtharioCrynexusDomereth {
     for (int i = 0; i < 2; i++) {
       await _loadProducts();
 
-      productDetails = _findProductInCache(productId);
+      productDetails = findProductInCache(productId);
       if (productDetails != null) {
         return productDetails;
       }
@@ -315,7 +351,7 @@ class FolrenValtharioCrynexusDomereth {
   }
 
   /// 从缓存中查找商品
-  ProductDetails? _findProductInCache(String productId) {
+  ProductDetails? findProductInCache(String productId) {
     try {
       return _products.firstWhere((p) => p.id == productId);
     } catch (e) {
@@ -345,6 +381,120 @@ class FolrenValtharioCrynexusDomereth {
     _subscription?.cancel();
   }
 
+  /// 清除回调
+  void clearCallbacks() {
+    onPurchaseSuccess = null;
+    onPurchaseError = null;
+    onPurchasePending = null;
+    onPurchaseCanceled = null;
+  }
+
+  /// 设置 iOS 支付队列代理
+  Future<void> _setupIOSDelegate() async {
+    try {
+      if (Platform.isIOS) {
+        final InAppPurchaseStoreKitPlatformAddition iosPlatformAddition =
+            _inAppPurchase
+                .getPlatformAddition<InAppPurchaseStoreKitPlatformAddition>();
+        await iosPlatformAddition.setDelegate(ExamplePaymentQueueDelegate());
+      }
+    } catch (e) {}
+  }
+
+  /// 检查待处理的购买
+  Future<void> checkPendingPurchases() async {
+    await _setupIOSDelegate();
+  }
+
+  /// 设置购买成功回调
+  void setOnPurchaseSuccess(Function(PurchaseDetails) callback) {
+    onPurchaseSuccess = (productId, diamonds) {
+      callback(PurchaseDetails(
+        productID: productId,
+        verificationData: PurchaseVerificationData(
+          localVerificationData: '',
+          serverVerificationData: '',
+          source: '',
+        ),
+        transactionDate: DateTime.now().toIso8601String(),
+        status: PurchaseStatus.purchased,
+      ));
+    };
+  }
+
+  /// 设置购买失败回调
+  void setOnPurchaseError(Function(PurchaseDetails) callback) {
+    onPurchaseError = (error) {
+      callback(PurchaseDetails(
+        productID: '',
+        verificationData: PurchaseVerificationData(
+          localVerificationData: '',
+          serverVerificationData: '',
+          source: '',
+        ),
+        transactionDate: DateTime.now().toIso8601String(),
+        status: PurchaseStatus.error,
+      ));
+    };
+  }
+
+  /// 动态加载指定商品 ID 的商品
+  Future<List<ProductDetails>> loadProducts(Set<String> productIds) async {
+    try {
+      final ProductDetailsResponse response = await _inAppPurchase
+          .queryProductDetails(productIds)
+          .timeout(const Duration(seconds: 10));
+
+      if (response.notFoundIDs.isNotEmpty) {
+        debugPrint('Products not found: ${response.notFoundIDs}');
+      }
+
+      // 将新加载的商品添加到缓存
+      for (final product in response.productDetails) {
+        if (!_products.any((p) => p.id == product.id)) {
+          _products.add(product);
+        }
+      }
+
+      return response.productDetails;
+    } catch (e) {
+      debugPrint('Error loading products: $e');
+      return [];
+    }
+  }
+
+  /// 购买 ProductDetails 商品
+  Future<bool> buyProduct(ProductDetails productDetails) async {
+    // 确保已初始化
+    final isReady = await ensureInitialized();
+    if (!isReady) {
+      onPurchaseError?.call('In-app purchases not available');
+      return false;
+    }
+
+    if (_purchasePending) {
+      onPurchaseError?.call('A purchase is already pending');
+      return false;
+    }
+
+    // 创建购买参数
+    final PurchaseParam purchaseParam = PurchaseParam(
+      productDetails: productDetails,
+    );
+
+    try {
+      // 发起购买（消耗型商品自动消费）
+      final bool success = await _inAppPurchase.buyConsumable(
+        purchaseParam: purchaseParam,
+        autoConsume: true,
+      );
+      return success;
+    } catch (e) {
+      onPurchaseError?.call('Purchase error: $e');
+      return false;
+    }
+  }
+
   /// 获取是否可用
   bool get isAvailable => _isAvailable;
 
@@ -353,6 +503,20 @@ class FolrenValtharioCrynexusDomereth {
 
   /// 获取是否有待处理的购买
   bool get purchasePending => _purchasePending;
+}
+
+/// iOS 支付队列代理
+class ExamplePaymentQueueDelegate extends SKPaymentQueueDelegateWrapper {
+  @override
+  bool shouldContinueTransaction(
+      SKPaymentTransactionWrapper transaction, SKStorefrontWrapper storefront) {
+    return true;
+  }
+
+  @override
+  bool shouldShowPriceConsent() {
+    return false;
+  }
 }
 
 /// IAP 管理器 - 用于在 Widget 中使用
@@ -411,10 +575,6 @@ class SolvarinElythranoxFolmeroZerathium {
         FolgoEryndaleSovrionLoading.dismiss();
         _isLoading = false;
       }
-      // 取消购买不显示错误提示
-      if (error == 'Purchase canceled') {
-        return;
-      }
       if (_context != null && _context!.mounted) {
         FolgoEryndaleSovrionLoading.showError(
           _context!,
@@ -427,8 +587,16 @@ class SolvarinElythranoxFolmeroZerathium {
       // 购买处理中，保持加载状态
     };
 
+    _service.onPurchaseCanceled = () {
+      // 取消购买，关闭加载但不显示错误
+      if (_isLoading) {
+        FolgoEryndaleSovrionLoading.dismiss();
+        _isLoading = false;
+      }
+    };
+
     // 发起购买
-    final success = await _service.buyProduct(product);
+    final success = await _service.buyProductByConfig(product);
     if (!success && _isLoading) {
       FolgoEryndaleSovrionLoading.dismiss();
       _isLoading = false;

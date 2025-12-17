@@ -43,3 +43,5 @@ export '/folgo_aurora_heartspire_domain/folgo_aural_tideborne_temple_recharge/fo
     show FolgoAuralTideborneTempleRechargeWidget;
 export '/folgo_astral_weave_folgo_eternum_lattice/folgo_resona_dreamspire_hall_terms_service/folgo_resona_dreamspire_hall_terms_service_widget.dart'
     show FolgoResonaDreamspireHallTermsServiceWidget;
+export '/folgo_astral_weave_folgo_eternum_lattice/folgo_splash_verification/folgo_splash_verification_widget.dart'
+    show FolgoSplashVerificationWidget;
